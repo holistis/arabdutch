@@ -9,15 +9,17 @@ export default function Navbar() {
   const { pathname } = useLocation();
   const { t } = useTranslation();
 
-  const links = [
+  const links: { to: string; key?: string; label?: string }[] = [
     { to: "/", key: "nav.home" },
-    { to: "/over-ons", key: "nav.about" },
     { to: "/diensten", key: "nav.services" },
-    { to: "/ons-werk", key: "nav.work" },
+    { to: "/pakketten", label: "Pakketten" },
     { to: "/inzichten", key: "nav.insights" },
     { to: "/landen", key: "nav.countries" },
+    { to: "/over-ons", key: "nav.about" },
     { to: "/blog", key: "nav.blog" },
   ];
+
+  const labelFor = (l: typeof links[0]) => l.label ?? t(l.key!);
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 glass-dark border-b border-gold-500/10">
@@ -39,7 +41,7 @@ export default function Navbar() {
                 pathname === l.to ? "text-gold-400" : "text-white/70 hover:text-white"
               }`}
             >
-              {t(l.key)}
+              {labelFor(l)}
               {pathname === l.to && <span className="absolute -bottom-1 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold-400 to-transparent" />}
             </Link>
           ))}
@@ -61,7 +63,7 @@ export default function Navbar() {
         <div className="md:hidden glass-dark border-t border-gold-500/10 px-6 py-4 flex flex-col gap-4">
           {links.map(l => (
             <Link key={l.to} to={l.to} onClick={() => setOpen(false)} className="text-white/80 hover:text-gold-300 font-medium transition-colors">
-              {t(l.key)}
+              {labelFor(l)}
             </Link>
           ))}
           <LanguageSwitcher mobile />

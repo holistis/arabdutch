@@ -4,6 +4,8 @@ import { motion, useScroll, useTransform, useSpring, useMotionValue, animate } f
 import { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import useSpotlight from "../components/Spotlight";
+import Testimonials from "../components/Testimonials";
+import NewsletterSignup from "../components/NewsletterSignup";
 
 const fade = { hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.2, 0.8, 0.2, 1] as [number, number, number, number] } } };
 const stagger = { visible: { transition: { staggerChildren: 0.1 } } };
@@ -382,6 +384,25 @@ export default function Home() {
               </Link>
             </motion.div>
           </div>
+        </div>
+      </section>
+
+      {/* ═══════════════════════════════════════════════════════════
+          TESTIMONIALS
+          ═══════════════════════════════════════════════════════════ */}
+      <Testimonials />
+
+      {/* ═══════════════════════════════════════════════════════════
+          NEWSLETTER
+          ═══════════════════════════════════════════════════════════ */}
+      <section className="py-32 bg-luxe-light relative overflow-hidden">
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] opacity-30 pointer-events-none"
+          style={{ background: "radial-gradient(ellipse, rgba(196,149,42,.3) 0%, transparent 60%)" }} />
+        <div className="max-w-3xl mx-auto px-6 relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+            <NewsletterSignup variant="light" />
+          </motion.div>
         </div>
       </section>
 

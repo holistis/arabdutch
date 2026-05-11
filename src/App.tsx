@@ -2,6 +2,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import CookieBanner from "./components/CookieBanner";
+import WhatsAppButton from "./components/WhatsAppButton";
+import SchemaOrg from "./components/SchemaOrg";
 import Home from "./pages/Home";
 import OverOns from "./pages/OverOns";
 import Diensten from "./pages/Diensten";
@@ -17,15 +19,20 @@ import Cookiebeleid from "./pages/Cookiebeleid";
 import Inzichten from "./pages/Inzichten";
 import Landen from "./pages/Landen";
 import LandGids from "./pages/LandGids";
+import Strategiegesprek from "./pages/Strategiegesprek";
+import Pakketten from "./pages/Pakketten";
 
 export default function App() {
   return (
     <BrowserRouter>
+      <SchemaOrg />
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/over-ons" element={<OverOns />} />
         <Route path="/diensten" element={<Diensten />} />
+        <Route path="/pakketten" element={<Pakketten />} />
+        <Route path="/strategiegesprek" element={<Strategiegesprek />} />
         <Route path="/ons-werk" element={<OnsWerk />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/blog" element={<Blog />} />
@@ -41,6 +48,7 @@ export default function App() {
       </Routes>
       <Footer />
       <CookieBanner />
+      <WhatsAppButton />
     </BrowserRouter>
   );
 }

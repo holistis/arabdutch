@@ -26,14 +26,17 @@ export default function Footer() {
             <p className="text-gold-400 text-xs font-semibold uppercase tracking-widest mb-4">{t("footer.nav")}</p>
             <div className="flex flex-col gap-2">
               {[
-                { to: "/over-ons", key: "nav.about" },
-                { to: "/diensten", key: "nav.services" },
-                { to: "/ons-werk", key: "nav.work" },
-                { to: "/blog", key: "nav.blog" },
-                { to: "/contact", key: "nav.contact" },
+                { to: "/diensten", label: t("nav.services") },
+                { to: "/pakketten", label: "Pakketten" },
+                { to: "/strategiegesprek", label: "Strategiegesprek" },
+                { to: "/inzichten", label: t("nav.insights") },
+                { to: "/landen", label: t("nav.countries") },
+                { to: "/over-ons", label: t("nav.about") },
+                { to: "/blog", label: t("nav.blog") },
+                { to: "/contact", label: t("nav.contact") },
               ].map(l => (
                 <Link key={l.to} to={l.to} className="text-white/60 hover:text-white text-sm transition-colors">
-                  {t(l.key)}
+                  {l.label}
                 </Link>
               ))}
             </div>
