@@ -1,6 +1,7 @@
 import { Globe, Handshake, Search, BookOpen, TrendingUp, Users, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { useEffect } from "react";
 
 const diensten = [
   {
@@ -36,6 +37,7 @@ const diensten = [
 ];
 
 export default function Diensten() {
+  useEffect(() => { document.title = "Diensten — ArabDutch | Consultancy Nederland & Arabische wereld"; }, []);
   return (
     <main className="pt-20">
       <section className="bg-navy-900 text-white py-24">

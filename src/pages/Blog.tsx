@@ -1,9 +1,11 @@
 import { Calendar, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 import posts from "../data/blogPosts";
 
 export default function Blog() {
+  useEffect(() => { document.title = "Blog — ArabDutch | Inzichten over Nederland & Arabische wereld"; }, []);
   return (
     <main className="pt-20">
       <section className="bg-navy-900 text-white py-24">

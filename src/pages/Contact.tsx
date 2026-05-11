@@ -1,9 +1,11 @@
 ﻿import { Mail, Phone, MapPin, Clock, Send, CheckCircle, AlertCircle } from "lucide-react";
-import { useState, useRef, type FormEvent } from "react";
+import { useState, useRef, useEffect } from "react";
+import type { FormEvent } from "react";
 
 const WEB3FORMS_KEY = import.meta.env.VITE_WEB3FORMS_KEY as string;
 
 export default function Contact() {
+  useEffect(() => { document.title = "Contact — ArabDutch | Neem contact op"; }, []);
   const [status, setStatus] = useState<"idle" | "loading" | "sent" | "error">("idle");
   const formRef = useRef<HTMLFormElement>(null);
 

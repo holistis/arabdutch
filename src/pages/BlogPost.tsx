@@ -1,6 +1,7 @@
 import { useParams, Link, Navigate } from "react-router-dom";
 import { ArrowLeft, Calendar, Tag } from "lucide-react";
 import { motion } from "framer-motion";
+import { useEffect } from "react";
 import posts, { type Section } from "../data/blogPosts";
 
 function renderSection(s: Section, i: number) {
@@ -63,6 +64,10 @@ function renderSection(s: Section, i: number) {
 export default function BlogPost() {
   const { slug } = useParams<{ slug: string }>();
   const post = posts.find((p) => p.slug === slug);
+
+  useEffect(() => {
+    if (post) document.title = `${post.titel} — ArabDutch Blog`;
+  }, [post]);
 
   if (!post) return <Navigate to="/blog" replace />;
 

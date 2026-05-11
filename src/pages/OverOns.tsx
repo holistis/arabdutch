@@ -1,5 +1,6 @@
 import { Users, Target, Heart } from "lucide-react";
 import { motion } from "framer-motion";
+import { useEffect } from "react";
 
 const teamGroepen = [
   {
@@ -35,6 +36,7 @@ const teamGroepen = [
 ];
 
 export default function OverOns() {
+  useEffect(() => { document.title = "Over Ons — ArabDutch | Team & Missie"; }, []);
   return (
     <main className="pt-20">
       <section className="bg-navy-900 text-white py-24">

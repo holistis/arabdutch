@@ -1,6 +1,7 @@
 import { ArrowRight, Calendar } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { useEffect } from "react";
 
 const projecten = [
   {
@@ -30,6 +31,8 @@ const projecten = [
 ];
 
 export default function OnsWerk() {
+  useEffect(() => { document.title = "Ons Werk — ArabDutch | Projecten & Resultaten"; }, []);
+  useEffect(() => { document.title = "Ons Werk — ArabDutch | Projecten & Resultaten"; }, []);
   return (
     <main className="pt-20">
       <section className="bg-navy-900 text-white py-24">

@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, Globe, Users, TrendingUp, BookOpen, Handshake, Search, ChevronRight } from "lucide-react";
 import { motion } from "framer-motion";
+import { useEffect } from "react";
 
 const fade = { hidden: { opacity: 0, y: 24 }, visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: "easeOut" as const } } };
 const stagger = { visible: { transition: { staggerChildren: 0.12 } } };
@@ -21,6 +22,7 @@ const cases = [
 ];
 
 export default function Home() {
+  useEffect(() => { document.title = "ArabDutch — Bruggenbouwer tussen Nederland en de Arabische wereld"; }, []);
   return (
     <main className="pt-20">
 
