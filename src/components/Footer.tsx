@@ -5,17 +5,19 @@ export default function Footer() {
   return (
     <footer className="bg-navy-900 text-white pt-16 pb-8">
       <div className="max-w-6xl mx-auto px-6">
-        <div className="grid md:grid-cols-3 gap-12 mb-12">
-          <div>
+        <div className="grid md:grid-cols-4 gap-10 mb-12">
+          <div className="md:col-span-1">
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-9 h-9 rounded-full bg-gold-500 flex items-center justify-center">
-                <span className="text-white font-bold text-sm">AD</span>
-              </div>
+              <img src="/logo.png" alt="ArabDutch" className="w-10 h-10 rounded-full object-cover" />
               <span className="text-white font-semibold text-lg">ArabDutch</span>
             </div>
-            <p className="text-white/60 text-sm leading-relaxed">
+            <p className="text-white/60 text-sm leading-relaxed mb-4">
               Bruggenbouwer tussen Nederland en de Arabische wereld. Cultuur, business en vertrouwen centraal.
             </p>
+            <div className="text-white/30 text-xs space-y-1">
+              <p>KvK: <span className="text-white/50">nader te registreren</span></p>
+              <p>BTW: <span className="text-white/50">nader te registreren</span></p>
+            </div>
           </div>
 
           <div>
@@ -27,6 +29,22 @@ export default function Footer() {
                 { to: "/ons-werk", label: "Ons werk" },
                 { to: "/blog", label: "Blog" },
                 { to: "/contact", label: "Contact" },
+              ].map(l => (
+                <Link key={l.to} to={l.to} className="text-white/60 hover:text-white text-sm transition-colors">
+                  {l.label}
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          <div>
+            <p className="text-gold-400 text-xs font-semibold uppercase tracking-widest mb-4">Juridisch</p>
+            <div className="flex flex-col gap-2">
+              {[
+                { to: "/privacyverklaring", label: "Privacyverklaring" },
+                { to: "/disclaimer", label: "Disclaimer" },
+                { to: "/algemene-voorwaarden", label: "Algemene Voorwaarden" },
+                { to: "/cookiebeleid", label: "Cookiebeleid" },
               ].map(l => (
                 <Link key={l.to} to={l.to} className="text-white/60 hover:text-white text-sm transition-colors">
                   {l.label}
@@ -52,10 +70,12 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-white/10 pt-6 flex flex-col md:flex-row justify-between items-center gap-3">
-          <p className="text-white/40 text-xs">© {new Date().getFullYear()} ArabDutch · Alle rechten voorbehouden</p>
+          <p className="text-white/40 text-xs">© {new Date().getFullYear()} ArabDutch · Alle rechten voorbehouden · Eindhoven, Nederland</p>
           <div className="flex gap-4">
-            <a href="#" className="text-white/40 hover:text-white text-xs transition-colors">Privacy</a>
-            <a href="#" className="text-white/40 hover:text-white text-xs transition-colors">Disclaimer</a>
+            <Link to="/privacyverklaring" className="text-white/40 hover:text-white text-xs transition-colors">Privacy</Link>
+            <Link to="/disclaimer" className="text-white/40 hover:text-white text-xs transition-colors">Disclaimer</Link>
+            <Link to="/algemene-voorwaarden" className="text-white/40 hover:text-white text-xs transition-colors">AV</Link>
+            <Link to="/cookiebeleid" className="text-white/40 hover:text-white text-xs transition-colors">Cookies</Link>
           </div>
         </div>
       </div>

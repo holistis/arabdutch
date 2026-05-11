@@ -7,32 +7,32 @@ const diensten = [
   {
     icon: <Globe className="w-7 h-7" />,
     title: "Interculturele Training",
-    desc: "Helpt individuen en organisaties navigeren in culturele verschillen en diversiteit. Onmisbaar voor teams die internationaal samenwerken of Arabische markten betreden.",
+    desc: "Wij trainen uw team in culturele intelligentie — van communicatiestijlen tot onderhandelingsdynamiek. Onmisbaar wanneer u Arabische markten betreedt of partners uit de regio ontvangt.",
   },
   {
     icon: <Handshake className="w-7 h-7" />,
     title: "Business Matchmaking",
-    desc: "Verbindt bedrijven en professionals om waardevolle zakelijke relaties op te bouwen. Wij kennen de juiste mensen aan beide kanten van de brug.",
+    desc: "U zoekt de juiste partner — wij vinden die voor u. Ons netwerk in Nederland én de Arabische wereld stelt ons in staat gerichte koppelingen te maken die tot echte resultaten leiden.",
   },
   {
     icon: <Search className="w-7 h-7" />,
     title: "Marktonderzoek",
-    desc: "Analyseert consumentenbehoeften en ontwikkelt effectieve marketingstrategieën voor de Arabische markt. Inclusief documentatie, budgetten en lokale regelgeving.",
+    desc: "Voordat u investeert, wilt u weten wat u te wachten staat. Wij leveren diepgaande analyses van Arabische markten: consumentengedrag, regelgeving, concurrentie en lokale nuances.",
   },
   {
     icon: <BookOpen className="w-7 h-7" />,
     title: "Taal & Cultuur Consulting",
-    desc: "Overbrugt communicatiekloven over taal en cultuur heen. Professionele vertaling NL ↔ AR en interculturele begeleiding bij onderhandelingen.",
+    desc: "Taal is meer dan woorden. Wij vertalen NL ↔ AR en begeleiden onderhandelingen, contractbesprekingen en introductiegesprekken — zodat elke boodschap overkomt zoals bedoeld.",
   },
   {
     icon: <TrendingUp className="w-7 h-7" />,
     title: "Lobbying & Advocacy",
-    desc: "Strategische beïnvloeding van besluitvorming voor organisaties of groepen die belangen hebben in zowel Nederland als de Arabische wereld.",
+    desc: "Wij openen deuren die anders gesloten blijven. Via ons netwerk en onze reputatie bij besluitvormers in Nederland én de Arabische wereld beïnvloeden wij beleid in uw voordeel.",
   },
   {
     icon: <Users className="w-7 h-7" />,
     title: "Netwerkevenementen",
-    desc: "Faciliteert nieuwe contacten en versterkt bestaande zakelijke relaties via gerichte evenementen en tours in Nederland en de Arabische regio.",
+    desc: "Wij organiseren gerichte handelsmissies, tours en bijeenkomsten die duurzame zakelijke relaties opleveren — geen eenmalige handshakes, maar verbindingen die stand houden.",
   },
 ];
 
@@ -45,7 +45,7 @@ export default function Diensten() {
           <span className="text-gold-400 text-sm font-semibold uppercase tracking-widest">Wat wij bieden</span>
           <h1 className="text-5xl font-serif font-bold mt-2 max-w-2xl leading-tight">Onze diensten</h1>
           <p className="text-white/70 text-xl mt-4 max-w-2xl">
-            Een realistisch en compleet overzicht van wat ArabDutch voor uw organisatie kan betekenen.
+            Geen standaardpakketten. Elke opdracht is maatwerk — afgestemd op uw markt, uw sector en uw ambities.
           </p>
         </div>
       </section>

@@ -7,12 +7,12 @@ const fade = { hidden: { opacity: 0, y: 24 }, visible: { opacity: 1, y: 0, trans
 const stagger = { visible: { transition: { staggerChildren: 0.12 } } };
 
 const services = [
-  { icon: <Globe className="w-5 h-5" />, title: "Interculturele Training", desc: "Navigeren in culturele verschillen en diversiteit voor duurzame internationale samenwerking." },
-  { icon: <Handshake className="w-5 h-5" />, title: "Business Matchmaking", desc: "Verbinden van bedrijven en professionals aan weerszijden van de brug." },
-  { icon: <Search className="w-5 h-5" />, title: "Marktonderzoek", desc: "Strategisch inzicht in Arabische consumentenmarkten en regelgeving." },
-  { icon: <BookOpen className="w-5 h-5" />, title: "Taal & Cultuur Consulting", desc: "Professionele vertaling en interculturele begeleiding NL ↔ AR." },
-  { icon: <TrendingUp className="w-5 h-5" />, title: "Lobbying & Advocacy", desc: "Strategische beïnvloeding van besluitvorming op twee continenten." },
-  { icon: <Users className="w-5 h-5" />, title: "Netwerkevenementen", desc: "Curated evenementen die echte zakelijke relaties opleveren." },
+  { icon: <Globe className="w-5 h-5" />, title: "Interculturele Training", desc: "Wij trainen uw team in culturele intelligentie — zodat niets onverwacht komt aan de onderhandelingstafel." },
+  { icon: <Handshake className="w-5 h-5" />, title: "Business Matchmaking", desc: "U zoekt de juiste partner. Wij kennen die — aan beide kanten van de brug." },
+  { icon: <Search className="w-5 h-5" />, title: "Marktonderzoek", desc: "Diepgaande analyses van Arabische markten: consumentengedrag, regelgeving en concurrentielandschap." },
+  { icon: <BookOpen className="w-5 h-5" />, title: "Taal & Cultuur Consulting", desc: "Wij vertalen NL ↔ AR en begeleiden onderhandelingen zodat elke boodschap overkomt zoals bedoeld." },
+  { icon: <TrendingUp className="w-5 h-5" />, title: "Lobbying & Advocacy", desc: "Wij openen deuren die anders gesloten blijven — bij besluitvormers op twee continenten." },
+  { icon: <Users className="w-5 h-5" />, title: "Netwerkevenementen", desc: "Gerichte handelsmissies en tours die duurzame relaties opleveren, geen eenmalige handshakes." },
 ];
 
 const cases = [

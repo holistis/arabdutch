@@ -32,7 +32,6 @@ const projecten = [
 
 export default function OnsWerk() {
   useEffect(() => { document.title = "Ons Werk — ArabDutch | Projecten & Resultaten"; }, []);
-  useEffect(() => { document.title = "Ons Werk — ArabDutch | Projecten & Resultaten"; }, []);
   return (
     <main className="pt-20">
       <section className="bg-navy-900 text-white py-24">
@@ -40,7 +39,7 @@ export default function OnsWerk() {
           <span className="text-gold-400 text-sm font-semibold uppercase tracking-widest">Onze resultaten</span>
           <h1 className="text-5xl font-serif font-bold mt-2 max-w-2xl leading-tight">Ons werk</h1>
           <p className="text-white/70 text-xl mt-4 max-w-2xl">
-            Van vastgoed­investeringen tot innovatietours — een greep uit onze projecten.
+            Concrete opdrachten, bewezen resultaten. Dit is een selectie van wat wij voor onze klanten realiseerden.
           </p>
         </div>
       </section>

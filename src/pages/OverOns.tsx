@@ -53,20 +53,20 @@ export default function OverOns() {
           <div>
             <h2 className="text-3xl font-serif font-bold text-navy-900 mb-6">Onze achtergrond</h2>
             <p className="text-gray-600 leading-relaxed mb-4">
-              ArabDutch functioneert als brug tussen Nederland en de Arabische wereld en biedt consultancy en culturele bemiddelingsdiensten. Wij geloven dat succesvolle samenwerking begint met echt begrip.
+              ArabDutch is opgericht door Abdoellah — in Nederland geboren, met diepe culturele wortels in de Arabische wereld. Die tweeledige identiteit is geen bijzaak; het is precies wat ons onderscheidt. Wij spreken beide talen, kennen beide culturen van binnenuit en weten hoe zaken écht gedaan worden aan weerszijden van de brug.
             </p>
             <p className="text-gray-600 leading-relaxed mb-4">
-              De oprichter vestigde ArabDutch vanuit een persoonlijke missie om culturen te verbinden en expertise te delen tussen beide regio's, gebruikmakend van zijn achtergrond als in Nederland geboren professional met sterke Arabische culturele banden.
+              Waar andere adviseurs gebaseerd zijn op theorie, werken wij vanuit vertrouwen en relaties die door de jaren zijn opgebouwd — in Marokko, Saudi-Arabië, Libië, de VAE en Nederland. Ons team van 13 professionals combineert juridische, financiële, taalkundige en zakelijke expertise.
             </p>
             <p className="text-gray-600 leading-relaxed">
-              Wij bieden gespecialiseerde begeleiding op maat voor vrouwen, afgestemd op Arabische culturele voorkeuren, naast onze bredere zakelijke dienstverlening.
+              Wij geloven dat de grootste kansen liggen op het snijvlak van twee werelden. Ons werk is om u daar te brengen — efficiënt, betrouwbaar en met resultaat.
             </p>
           </div>
           <div className="grid grid-cols-1 gap-4">
             {[
-              { icon: <Target className="w-5 h-5" />, title: "Onze missie", text: "Bruggen bouwen tussen Nederland en de Arabische wereld, met aandacht voor cultuur en duurzaamheid." },
-              { icon: <Heart className="w-5 h-5" />, title: "Onze waarden", text: "Vertrouwen, cultureel respect, transparantie en duurzame samenwerking staan centraal in alles wat wij doen." },
-              { icon: <Users className="w-5 h-5" />, title: "Ons netwerk", text: "Een breed netwerk van betrouwbare partners in Nederland, Marokko, Saudi-Arabië, Libië en verder." },
+              { icon: <Target className="w-5 h-5" />, title: "Onze missie", text: "Ondernemers, investeerders en instellingen succesvol verbinden met de Arabische wereld — en andersom. Niet als tussenpersoon, maar als strategische partner." },
+              { icon: <Heart className="w-5 h-5" />, title: "Onze waarden", text: "Vertrouwen gaat boven alles. Wij zeggen wat we doen, en doen wat we zeggen. Cultureel respect, integriteit en langetermijndenken zitten in ons DNA." },
+              { icon: <Users className="w-5 h-5" />, title: "Ons netwerk", text: "Actieve relaties met ondernemers, overheden en investeerders in Marokko, Saudi-Arabië, Libië, de VAE en Nederland — opgebouwd door jaren aanwezig te zijn." },
             ].map((v, i) => (
               <motion.div key={i}
                 initial={{ opacity: 0, x: 20 }}
@@ -91,7 +91,7 @@ export default function OverOns() {
         <div className="max-w-6xl mx-auto px-6">
           <h2 className="text-3xl font-serif font-bold text-navy-900 text-center mb-4">Ons team</h2>
           <p className="text-gray-500 text-center max-w-2xl mx-auto mb-16">
-            Samen vormen wij een toegewijd team dat streeft naar professionaliteit, efficiëntie en duurzame samenwerking tussen Nederland en de Arabische wereld.
+            Dertien professionals. Twee continenten. Één gemeenschappelijk doel: uw project laten slagen.
           </p>
 
           <div className="flex flex-col gap-12">
@@ -122,7 +122,7 @@ export default function OverOns() {
 
           <div className="mt-16 bg-navy-900 text-white rounded-2xl p-8">
             <p className="text-gray-300 leading-relaxed text-center max-w-3xl mx-auto">
-              Daarnaast werken wij nauw samen met sterke partners en stakeholders in zowel Nederland als de Arabische wereld. Deze samenwerking stelt ons in staat om extra waarde te leveren, toegang te bieden tot een breed netwerk en succesvolle verbindingen te creëren voor al onze klanten.
+              Naast ons vaste team werken wij samen met een selecte groep vertrouwde partners en specialisten in Nederland en de Arabische wereld. Dat stelt ons in staat om élke opdracht — hoe specifiek ook — met de juiste expertise aan te pakken.
             </p>
           </div>
         </div>
