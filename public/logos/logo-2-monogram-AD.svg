@@ -1,52 +1,55 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 280" width="400" height="280">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 320" width="500" height="320">
   <defs>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Amiri+Quran&family=Amiri:wght@700&display=swap');</style>
     <linearGradient id="g2" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#E8C16C"/>
-      <stop offset="1" stop-color="#A67C1E"/>
+      <stop offset="0" stop-color="#F0CC74"/>
+      <stop offset="1" stop-color="#8B6515"/>
     </linearGradient>
+    <radialGradient id="bgGlow" cx="0.5" cy="0.5">
+      <stop offset="0" stop-color="#1A2744"/>
+      <stop offset="1" stop-color="#0F1A30"/>
+    </radialGradient>
   </defs>
-  <rect width="400" height="280" fill="#0F1A30"/>
+  <rect width="500" height="320" fill="url(#bgGlow)"/>
 
-  <!-- Outer circular medallion -->
-  <circle cx="200" cy="140" r="110" fill="none" stroke="url(#g2)" stroke-width="2"/>
-  <circle cx="200" cy="140" r="103" fill="none" stroke="#D4A847" stroke-width="0.5" opacity="0.5"/>
+  <!-- Outer ornate medallion -->
+  <circle cx="250" cy="160" r="130" fill="none" stroke="url(#g2)" stroke-width="2.5"/>
+  <circle cx="250" cy="160" r="120" fill="none" stroke="#D4A847" stroke-width="0.6" opacity="0.5"/>
+  <circle cx="250" cy="160" r="113" fill="none" stroke="#D4A847" stroke-width="0.4" opacity="0.3"/>
 
-  <!-- Islamic geometric pattern dots around -->
+  <!-- 8-point star pattern around medallion -->
   <g fill="#D4A847">
-    <circle cx="200" cy="30" r="2.5"/>
-    <circle cx="200" cy="250" r="2.5"/>
-    <circle cx="90" cy="140" r="2.5"/>
-    <circle cx="310" cy="140" r="2.5"/>
-    <circle cx="278" cy="62" r="2"/>
-    <circle cx="122" cy="62" r="2"/>
-    <circle cx="278" cy="218" r="2"/>
-    <circle cx="122" cy="218" r="2"/>
+    <polygon points="250,28 252,33 257,33 253,36 255,41 250,38 245,41 247,36 243,33 248,33"/>
+    <polygon points="250,292 252,287 257,287 253,284 255,279 250,282 245,279 247,284 243,287 248,287"/>
+    <polygon points="118,160 123,158 123,153 126,157 131,155 128,160 131,165 126,163 123,167 123,162"/>
+    <polygon points="382,160 377,158 377,153 374,157 369,155 372,160 369,165 374,163 377,167 377,162"/>
   </g>
 
-  <!-- Decorative arch top of medallion -->
-  <path d="M 130 70 Q 200 40 270 70" fill="none" stroke="url(#g2)" stroke-width="1.5" opacity="0.8"/>
+  <!-- Decorative dots around -->
+  <g fill="#D4A847" opacity="0.7">
+    <circle cx="343" cy="67" r="2"/>
+    <circle cx="157" cy="67" r="2"/>
+    <circle cx="343" cy="253" r="2"/>
+    <circle cx="157" cy="253" r="2"/>
+  </g>
 
-  <!-- Arabic calligraphy in center -->
-  <text x="200" y="170" font-family="'Amiri', 'Scheherazade New', 'Noto Naskh Arabic', serif"
-        font-size="68" fill="url(#g2)" text-anchor="middle" font-weight="700"
+  <!-- Islamic geometric arch top -->
+  <path d="M 165 95 Q 250 50 335 95" fill="none" stroke="url(#g2)" stroke-width="1.2"/>
+  <path d="M 175 100 Q 250 65 325 100" fill="none" stroke="#D4A847" stroke-width="0.5" opacity="0.5"/>
+
+  <!-- Classical Quranic Arabic calligraphy -->
+  <text x="250" y="195" font-family="'Amiri Quran', 'Amiri', serif"
+        font-size="78" fill="url(#g2)" text-anchor="middle" font-weight="700"
         direction="rtl">
     عرب داتش
   </text>
 
-  <!-- Inner ornamental star -->
-  <g transform="translate(200 215)" fill="#D4A847">
-    <polygon points="0,-7 2,-2 7,-2 3,2 5,7 0,4 -5,7 -3,2 -7,-2 -2,-2"/>
-  </g>
+  <!-- Inner decorative line -->
+  <line x1="180" y1="220" x2="320" y2="220" stroke="url(#g2)" stroke-width="0.8"/>
+  <polygon points="250,217 254,220 250,223 246,220" fill="#D4A847"/>
 
-  <!-- Side ornaments -->
-  <g transform="translate(120 140)" fill="#D4A847" opacity="0.6">
-    <circle r="1.5"/>
-    <circle cx="-8" r="1"/>
-    <circle cx="-16" r="0.7"/>
-  </g>
-  <g transform="translate(280 140)" fill="#D4A847" opacity="0.6">
-    <circle r="1.5"/>
-    <circle cx="8" r="1"/>
-    <circle cx="16" r="0.7"/>
+  <!-- Below medallion ornament -->
+  <g transform="translate(250 305)" fill="#D4A847">
+    <path d="M -20 0 Q 0 -8 20 0 Q 0 5 -20 0 Z" stroke="#D4A847" stroke-width="0.5"/>
   </g>
 </svg>

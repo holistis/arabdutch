@@ -1,7 +1,7 @@
 import { useParams, Link, Navigate } from "react-router-dom";
 import { ArrowLeft, Calendar, Tag } from "lucide-react";
 import { motion } from "framer-motion";
-import posts, { Section } from "../data/blogPosts";
+import posts, { type Section } from "../data/blogPosts";
 
 function renderSection(s: Section, i: number) {
   switch (s.type) {

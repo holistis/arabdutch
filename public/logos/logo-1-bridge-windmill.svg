@@ -1,44 +1,59 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 280" width="400" height="280">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 320" width="500" height="320">
   <defs>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@700&display=swap');</style>
     <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#E8C16C"/>
+      <stop offset="0" stop-color="#F0CC74"/>
       <stop offset="0.5" stop-color="#D4A847"/>
-      <stop offset="1" stop-color="#A67C1E"/>
+      <stop offset="1" stop-color="#8B6515"/>
     </linearGradient>
   </defs>
-  <rect width="400" height="280" fill="#0F1A30"/>
+  <rect width="500" height="320" fill="#0F1A30"/>
 
-  <!-- Decorative top arch -->
-  <path d="M 100 70 Q 200 30 300 70" fill="none" stroke="url(#g1)" stroke-width="1.5" opacity="0.7"/>
-  <path d="M 110 75 Q 200 40 290 75" fill="none" stroke="#D4A847" stroke-width="0.5" opacity="0.4"/>
+  <!-- Ornate decorative border top -->
+  <g stroke="url(#g1)" fill="none">
+    <path d="M 60 50 Q 250 25 440 50" stroke-width="1.2"/>
+    <path d="M 70 60 Q 250 38 430 60" stroke-width="0.5" opacity="0.5"/>
+  </g>
+  <g fill="#D4A847">
+    <circle cx="60" cy="50" r="3"/>
+    <circle cx="440" cy="50" r="3"/>
+    <circle cx="250" cy="28" r="2"/>
+    <circle cx="155" cy="35" r="1.5"/>
+    <circle cx="345" cy="35" r="1.5"/>
+  </g>
 
-  <!-- Bold Arabic Calligraphy - Centerpiece -->
-  <text x="200" y="170" font-family="'Amiri', 'Scheherazade New', 'Noto Naskh Arabic', 'Times New Roman', serif"
-        font-size="100" fill="url(#g1)" text-anchor="middle" font-weight="700"
-        direction="rtl" style="font-feature-settings: 'liga' on, 'calt' on;">
+  <!-- Ruqaa-style Arabic calligraphy -->
+  <text x="250" y="190" font-family="'Aref Ruqaa', 'Amiri', serif"
+        font-size="120" fill="url(#g1)" text-anchor="middle" font-weight="700"
+        direction="rtl">
     عرب داتش
   </text>
 
-  <!-- Bridge underline -->
-  <path d="M 80 200 Q 200 230 320 200" fill="none" stroke="url(#g1)" stroke-width="2.5" stroke-linecap="round"/>
-  <line x1="80" y1="200" x2="320" y2="200" stroke="#D4A847" stroke-width="0.5" opacity="0.5"/>
+  <!-- Bridge below -->
+  <path d="M 90 230 Q 250 265 410 230" fill="none" stroke="url(#g1)" stroke-width="3" stroke-linecap="round"/>
+  <path d="M 90 230 Q 250 255 410 230" fill="none" stroke="#D4A847" stroke-width="0.5" opacity="0.5"/>
+  <line x1="90" y1="230" x2="410" y2="230" stroke="url(#g1)" stroke-width="1.5"/>
 
-  <!-- Windmill on left of bridge -->
-  <g transform="translate(85 200)">
-    <circle r="3" fill="#D4A847"/>
-    <line x1="0" y1="0" x2="0" y2="-18" stroke="#D4A847" stroke-width="2.2" stroke-linecap="round"/>
-    <line x1="0" y1="0" x2="16" y2="9" stroke="#D4A847" stroke-width="2.2" stroke-linecap="round"/>
-    <line x1="0" y1="0" x2="-16" y2="9" stroke="#D4A847" stroke-width="2.2" stroke-linecap="round"/>
-    <line x1="0" y1="0" x2="16" y2="-9" stroke="#D4A847" stroke-width="2.2" stroke-linecap="round"/>
+  <!-- Windmill -->
+  <g transform="translate(95 230)">
+    <circle r="3.5" fill="#D4A847"/>
+    <line x1="0" y1="0" x2="0" y2="-22" stroke="#D4A847" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="0" y1="0" x2="19" y2="11" stroke="#D4A847" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="0" y1="0" x2="-19" y2="11" stroke="#D4A847" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="0" y1="0" x2="19" y2="-11" stroke="#D4A847" stroke-width="2.5" stroke-linecap="round"/>
   </g>
 
-  <!-- Crescent on right of bridge -->
-  <g transform="translate(315 200)">
-    <path d="M 0 -14 A 14 14 0 1 0 0 14 A 11 11 0 1 1 0 -14" fill="url(#g1)"/>
+  <!-- Crescent -->
+  <g transform="translate(405 230)">
+    <path d="M 0 -16 A 16 16 0 1 0 0 16 A 13 13 0 1 1 0 -16" fill="url(#g1)"/>
   </g>
 
-  <!-- Decorative dots -->
-  <circle cx="200" cy="225" r="2" fill="#D4A847"/>
-  <circle cx="180" cy="225" r="1.5" fill="#D4A847" opacity="0.6"/>
-  <circle cx="220" cy="225" r="1.5" fill="#D4A847" opacity="0.6"/>
+  <!-- Bottom ornament -->
+  <g transform="translate(250 275)" fill="#D4A847">
+    <polygon points="0,-5 4,0 0,5 -4,0"/>
+    <circle cx="-15" r="1.5" opacity="0.7"/>
+    <circle cx="15" r="1.5" opacity="0.7"/>
+    <circle cx="-28" r="1" opacity="0.5"/>
+    <circle cx="28" r="1" opacity="0.5"/>
+  </g>
 </svg>
