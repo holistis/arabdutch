@@ -1,48 +1,5 @@
 import { motion } from "framer-motion";
-import { Check } from "lucide-react";
-
-const logos = [
-  {
-    nummer: 1,
-    naam: "Klassieke Calligrafie",
-    bestand: "/logos/logo-1-bridge-windmill.svg",
-    beschrijving:
-      "Bold Arabische calligrafie met daaronder een brug die de windmolen en halve maan verbindt. Krachtig en direct.",
-    tags: ["Calligrafie", "Brug", "Windmolen"],
-  },
-  {
-    nummer: 2,
-    naam: "Medaillon",
-    bestand: "/logos/logo-2-monogram-AD.svg",
-    beschrijving:
-      "Arabische letters in een rond medaillon met islamitische geometrische ornamenten. Formeel en tijdloos.",
-    tags: ["Medaillon", "Geometrisch", "Premium"],
-  },
-  {
-    nummer: 3,
-    naam: "Skyline",
-    bestand: "/logos/logo-3-skyline.svg",
-    beschrijving:
-      "Visueel verhaal: Hollandse windmolen, brug en Arabische koepel boven de Arabische naam. Vol karakter.",
-    tags: ["Verhaal", "Skyline", "Cultuur"],
-  },
-  {
-    nummer: 4,
-    naam: "Moorse Boog",
-    bestand: "/logos/logo-4-shield-emblem.svg",
-    beschrijving:
-      "Stijlvolle Moorse/Andalusische puntboog met halve maan-finial, geometrisch ornament en Arabische naam centraal.",
-    tags: ["Moors", "Architectuur", "Heraldisch"],
-  },
-  {
-    nummer: 5,
-    naam: "Minimaal & Bold",
-    bestand: "/logos/logo-5-minimal-wordmark.svg",
-    beschrijving:
-      "Grote Arabische calligrafie als hoofdelement, subtiele brug-windmolen-halve maan boven. Modern en strak.",
-    tags: ["Minimalistisch", "Modern", "Bold"],
-  },
-];
+import { AlertCircle, Check } from "lucide-react";
 
 export default function Logos() {
   return (
@@ -50,72 +7,94 @@ export default function Logos() {
       <section className="bg-navy-900 text-white py-24">
         <div className="max-w-6xl mx-auto px-6">
           <span className="text-gold-400 text-sm font-semibold uppercase tracking-widest">
-            Logo Keuze
+            Logo Concept
           </span>
-          <h1 className="text-5xl font-serif font-bold mt-2">Vijf concepten</h1>
+          <h1 className="text-5xl font-serif font-bold mt-2">AI Calligrafie</h1>
           <p className="text-gray-300 mt-4 max-w-2xl">
-            Alle vijf logo's gebruiken stijlvolle Arabische calligrafie (عرب داتش)
-            als hoofdelement, gecombineerd met brug, windmolen en halve maan.
-            Kies de variant die het beste bij ArabDutch past.
+            Stijl: klassieke gouden calligrafie, ornamenteel medaillon, windmolen + brug + halve maan.
           </p>
         </div>
       </section>
 
       <section className="py-24 bg-white">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-10">
-            {logos.map((logo, i) => (
-              <motion.div
-                key={logo.nummer}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                className="bg-gray-50 rounded-2xl overflow-hidden border border-transparent hover:border-gold-500/30 transition-colors"
-              >
-                <div className="bg-navy-900 p-6 flex items-center justify-center">
-                  <img
-                    src={logo.bestand}
-                    alt={logo.naam}
-                    className="w-full max-w-md"
-                  />
-                </div>
-                <div className="p-8">
-                  <div className="flex items-center gap-3 mb-3">
-                    <span className="bg-gold-500 text-navy-900 text-sm font-bold w-8 h-8 rounded-full flex items-center justify-center">
-                      {logo.nummer}
-                    </span>
-                    <h2 className="font-bold text-navy-900 text-2xl">
-                      {logo.naam}
-                    </h2>
-                  </div>
-                  <p className="text-gray-600 leading-relaxed mb-4">
-                    {logo.beschrijving}
-                  </p>
-                  <div className="flex flex-wrap gap-2">
-                    {logo.tags.map((tag) => (
-                      <span
-                        key={tag}
-                        className="bg-gold-500/10 text-gold-600 text-xs font-semibold px-3 py-1 rounded-full"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </motion.div>
-            ))}
+        <div className="max-w-4xl mx-auto px-6">
+
+          {/* Main AI generated logo */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="bg-navy-900 rounded-2xl overflow-hidden mb-8"
+          >
+            <img
+              src="/logos/ai-calligraphy-v1.png"
+              alt="AI Calligrafie concept"
+              className="w-full max-w-lg mx-auto block p-8"
+            />
+          </motion.div>
+
+          {/* Warning about Arabic text */}
+          <div className="bg-amber-50 border border-amber-200 rounded-2xl p-6 mb-10 flex gap-4">
+            <AlertCircle className="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5" />
+            <div>
+              <p className="font-semibold text-amber-800 mb-1">Arabische tekst klopt niet helemaal</p>
+              <p className="text-amber-700 text-sm leading-relaxed">
+                De AI heeft de letters niet correct gespeld — het staat er niet als <strong>عرب داتش</strong>.
+                Genereer een nieuwe versie met onderstaande prompt en het wordt perfect.
+              </p>
+            </div>
           </div>
 
-          <div className="mt-16 bg-navy-900 text-white rounded-2xl p-10 text-center">
-            <Check className="w-8 h-8 text-gold-400 mx-auto mb-4" />
-            <h3 className="text-2xl font-serif font-bold mb-3">Welke is het?</h3>
-            <p className="text-gray-300 max-w-2xl mx-auto">
-              Laat me weten welk nummer je kiest (of welke combinatie van
-              elementen) — dan werken we die uit als het definitieve logo in PNG,
-              SVG en favicon-formaat.
-            </p>
+          {/* Style verdict */}
+          <div className="bg-green-50 border border-green-200 rounded-2xl p-6 mb-10 flex gap-4">
+            <Check className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
+            <div>
+              <p className="font-semibold text-green-800 mb-1">Stijl is perfect</p>
+              <p className="text-green-700 text-sm leading-relaxed">
+                Gouden calligrafie + ornamenteel medaillon met 8-punt sterren + windmolen + brug + halve maan — dit is exact de richting.
+                Genereer met de prompt hieronder voor correcte Arabische spelling.
+              </p>
+            </div>
           </div>
+
+          {/* Prompt to generate correct version */}
+          <div className="bg-navy-900 text-white rounded-2xl p-8 mb-10">
+            <h2 className="font-serif font-bold text-2xl text-gold-400 mb-4">
+              Prompt voor correcte versie
+            </h2>
+            <p className="text-gray-300 text-sm mb-4">Plak dit in ChatGPT (GPT-4o) of Adobe Firefly:</p>
+            <pre className="bg-black/30 rounded-xl p-5 text-gold-400 text-sm leading-relaxed whitespace-pre-wrap font-mono">
+{`Premium consultancy logo: circular ornate golden medallion
+with Islamic 8-point star border on deep navy blue background.
+Inside the medallion: large classical Arabic Thuluth calligraphy
+spelling exactly "عرب داتش" in flowing gold strokes.
+Below the calligraphy inside the circle: a detailed Dutch
+windmill on the left, an elegant arched bridge in the center,
+and an Islamic crescent moon on the right — all in gold.
+Symmetrical, McKinsey-level premium, like an Ottoman imperial
+seal. Gold (#D4A847) on navy (#0F1A30). Isolated logo,
+no background, ultra detailed, vector clean style.`}
+            </pre>
+          </div>
+
+          {/* Next steps */}
+          <div className="bg-gray-50 rounded-2xl p-8">
+            <h2 className="font-bold text-navy-900 text-xl mb-4">Volgende stap</h2>
+            <ol className="space-y-3 text-gray-600">
+              <li className="flex gap-3">
+                <span className="bg-gold-500 text-navy-900 font-bold w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 text-sm">1</span>
+                Genereer nieuwe versie met bovenstaande prompt (focus op exacte Arabische spelling)
+              </li>
+              <li className="flex gap-3">
+                <span className="bg-gold-500 text-navy-900 font-bold w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 text-sm">2</span>
+                Sla op als <code className="bg-gray-200 px-2 py-0.5 rounded text-sm">public/logos/ai-calligraphy-v2.png</code>
+              </li>
+              <li className="flex gap-3">
+                <span className="bg-gold-500 text-navy-900 font-bold w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 text-sm">3</span>
+                Laat me weten — ik werk het dan uit als definitief logo, favicon en site-header
+              </li>
+            </ol>
+          </div>
+
         </div>
       </section>
     </main>
