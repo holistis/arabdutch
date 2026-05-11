@@ -7,8 +7,9 @@ const links = [
   { to: "/over-ons", label: "Over ons" },
   { to: "/diensten", label: "Diensten" },
   { to: "/ons-werk", label: "Ons werk" },
+  { to: "/inzichten", label: "Inzichten" },
+  { to: "/landen", label: "Landengidsen" },
   { to: "/blog", label: "Blog" },
-  { to: "/contact", label: "Contact" },
 ];
 
 export default function Navbar() {

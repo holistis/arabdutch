@@ -14,6 +14,9 @@ import Privacyverklaring from "./pages/Privacyverklaring";
 import Disclaimer from "./pages/Disclaimer";
 import AlgemeneVoorwaarden from "./pages/AlgemeneVoorwaarden";
 import Cookiebeleid from "./pages/Cookiebeleid";
+import Inzichten from "./pages/Inzichten";
+import Landen from "./pages/Landen";
+import LandGids from "./pages/LandGids";
 
 export default function App() {
   return (
@@ -32,6 +35,9 @@ export default function App() {
         <Route path="/disclaimer" element={<Disclaimer />} />
         <Route path="/algemene-voorwaarden" element={<AlgemeneVoorwaarden />} />
         <Route path="/cookiebeleid" element={<Cookiebeleid />} />
+        <Route path="/inzichten" element={<Inzichten />} />
+        <Route path="/landen" element={<Landen />} />
+        <Route path="/landen/:slug" element={<LandGids />} />
       </Routes>
       <Footer />
       <CookieBanner />
