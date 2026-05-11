@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" width="400" height="240">
+  <defs>
+    <linearGradient id="gold5" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#D4A847"/>
+      <stop offset="1" stop-color="#A67C1E"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="240" fill="#0F1A30"/>
+
+  <!-- Subtle bridge arch above wordmark -->
+  <path d="M 90 100 Q 200 50 310 100" fill="none" stroke="url(#gold5)" stroke-width="1.5" stroke-linecap="round"/>
+
+  <!-- Tiny windmill blades at left of arch -->
+  <g transform="translate(95 100)">
+    <circle r="2" fill="#D4A847"/>
+    <line x1="0" y1="0" x2="0" y2="-10" stroke="#D4A847" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="0" y1="0" x2="9" y2="5" stroke="#D4A847" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="0" y1="0" x2="-9" y2="5" stroke="#D4A847" stroke-width="1.5" stroke-linecap="round"/>
+  </g>
+
+  <!-- Tiny crescent at right of arch -->
+  <g transform="translate(305 100)">
+    <path d="M 0 -8 A 8 8 0 1 0 0 8 A 6 6 0 1 1 0 -8" fill="#D4A847"/>
+  </g>
+
+  <!-- Big wordmark -->
+  <text x="200" y="155" font-family="Georgia, serif" font-size="48" fill="#FFFFFF" text-anchor="middle" font-weight="400" letter-spacing="3">Arab<tspan fill="url(#gold5)" font-weight="700">Dutch</tspan></text>
+
+  <!-- Bridge underline below wordmark -->
+  <path d="M 100 175 Q 200 195 300 175" fill="none" stroke="url(#gold5)" stroke-width="2" stroke-linecap="round"/>
+  <line x1="100" y1="175" x2="300" y2="175" stroke="#D4A847" stroke-width="0.5" opacity="0.4"/>
+
+  <!-- Arabic + tagline -->
+  <text x="200" y="210" font-family="Arial, sans-serif" font-size="16" fill="#D4A847" text-anchor="middle" letter-spacing="4">عرب داتش</text>
+</svg>
