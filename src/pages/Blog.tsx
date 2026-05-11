@@ -1,32 +1,7 @@
 import { Calendar, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
-
-const posts = [
-  {
-    datum: "14 oktober 2025",
-    tag: "Investering",
-    titel: "Van Nederland naar Marokko: waarom slimme investeerders kiezen voor Temara",
-    excerpt: "Nieuwe contacten, groeiende kansen en vastgoed in Marokko: Temara & Rabat in de spotlight.",
-  },
-  {
-    datum: "9 september 2025",
-    tag: "Innovatie",
-    titel: "Bruggen bouwen met innovatie: een succesvolle klantentour uit Saoedi-Arabië en Libië",
-    excerpt: "Onlangs begeleidde ArabDutch een bijzondere klantentour met bezoeken aan Hoogendoorn en LetsGrow voor agritech-technologieën.",
-  },
-  {
-    datum: "13 mei 2025",
-    tag: "Partnership",
-    titel: "Partnership met Manea Saoedi-Arabië",
-    excerpt: "ArabDutch & Manea — een nieuwe stap richting cybersecurity-uitbreiding in Afrika.",
-  },
-  {
-    datum: "31 juli 2024",
-    tag: "Cultuur & Reizen",
-    titel: "Fossielen zoeken en ontspannen in de Ourika Vallei",
-    excerpt: "Een onvergetelijke fossielenreis naar Marokko — georganiseerd door ArabDutch.",
-  },
-];
+import { Link } from "react-router-dom";
+import posts from "../data/blogPosts";
 
 export default function Blog() {
   return (
@@ -46,19 +21,31 @@ export default function Blog() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                className="group bg-gray-50 rounded-2xl p-8 hover:bg-gold-500/5 transition-colors border border-transparent hover:border-gold-500/20 cursor-pointer">
-                <div className="flex items-center gap-3 mb-4">
-                  <span className="bg-gold-500/10 text-gold-500 text-xs font-semibold px-3 py-1 rounded-full">{p.tag}</span>
-                  <span className="flex items-center gap-1 text-gray-400 text-xs">
-                    <Calendar className="w-3 h-3" /> {p.datum}
-                  </span>
-                </div>
-                <h2 className="font-bold text-navy-900 text-xl mb-3 leading-tight group-hover:text-gold-500 transition-colors">{p.titel}</h2>
-                <p className="text-gray-500 leading-relaxed mb-4">{p.excerpt}</p>
-                <span className="inline-flex items-center gap-1 text-gold-500 text-sm font-semibold group-hover:gap-2 transition-all">
-                  Lees meer <ArrowRight className="w-4 h-4" />
-                </span>
+                transition={{ delay: i * 0.1 }}>
+                <Link
+                  to={`/blog/${p.slug}`}
+                  className="group block h-full bg-gray-50 rounded-2xl overflow-hidden hover:bg-gold-500/5 transition-colors border border-transparent hover:border-gold-500/20">
+                  {p.afbeelding && (
+                    <img
+                      src={p.afbeelding}
+                      alt={p.titel}
+                      className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                  )}
+                  <div className="p-8">
+                    <div className="flex items-center gap-3 mb-4">
+                      <span className="bg-gold-500/10 text-gold-500 text-xs font-semibold px-3 py-1 rounded-full">{p.tag}</span>
+                      <span className="flex items-center gap-1 text-gray-400 text-xs">
+                        <Calendar className="w-3 h-3" /> {p.datum}
+                      </span>
+                    </div>
+                    <h2 className="font-bold text-navy-900 text-xl mb-3 leading-tight group-hover:text-gold-500 transition-colors">{p.titel}</h2>
+                    <p className="text-gray-500 leading-relaxed mb-4">{p.excerpt}</p>
+                    <span className="inline-flex items-center gap-1 text-gold-500 text-sm font-semibold group-hover:gap-2 transition-all">
+                      Lees meer <ArrowRight className="w-4 h-4" />
+                    </span>
+                  </div>
+                </Link>
               </motion.article>
             ))}
           </div>
