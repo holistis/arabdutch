@@ -19,9 +19,7 @@ export default function Navbar() {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-navy-900/95 backdrop-blur border-b border-white/10">
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-3">
-          <div className="w-9 h-9 rounded-full bg-gold-500 flex items-center justify-center">
-            <span className="text-white font-bold text-sm">AD</span>
-          </div>
+          <img src="/logo.png" alt="ArabDutch" className="w-11 h-11 rounded-full object-cover" />
           <span className="text-white font-semibold text-lg tracking-wide">ArabDutch</span>
         </Link>
 

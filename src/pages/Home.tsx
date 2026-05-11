@@ -34,7 +34,11 @@ export default function Home() {
           style={{ background: "radial-gradient(circle, #C4952A 0%, transparent 70%)" }} />
 
         <div className="max-w-6xl mx-auto px-6 py-32 relative z-10 w-full">
-          <motion.div initial="hidden" animate="visible" variants={stagger} className="max-w-4xl">
+          <motion.div initial="hidden" animate="visible" variants={stagger} className="flex flex-col md:flex-row items-center gap-16">
+          <motion.div variants={fade} className="flex-shrink-0 hidden md:block">
+            <img src="/logo.png" alt="ArabDutch logo" className="w-72 h-72 rounded-full object-cover shadow-2xl shadow-gold-500/20" />
+          </motion.div>
+          <motion.div initial="hidden" animate="visible" variants={stagger} className="max-w-2xl">
             <motion.div variants={fade} className="flex items-center gap-3 mb-8">
               <div className="h-px w-8 bg-gold-500" />
               <span className="text-gold-400 text-xs font-semibold uppercase tracking-[0.2em]">
@@ -62,6 +66,7 @@ export default function Home() {
                 Gesprek plannen <ChevronRight className="w-4 h-4" />
               </Link>
             </motion.div>
+          </motion.div>
           </motion.div>
 
           {/* stats bar */}
