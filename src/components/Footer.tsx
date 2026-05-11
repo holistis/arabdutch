@@ -1,7 +1,9 @@
 import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 export default function Footer() {
+  const { t } = useTranslation();
   return (
     <footer className="bg-navy-900 text-white pt-16 pb-8">
       <div className="max-w-6xl mx-auto px-6">
@@ -12,33 +14,33 @@ export default function Footer() {
               <span className="text-white font-semibold text-lg">ArabDutch</span>
             </div>
             <p className="text-white/60 text-sm leading-relaxed mb-4">
-              Bruggenbouwer tussen Nederland en de Arabische wereld. Cultuur, business en vertrouwen centraal.
+              {t("footer.tagline")}
             </p>
             <div className="text-white/30 text-xs space-y-1">
-              <p>KvK: <span className="text-white/50">nader te registreren</span></p>
-              <p>BTW: <span className="text-white/50">nader te registreren</span></p>
+              <p>KvK: <span className="text-white/50">86816632</span></p>
+              <p>BTW: <span className="text-white/50">NL004319767B61</span></p>
             </div>
           </div>
 
           <div>
-            <p className="text-gold-400 text-xs font-semibold uppercase tracking-widest mb-4">Navigatie</p>
+            <p className="text-gold-400 text-xs font-semibold uppercase tracking-widest mb-4">{t("footer.nav")}</p>
             <div className="flex flex-col gap-2">
               {[
-                { to: "/over-ons", label: "Over ons" },
-                { to: "/diensten", label: "Diensten" },
-                { to: "/ons-werk", label: "Ons werk" },
-                { to: "/blog", label: "Blog" },
-                { to: "/contact", label: "Contact" },
+                { to: "/over-ons", key: "nav.about" },
+                { to: "/diensten", key: "nav.services" },
+                { to: "/ons-werk", key: "nav.work" },
+                { to: "/blog", key: "nav.blog" },
+                { to: "/contact", key: "nav.contact" },
               ].map(l => (
                 <Link key={l.to} to={l.to} className="text-white/60 hover:text-white text-sm transition-colors">
-                  {l.label}
+                  {t(l.key)}
                 </Link>
               ))}
             </div>
           </div>
 
           <div>
-            <p className="text-gold-400 text-xs font-semibold uppercase tracking-widest mb-4">Juridisch</p>
+            <p className="text-gold-400 text-xs font-semibold uppercase tracking-widest mb-4">{t("footer.legal")}</p>
             <div className="flex flex-col gap-2">
               {[
                 { to: "/privacyverklaring", label: "Privacyverklaring" },
@@ -54,7 +56,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <p className="text-gold-400 text-xs font-semibold uppercase tracking-widest mb-4">Contact</p>
+            <p className="text-gold-400 text-xs font-semibold uppercase tracking-widest mb-4">{t("footer.contact")}</p>
             <div className="flex flex-col gap-3">
               <a href="mailto:info@arabdutch.com" className="flex items-center gap-2 text-white/60 hover:text-white text-sm transition-colors">
                 <Mail className="w-4 h-4" /> info@arabdutch.com
@@ -70,7 +72,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-white/10 pt-6 flex flex-col md:flex-row justify-between items-center gap-3">
-          <p className="text-white/40 text-xs">© {new Date().getFullYear()} ArabDutch · Alle rechten voorbehouden · Eindhoven, Nederland</p>
+          <p className="text-white/40 text-xs">© {new Date().getFullYear()} AO Services (ArabDutch) · {t("footer.rights")} · Eindhoven</p>
           <div className="flex gap-4">
             <Link to="/privacyverklaring" className="text-white/40 hover:text-white text-xs transition-colors">Privacy</Link>
             <Link to="/disclaimer" className="text-white/40 hover:text-white text-xs transition-colors">Disclaimer</Link>

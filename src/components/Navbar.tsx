@@ -1,48 +1,54 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
-
-const links = [
-  { to: "/", label: "Home" },
-  { to: "/over-ons", label: "Over ons" },
-  { to: "/diensten", label: "Diensten" },
-  { to: "/ons-werk", label: "Ons werk" },
-  { to: "/inzichten", label: "Inzichten" },
-  { to: "/landen", label: "Landengidsen" },
-  { to: "/blog", label: "Blog" },
-];
+import { useTranslation } from "react-i18next";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const { pathname } = useLocation();
+  const { t } = useTranslation();
+
+  const links = [
+    { to: "/", key: "nav.home" },
+    { to: "/over-ons", key: "nav.about" },
+    { to: "/diensten", key: "nav.services" },
+    { to: "/ons-werk", key: "nav.work" },
+    { to: "/inzichten", key: "nav.insights" },
+    { to: "/landen", key: "nav.countries" },
+    { to: "/blog", key: "nav.blog" },
+  ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-navy-900/95 backdrop-blur border-b border-white/10">
+    <nav className="fixed top-0 left-0 right-0 z-50 glass-dark border-b border-gold-500/10">
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-        <Link to="/" className="flex items-center gap-3">
-          <img src="/logo.png" alt="ArabDutch" className="w-11 h-11 rounded-full object-cover" />
-          <span className="text-white font-semibold text-lg tracking-wide">ArabDutch</span>
+        <Link to="/" className="flex items-center gap-3 group">
+          <div className="relative">
+            <div className="absolute inset-0 rounded-full bg-gold-500/40 blur-md group-hover:bg-gold-500/60 transition-all" />
+            <img src="/logo.png" alt="ArabDutch" className="relative w-11 h-11 rounded-full object-cover ring-2 ring-gold-500/40 group-hover:ring-gold-500/80 transition-all" />
+          </div>
+          <span className="text-white font-semibold text-lg tracking-wide group-hover:text-gold-300 transition-colors">ArabDutch</span>
         </Link>
 
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden md:flex items-center gap-6">
           {links.map(l => (
             <Link
               key={l.to}
               to={l.to}
-              className={`text-sm font-medium transition-colors ${
-                pathname === l.to
-                  ? "text-gold-400"
-                  : "text-white/70 hover:text-white"
+              className={`relative text-sm font-medium transition-colors ${
+                pathname === l.to ? "text-gold-400" : "text-white/70 hover:text-white"
               }`}
             >
-              {l.label}
+              {t(l.key)}
+              {pathname === l.to && <span className="absolute -bottom-1 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold-400 to-transparent" />}
             </Link>
           ))}
+          <LanguageSwitcher />
           <Link
             to="/contact"
-            className="bg-gold-500 hover:bg-gold-600 text-white text-sm font-semibold px-5 py-2 rounded-full transition-colors"
+            className="btn-shine bg-gradient-to-r from-gold-500 to-gold-600 hover:from-gold-400 hover:to-gold-500 text-white text-sm font-semibold px-5 py-2 rounded-full transition-all shadow-lg shadow-gold-500/30 hover:shadow-gold-500/50"
           >
-            Neem contact op
+            {t("nav.cta")}
           </Link>
         </div>
 
@@ -52,17 +58,17 @@ export default function Navbar() {
       </div>
 
       {open && (
-        <div className="md:hidden bg-navy-900 border-t border-white/10 px-6 py-4 flex flex-col gap-4">
+        <div className="md:hidden glass-dark border-t border-gold-500/10 px-6 py-4 flex flex-col gap-4">
           {links.map(l => (
-            <Link
-              key={l.to}
-              to={l.to}
-              onClick={() => setOpen(false)}
-              className="text-white/80 hover:text-white font-medium"
-            >
-              {l.label}
+            <Link key={l.to} to={l.to} onClick={() => setOpen(false)} className="text-white/80 hover:text-gold-300 font-medium transition-colors">
+              {t(l.key)}
             </Link>
           ))}
+          <LanguageSwitcher mobile />
+          <Link to="/contact" onClick={() => setOpen(false)}
+            className="btn-shine bg-gradient-to-r from-gold-500 to-gold-600 text-white font-semibold px-5 py-2 rounded-full text-center shadow-lg shadow-gold-500/30">
+            {t("nav.cta")}
+          </Link>
         </div>
       )}
     </nav>

@@ -1,55 +1,79 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 320" width="500" height="320">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 360" width="500" height="360">
   <defs>
-    <style>@import url('https://fonts.googleapis.com/css2?family=Amiri+Quran&family=Amiri:wght@700&display=swap');</style>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@700&display=swap');</style>
     <linearGradient id="g2" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0" stop-color="#F0CC74"/>
       <stop offset="1" stop-color="#8B6515"/>
     </linearGradient>
-    <radialGradient id="bgGlow" cx="0.5" cy="0.5">
-      <stop offset="0" stop-color="#1A2744"/>
-      <stop offset="1" stop-color="#0F1A30"/>
-    </radialGradient>
   </defs>
-  <rect width="500" height="320" fill="url(#bgGlow)"/>
+  <rect width="500" height="360" fill="#0F1A30"/>
 
-  <!-- Outer ornate medallion -->
-  <circle cx="250" cy="160" r="130" fill="none" stroke="url(#g2)" stroke-width="2.5"/>
-  <circle cx="250" cy="160" r="120" fill="none" stroke="#D4A847" stroke-width="0.6" opacity="0.5"/>
-  <circle cx="250" cy="160" r="113" fill="none" stroke="#D4A847" stroke-width="0.4" opacity="0.3"/>
+  <!-- Rub el Hizb (8-point star) — overlapping squares -->
+  <g transform="translate(250 180)">
+    <!-- Outer big star: two squares rotated 45° -->
+    <rect x="-130" y="-130" width="260" height="260" fill="none" stroke="url(#g2)" stroke-width="2"/>
+    <rect x="-130" y="-130" width="260" height="260" fill="none" stroke="url(#g2)" stroke-width="2" transform="rotate(45)"/>
 
-  <!-- 8-point star pattern around medallion -->
-  <g fill="#D4A847">
-    <polygon points="250,28 252,33 257,33 253,36 255,41 250,38 245,41 247,36 243,33 248,33"/>
-    <polygon points="250,292 252,287 257,287 253,284 255,279 250,282 245,279 247,284 243,287 248,287"/>
-    <polygon points="118,160 123,158 123,153 126,157 131,155 128,160 131,165 126,163 123,167 123,162"/>
-    <polygon points="382,160 377,158 377,153 374,157 369,155 372,160 369,165 374,163 377,167 377,162"/>
+    <!-- Inner star layer -->
+    <rect x="-115" y="-115" width="230" height="230" fill="none" stroke="#D4A847" stroke-width="0.6" opacity="0.5"/>
+    <rect x="-115" y="-115" width="230" height="230" fill="none" stroke="#D4A847" stroke-width="0.6" opacity="0.5" transform="rotate(45)"/>
+
+    <!-- Central circle -->
+    <circle r="90" fill="#0F1A30" stroke="url(#g2)" stroke-width="1.5"/>
+    <circle r="84" fill="none" stroke="#D4A847" stroke-width="0.5" opacity="0.6"/>
+
+    <!-- Spokes radiating from center -->
+    <g stroke="url(#g2)" stroke-width="0.7" opacity="0.7">
+      <line x1="0" y1="-90" x2="0" y2="-130"/>
+      <line x1="0" y1="90" x2="0" y2="130"/>
+      <line x1="-90" y1="0" x2="-130" y2="0"/>
+      <line x1="90" y1="0" x2="130" y2="0"/>
+      <line x1="-64" y1="-64" x2="-92" y2="-92"/>
+      <line x1="64" y1="64" x2="92" y2="92"/>
+      <line x1="-64" y1="64" x2="-92" y2="92"/>
+      <line x1="64" y1="-64" x2="92" y2="-92"/>
+    </g>
+
+    <!-- Star tips ornaments -->
+    <g fill="url(#g2)">
+      <circle cx="0" cy="-130" r="3"/>
+      <circle cx="0" cy="130" r="3"/>
+      <circle cx="-130" cy="0" r="3"/>
+      <circle cx="130" cy="0" r="3"/>
+      <circle cx="-92" cy="-92" r="2.5"/>
+      <circle cx="92" cy="-92" r="2.5"/>
+      <circle cx="-92" cy="92" r="2.5"/>
+      <circle cx="92" cy="92" r="2.5"/>
+    </g>
+
+    <!-- Inner small 8-point star above text -->
+    <g transform="translate(0 -45)" fill="#D4A847">
+      <polygon points="0,-7 2,-2 7,0 2,2 0,7 -2,2 -7,0 -2,-2"/>
+    </g>
+
+    <!-- Arabic Kufic text in center -->
+    <text y="15" font-family="'Reem Kufi', sans-serif"
+          font-size="56" fill="url(#g2)" text-anchor="middle" font-weight="700"
+          direction="rtl" letter-spacing="2">
+      عرب داتش
+    </text>
+
+    <!-- Decorative line below text -->
+    <line x1="-50" y1="35" x2="50" y2="35" stroke="url(#g2)" stroke-width="0.8"/>
+    <polygon points="0,32 4,35 0,38 -4,35" fill="#D4A847"/>
+
+    <!-- Inner small ornaments -->
+    <g transform="translate(0 55)" fill="#D4A847" opacity="0.7">
+      <circle r="1.5"/>
+      <circle cx="-12" r="1"/>
+      <circle cx="12" r="1"/>
+    </g>
   </g>
 
-  <!-- Decorative dots around -->
-  <g fill="#D4A847" opacity="0.7">
-    <circle cx="343" cy="67" r="2"/>
-    <circle cx="157" cy="67" r="2"/>
-    <circle cx="343" cy="253" r="2"/>
-    <circle cx="157" cy="253" r="2"/>
-  </g>
-
-  <!-- Islamic geometric arch top -->
-  <path d="M 165 95 Q 250 50 335 95" fill="none" stroke="url(#g2)" stroke-width="1.2"/>
-  <path d="M 175 100 Q 250 65 325 100" fill="none" stroke="#D4A847" stroke-width="0.5" opacity="0.5"/>
-
-  <!-- Classical Quranic Arabic calligraphy -->
-  <text x="250" y="195" font-family="'Amiri Quran', 'Amiri', serif"
-        font-size="78" fill="url(#g2)" text-anchor="middle" font-weight="700"
-        direction="rtl">
-    عرب داتش
-  </text>
-
-  <!-- Inner decorative line -->
-  <line x1="180" y1="220" x2="320" y2="220" stroke="url(#g2)" stroke-width="0.8"/>
-  <polygon points="250,217 254,220 250,223 246,220" fill="#D4A847"/>
-
-  <!-- Below medallion ornament -->
-  <g transform="translate(250 305)" fill="#D4A847">
-    <path d="M -20 0 Q 0 -8 20 0 Q 0 5 -20 0 Z" stroke="#D4A847" stroke-width="0.5"/>
+  <!-- Bottom motif -->
+  <g transform="translate(250 340)" fill="url(#g2)">
+    <polygon points="0,-6 6,0 0,6 -6,0"/>
+    <polygon points="-20,-3 -17,0 -20,3 -23,0" opacity="0.7"/>
+    <polygon points="20,-3 23,0 20,3 17,0" opacity="0.7"/>
   </g>
 </svg>
