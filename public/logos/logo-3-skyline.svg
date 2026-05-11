@@ -1,47 +1,47 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" width="400" height="240">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 280" width="400" height="280">
   <defs>
-    <linearGradient id="gold3" x1="0" y1="0" x2="1" y2="0">
+    <linearGradient id="g3" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0" stop-color="#A67C1E"/>
-      <stop offset="0.5" stop-color="#D4A847"/>
+      <stop offset="0.5" stop-color="#E8C16C"/>
       <stop offset="1" stop-color="#A67C1E"/>
     </linearGradient>
   </defs>
-  <rect width="400" height="240" fill="#0F1A30"/>
+  <rect width="400" height="280" fill="#0F1A30"/>
 
-  <!-- Horizon line -->
-  <line x1="60" y1="155" x2="340" y2="155" stroke="url(#gold3)" stroke-width="1" opacity="0.6"/>
-
-  <!-- Dutch windmill (left) -->
-  <g transform="translate(120 130)">
-    <!-- Tower -->
-    <polygon points="-12,25 12,25 8,-10 -8,-10" fill="url(#gold3)"/>
-    <!-- Cap -->
-    <ellipse cx="0" cy="-10" rx="10" ry="4" fill="#D4A847"/>
-    <!-- Blade hub -->
-    <circle cx="0" cy="-12" r="2.5" fill="#0F1A30" stroke="#D4A847" stroke-width="1"/>
-    <!-- Blades -->
-    <line x1="0" y1="-12" x2="0" y2="-32" stroke="#D4A847" stroke-width="2.5" stroke-linecap="round"/>
-    <line x1="0" y1="-12" x2="18" y2="-2" stroke="#D4A847" stroke-width="2.5" stroke-linecap="round"/>
-    <line x1="0" y1="-12" x2="-18" y2="-22" stroke="#D4A847" stroke-width="2.5" stroke-linecap="round"/>
-    <line x1="0" y1="-12" x2="-18" y2="-2" stroke="#D4A847" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Top scene: windmill left, dome right, bridge between -->
+  <!-- Windmill -->
+  <g transform="translate(85 100)">
+    <polygon points="-10,30 10,30 7,-5 -7,-5" fill="url(#g3)"/>
+    <ellipse cx="0" cy="-5" rx="8" ry="3" fill="#D4A847"/>
+    <circle cx="0" cy="-7" r="2.5" fill="#0F1A30" stroke="#D4A847" stroke-width="1"/>
+    <line x1="0" y1="-7" x2="0" y2="-26" stroke="#D4A847" stroke-width="2.2" stroke-linecap="round"/>
+    <line x1="0" y1="-7" x2="17" y2="3" stroke="#D4A847" stroke-width="2.2" stroke-linecap="round"/>
+    <line x1="0" y1="-7" x2="-17" y2="3" stroke="#D4A847" stroke-width="2.2" stroke-linecap="round"/>
+    <line x1="0" y1="-7" x2="17" y2="-17" stroke="#D4A847" stroke-width="2.2" stroke-linecap="round"/>
   </g>
 
-  <!-- Bridge connecting both sides -->
-  <path d="M 140 155 Q 200 100 260 155" fill="none" stroke="url(#gold3)" stroke-width="3" stroke-linecap="round"/>
-  <path d="M 140 155 Q 200 115 260 155" fill="none" stroke="#D4A847" stroke-width="1" opacity="0.5"/>
+  <!-- Bridge -->
+  <path d="M 100 130 Q 200 60 300 130" fill="none" stroke="url(#g3)" stroke-width="3" stroke-linecap="round"/>
+  <path d="M 100 130 Q 200 80 300 130" fill="none" stroke="#D4A847" stroke-width="0.8" opacity="0.5"/>
+  <line x1="100" y1="130" x2="300" y2="130" stroke="url(#g3)" stroke-width="1.5"/>
 
-  <!-- Arabic dome / mosque silhouette (right) -->
-  <g transform="translate(280 130)">
-    <!-- Dome -->
-    <path d="M -15 25 L -15 5 Q -15 -15 0 -15 Q 15 -15 15 5 L 15 25 Z" fill="url(#gold3)"/>
-    <!-- Spire -->
-    <line x1="0" y1="-15" x2="0" y2="-30" stroke="#D4A847" stroke-width="2"/>
-    <circle cx="0" cy="-32" r="2" fill="#D4A847"/>
-    <!-- Crescent on top -->
-    <path d="M 0 -38 A 4 4 0 1 0 0 -30 A 3 3 0 1 1 0 -38" fill="#D4A847"/>
+  <!-- Arabic dome -->
+  <g transform="translate(315 100)">
+    <path d="M -16 30 L -16 5 Q -16 -15 0 -15 Q 16 -15 16 5 L 16 30 Z" fill="url(#g3)"/>
+    <line x1="0" y1="-15" x2="0" y2="-32" stroke="#D4A847" stroke-width="2"/>
+    <circle cx="0" cy="-34" r="2.5" fill="#D4A847"/>
+    <path d="M 0 -42 A 4.5 4.5 0 1 0 0 -34 A 3.5 3.5 0 1 1 0 -42" fill="#D4A847"/>
   </g>
 
-  <!-- Brand text -->
-  <text x="200" y="195" font-family="Georgia, serif" font-size="34" fill="url(#gold3)" text-anchor="middle" font-weight="700">ArabDutch</text>
-  <text x="200" y="222" font-family="Arial, sans-serif" font-size="12" fill="#FFFFFF" text-anchor="middle" opacity="0.6" letter-spacing="5">EAST MEETS WEST</text>
+  <!-- Arabic calligraphy below scene -->
+  <text x="200" y="220" font-family="'Amiri', 'Scheherazade New', 'Noto Naskh Arabic', serif"
+        font-size="78" fill="url(#g3)" text-anchor="middle" font-weight="700"
+        direction="rtl">
+    عرب داتش
+  </text>
+
+  <!-- Decorative bottom line with diamonds -->
+  <line x1="120" y1="250" x2="180" y2="250" stroke="#D4A847" stroke-width="1" opacity="0.6"/>
+  <polygon points="200,247 204,250 200,253 196,250" fill="#D4A847"/>
+  <line x1="220" y1="250" x2="280" y2="250" stroke="#D4A847" stroke-width="1" opacity="0.6"/>
 </svg>

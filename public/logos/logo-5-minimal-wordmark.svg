@@ -1,35 +1,46 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" width="400" height="240">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 280" width="400" height="280">
   <defs>
-    <linearGradient id="gold5" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#D4A847"/>
+    <linearGradient id="g5" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#E8C16C"/>
       <stop offset="1" stop-color="#A67C1E"/>
     </linearGradient>
   </defs>
-  <rect width="400" height="240" fill="#0F1A30"/>
+  <rect width="400" height="280" fill="#0F1A30"/>
 
-  <!-- Subtle bridge arch above wordmark -->
-  <path d="M 90 100 Q 200 50 310 100" fill="none" stroke="url(#gold5)" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- Subtle bridge arch ABOVE Arabic -->
+  <path d="M 80 90 Q 200 50 320 90" fill="none" stroke="url(#g5)" stroke-width="1.2" stroke-linecap="round" opacity="0.9"/>
 
-  <!-- Tiny windmill blades at left of arch -->
-  <g transform="translate(95 100)">
+  <!-- Mini windmill at left of arch -->
+  <g transform="translate(85 90)">
     <circle r="2" fill="#D4A847"/>
-    <line x1="0" y1="0" x2="0" y2="-10" stroke="#D4A847" stroke-width="1.5" stroke-linecap="round"/>
-    <line x1="0" y1="0" x2="9" y2="5" stroke="#D4A847" stroke-width="1.5" stroke-linecap="round"/>
-    <line x1="0" y1="0" x2="-9" y2="5" stroke="#D4A847" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="0" y1="0" x2="0" y2="-12" stroke="#D4A847" stroke-width="1.6" stroke-linecap="round"/>
+    <line x1="0" y1="0" x2="10" y2="6" stroke="#D4A847" stroke-width="1.6" stroke-linecap="round"/>
+    <line x1="0" y1="0" x2="-10" y2="6" stroke="#D4A847" stroke-width="1.6" stroke-linecap="round"/>
+    <line x1="0" y1="0" x2="10" y2="-6" stroke="#D4A847" stroke-width="1.6" stroke-linecap="round"/>
   </g>
 
-  <!-- Tiny crescent at right of arch -->
-  <g transform="translate(305 100)">
-    <path d="M 0 -8 A 8 8 0 1 0 0 8 A 6 6 0 1 1 0 -8" fill="#D4A847"/>
+  <!-- Mini crescent at right of arch -->
+  <g transform="translate(315 90)">
+    <path d="M 0 -9 A 9 9 0 1 0 0 9 A 7 7 0 1 1 0 -9" fill="#D4A847"/>
   </g>
 
-  <!-- Big wordmark -->
-  <text x="200" y="155" font-family="Georgia, serif" font-size="48" fill="#FFFFFF" text-anchor="middle" font-weight="400" letter-spacing="3">Arab<tspan fill="url(#gold5)" font-weight="700">Dutch</tspan></text>
+  <!-- BIG bold Arabic calligraphy - centerpiece -->
+  <text x="200" y="190" font-family="'Amiri', 'Scheherazade New', 'Noto Naskh Arabic', serif"
+        font-size="120" fill="url(#g5)" text-anchor="middle" font-weight="700"
+        direction="rtl">
+    عرب داتش
+  </text>
 
-  <!-- Bridge underline below wordmark -->
-  <path d="M 100 175 Q 200 195 300 175" fill="none" stroke="url(#gold5)" stroke-width="2" stroke-linecap="round"/>
-  <line x1="100" y1="175" x2="300" y2="175" stroke="#D4A847" stroke-width="0.5" opacity="0.4"/>
+  <!-- Elegant underline -->
+  <line x1="120" y1="220" x2="280" y2="220" stroke="url(#g5)" stroke-width="1"/>
+  <circle cx="200" cy="220" r="2" fill="#D4A847"/>
 
-  <!-- Arabic + tagline -->
-  <text x="200" y="210" font-family="Arial, sans-serif" font-size="16" fill="#D4A847" text-anchor="middle" letter-spacing="4">عرب داتش</text>
+  <!-- Bottom decorative element -->
+  <g transform="translate(200 245)" fill="#D4A847" opacity="0.7">
+    <circle r="1.5"/>
+    <circle cx="-15" r="1"/>
+    <circle cx="15" r="1"/>
+    <circle cx="-30" r="0.7"/>
+    <circle cx="30" r="0.7"/>
+  </g>
 </svg>

@@ -1,38 +1,44 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" width="400" height="240">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 280" width="400" height="280">
   <defs>
     <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#D4A847"/>
+      <stop offset="0" stop-color="#E8C16C"/>
+      <stop offset="0.5" stop-color="#D4A847"/>
       <stop offset="1" stop-color="#A67C1E"/>
     </linearGradient>
   </defs>
-  <rect width="400" height="240" fill="#0F1A30"/>
+  <rect width="400" height="280" fill="#0F1A30"/>
 
-  <!-- Bridge arch -->
-  <path d="M 80 150 Q 200 60 320 150" fill="none" stroke="url(#g1)" stroke-width="4" stroke-linecap="round"/>
-  <!-- Bridge deck -->
-  <line x1="60" y1="150" x2="340" y2="150" stroke="url(#g1)" stroke-width="3"/>
-  <!-- Bridge cables -->
-  <line x1="120" y1="150" x2="135" y2="105" stroke="#D4A847" stroke-width="1" opacity="0.7"/>
-  <line x1="160" y1="150" x2="170" y2="82" stroke="#D4A847" stroke-width="1" opacity="0.7"/>
-  <line x1="240" y1="150" x2="230" y2="82" stroke="#D4A847" stroke-width="1" opacity="0.7"/>
-  <line x1="280" y1="150" x2="265" y2="105" stroke="#D4A847" stroke-width="1" opacity="0.7"/>
+  <!-- Decorative top arch -->
+  <path d="M 100 70 Q 200 30 300 70" fill="none" stroke="url(#g1)" stroke-width="1.5" opacity="0.7"/>
+  <path d="M 110 75 Q 200 40 290 75" fill="none" stroke="#D4A847" stroke-width="0.5" opacity="0.4"/>
 
-  <!-- Windmill tower (left pier) -->
-  <polygon points="70,150 80,150 78,180 72,180" fill="url(#g1)"/>
-  <!-- Windmill blades -->
-  <g transform="translate(75 145)">
+  <!-- Bold Arabic Calligraphy - Centerpiece -->
+  <text x="200" y="170" font-family="'Amiri', 'Scheherazade New', 'Noto Naskh Arabic', 'Times New Roman', serif"
+        font-size="100" fill="url(#g1)" text-anchor="middle" font-weight="700"
+        direction="rtl" style="font-feature-settings: 'liga' on, 'calt' on;">
+    عرب داتش
+  </text>
+
+  <!-- Bridge underline -->
+  <path d="M 80 200 Q 200 230 320 200" fill="none" stroke="url(#g1)" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="80" y1="200" x2="320" y2="200" stroke="#D4A847" stroke-width="0.5" opacity="0.5"/>
+
+  <!-- Windmill on left of bridge -->
+  <g transform="translate(85 200)">
     <circle r="3" fill="#D4A847"/>
-    <line x1="0" y1="0" x2="0" y2="-18" stroke="#D4A847" stroke-width="2" stroke-linecap="round"/>
-    <line x1="0" y1="0" x2="16" y2="9" stroke="#D4A847" stroke-width="2" stroke-linecap="round"/>
-    <line x1="0" y1="0" x2="-16" y2="9" stroke="#D4A847" stroke-width="2" stroke-linecap="round"/>
+    <line x1="0" y1="0" x2="0" y2="-18" stroke="#D4A847" stroke-width="2.2" stroke-linecap="round"/>
+    <line x1="0" y1="0" x2="16" y2="9" stroke="#D4A847" stroke-width="2.2" stroke-linecap="round"/>
+    <line x1="0" y1="0" x2="-16" y2="9" stroke="#D4A847" stroke-width="2.2" stroke-linecap="round"/>
+    <line x1="0" y1="0" x2="16" y2="-9" stroke="#D4A847" stroke-width="2.2" stroke-linecap="round"/>
   </g>
 
-  <!-- Arabic crescent (right pier) -->
-  <g transform="translate(325 145)">
-    <path d="M 0 -15 A 15 15 0 1 0 0 15 A 12 12 0 1 1 0 -15" fill="#D4A847"/>
+  <!-- Crescent on right of bridge -->
+  <g transform="translate(315 200)">
+    <path d="M 0 -14 A 14 14 0 1 0 0 14 A 11 11 0 1 1 0 -14" fill="url(#g1)"/>
   </g>
 
-  <!-- Brand text -->
-  <text x="200" y="200" font-family="Georgia, serif" font-size="32" fill="#D4A847" text-anchor="middle" font-weight="700" letter-spacing="2">ArabDutch</text>
-  <text x="200" y="225" font-family="Arial, sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle" opacity="0.7" letter-spacing="3">عرب داتش</text>
+  <!-- Decorative dots -->
+  <circle cx="200" cy="225" r="2" fill="#D4A847"/>
+  <circle cx="180" cy="225" r="1.5" fill="#D4A847" opacity="0.6"/>
+  <circle cx="220" cy="225" r="1.5" fill="#D4A847" opacity="0.6"/>
 </svg>

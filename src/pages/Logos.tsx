@@ -4,43 +4,43 @@ import { Check } from "lucide-react";
 const logos = [
   {
     nummer: 1,
-    naam: "Bridge & Windmill",
+    naam: "Klassieke Calligrafie",
     bestand: "/logos/logo-1-bridge-windmill.svg",
     beschrijving:
-      "Klassieke brug met windmolen aan Nederlandse zijde en halve maan aan Arabische zijde. Krachtig en duidelijk.",
-    tags: ["Brug", "Windmolen", "Halve maan", "Arabisch"],
+      "Bold Arabische calligrafie met daaronder een brug die de windmolen en halve maan verbindt. Krachtig en direct.",
+    tags: ["Calligrafie", "Brug", "Windmolen"],
   },
   {
     nummer: 2,
-    naam: "Monogram AD",
+    naam: "Medaillon",
     bestand: "/logos/logo-2-monogram-AD.svg",
     beschrijving:
-      "Ineengevlochten A en D in een cirkelvormig embleem met windmolenwieken bovenaan. Formeel en professioneel.",
-    tags: ["Monogram", "Embleem", "Premium"],
+      "Arabische letters in een rond medaillon met islamitische geometrische ornamenten. Formeel en tijdloos.",
+    tags: ["Medaillon", "Geometrisch", "Premium"],
   },
   {
     nummer: 3,
     naam: "Skyline",
     bestand: "/logos/logo-3-skyline.svg",
     beschrijving:
-      "Volledige scene: Nederlandse windmolen links, Arabische koepel met halve maan rechts, verbonden door een brug.",
+      "Visueel verhaal: Hollandse windmolen, brug en Arabische koepel boven de Arabische naam. Vol karakter.",
     tags: ["Verhaal", "Skyline", "Cultuur"],
   },
   {
     nummer: 4,
-    naam: "Schild Embleem",
+    naam: "Moorse Boog",
     bestand: "/logos/logo-4-shield-emblem.svg",
     beschrijving:
-      "Heraldisch schild met alle elementen samen: ster, windmolen, halve maan, brug en Arabische tekst.",
-    tags: ["Heraldiek", "Krachtig", "Traditioneel"],
+      "Stijlvolle Moorse/Andalusische puntboog met halve maan-finial, geometrisch ornament en Arabische naam centraal.",
+    tags: ["Moors", "Architectuur", "Heraldisch"],
   },
   {
     nummer: 5,
-    naam: "Minimaal Wordmark",
+    naam: "Minimaal & Bold",
     bestand: "/logos/logo-5-minimal-wordmark.svg",
     beschrijving:
-      "Strak en modern: grote naam met subtiele brug, kleine windmolen en halve maan accenten. Tijdloos.",
-    tags: ["Minimalistisch", "Modern", "Elegant"],
+      "Grote Arabische calligrafie als hoofdelement, subtiele brug-windmolen-halve maan boven. Modern en strak.",
+    tags: ["Minimalistisch", "Modern", "Bold"],
   },
 ];
 
@@ -54,8 +54,9 @@ export default function Logos() {
           </span>
           <h1 className="text-5xl font-serif font-bold mt-2">Vijf concepten</h1>
           <p className="text-gray-300 mt-4 max-w-2xl">
-            Elk logo verbindt Nederland en de Arabische wereld op zijn eigen
-            manier — kies de variant die het beste bij ArabDutch past.
+            Alle vijf logo's gebruiken stijlvolle Arabische calligrafie (عرب داتش)
+            als hoofdelement, gecombineerd met brug, windmolen en halve maan.
+            Kies de variant die het beste bij ArabDutch past.
           </p>
         </div>
       </section>

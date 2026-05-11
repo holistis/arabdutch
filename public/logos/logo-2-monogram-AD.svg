@@ -1,36 +1,52 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" width="400" height="240">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 280" width="400" height="280">
   <defs>
-    <linearGradient id="gold2" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#D4A847"/>
+    <linearGradient id="g2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#E8C16C"/>
       <stop offset="1" stop-color="#A67C1E"/>
     </linearGradient>
   </defs>
-  <rect width="400" height="240" fill="#0F1A30"/>
+  <rect width="400" height="280" fill="#0F1A30"/>
 
-  <!-- Circular emblem -->
-  <circle cx="200" cy="100" r="60" fill="none" stroke="#D4A847" stroke-width="2"/>
-  <circle cx="200" cy="100" r="55" fill="none" stroke="#D4A847" stroke-width="0.5" opacity="0.5"/>
+  <!-- Outer circular medallion -->
+  <circle cx="200" cy="140" r="110" fill="none" stroke="url(#g2)" stroke-width="2"/>
+  <circle cx="200" cy="140" r="103" fill="none" stroke="#D4A847" stroke-width="0.5" opacity="0.5"/>
 
-  <!-- Interlocking A and D forming a bridge -->
-  <!-- A shape (left) -->
-  <path d="M 175 130 L 195 70 L 215 130" fill="none" stroke="url(#gold2)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-  <line x1="183" y1="110" x2="207" y2="110" stroke="url(#gold2)" stroke-width="3"/>
-
-  <!-- D shape (right) -->
-  <path d="M 200 70 L 200 130 Q 230 130 230 100 Q 230 70 200 70 Z" fill="none" stroke="url(#gold2)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-
-  <!-- Bridge underline within circle -->
-  <path d="M 160 135 Q 200 145 240 135" fill="none" stroke="#D4A847" stroke-width="1.5" opacity="0.8"/>
-
-  <!-- Windmill blades on top of circle -->
-  <g transform="translate(200 40)">
-    <circle r="2.5" fill="#D4A847"/>
-    <line x1="0" y1="0" x2="0" y2="-14" stroke="#D4A847" stroke-width="2" stroke-linecap="round"/>
-    <line x1="0" y1="0" x2="12" y2="7" stroke="#D4A847" stroke-width="2" stroke-linecap="round"/>
-    <line x1="0" y1="0" x2="-12" y2="7" stroke="#D4A847" stroke-width="2" stroke-linecap="round"/>
+  <!-- Islamic geometric pattern dots around -->
+  <g fill="#D4A847">
+    <circle cx="200" cy="30" r="2.5"/>
+    <circle cx="200" cy="250" r="2.5"/>
+    <circle cx="90" cy="140" r="2.5"/>
+    <circle cx="310" cy="140" r="2.5"/>
+    <circle cx="278" cy="62" r="2"/>
+    <circle cx="122" cy="62" r="2"/>
+    <circle cx="278" cy="218" r="2"/>
+    <circle cx="122" cy="218" r="2"/>
   </g>
 
-  <!-- Brand text -->
-  <text x="200" y="195" font-family="Georgia, serif" font-size="28" fill="#FFFFFF" text-anchor="middle" font-weight="700" letter-spacing="3">ARABDUTCH</text>
-  <text x="200" y="220" font-family="Arial, sans-serif" font-size="13" fill="#D4A847" text-anchor="middle" letter-spacing="4">BRIDGING CULTURES</text>
+  <!-- Decorative arch top of medallion -->
+  <path d="M 130 70 Q 200 40 270 70" fill="none" stroke="url(#g2)" stroke-width="1.5" opacity="0.8"/>
+
+  <!-- Arabic calligraphy in center -->
+  <text x="200" y="170" font-family="'Amiri', 'Scheherazade New', 'Noto Naskh Arabic', serif"
+        font-size="68" fill="url(#g2)" text-anchor="middle" font-weight="700"
+        direction="rtl">
+    عرب داتش
+  </text>
+
+  <!-- Inner ornamental star -->
+  <g transform="translate(200 215)" fill="#D4A847">
+    <polygon points="0,-7 2,-2 7,-2 3,2 5,7 0,4 -5,7 -3,2 -7,-2 -2,-2"/>
+  </g>
+
+  <!-- Side ornaments -->
+  <g transform="translate(120 140)" fill="#D4A847" opacity="0.6">
+    <circle r="1.5"/>
+    <circle cx="-8" r="1"/>
+    <circle cx="-16" r="0.7"/>
+  </g>
+  <g transform="translate(280 140)" fill="#D4A847" opacity="0.6">
+    <circle r="1.5"/>
+    <circle cx="8" r="1"/>
+    <circle cx="16" r="0.7"/>
+  </g>
 </svg>
