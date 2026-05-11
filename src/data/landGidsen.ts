@@ -40,7 +40,7 @@ const landGidsen: LandData[] = [
       { label: "Inkomstenbelasting", waarde: "0–38%" },
       { label: "BTW", waarde: "20%" },
       { label: "Verdrag Nederland", waarde: "Ja (1972/2008)" },
-      { label: "Min. bedrijfskapitaal", waarde: "€900 (SARL)" },
+      { label: "Min. kapitaal SARL (≈ BV)", waarde: "MAD 10.000 (~€900)" },
       { label: "Kosten vs. Nederland", waarde: "−35 tot −40%" },
     ],
     belasting: {

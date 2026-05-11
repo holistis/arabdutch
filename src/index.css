@@ -12,44 +12,13 @@ body {
   color: #1A2744;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
-  cursor: none;
 }
-@media (max-width: 768px) { body { cursor: auto; } }
 
 #root { min-height: 100vh; }
 
 html[dir="rtl"] body {
   font-family: 'Amiri', 'Inter', sans-serif;
 }
-
-a, button, [role="button"] { cursor: none; }
-@media (max-width: 768px) { a, button, [role="button"] { cursor: pointer; } }
-
-/* ═══════════ CUSTOM CURSOR ═══════════ */
-.cursor-dot {
-  position: fixed;
-  top: 0; left: 0;
-  width: 8px; height: 8px;
-  background: #C4952A;
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 9999;
-  mix-blend-mode: difference;
-  transition: width .3s, height .3s, background .3s;
-}
-.cursor-ring {
-  position: fixed;
-  top: 0; left: 0;
-  width: 40px; height: 40px;
-  border: 1.5px solid rgba(196,149,42,.6);
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 9998;
-  transition: width .4s cubic-bezier(.2,.8,.2,1), height .4s cubic-bezier(.2,.8,.2,1), border-color .3s;
-  box-shadow: 0 0 30px rgba(196,149,42,.3);
-}
-.cursor-ring.hover { width: 80px; height: 80px; border-color: rgba(244,215,138,.9); }
-.cursor-dot.hover { width: 0; height: 0; }
 
 /* ═══════════ KEYFRAMES ═══════════ */
 @keyframes aurora-flow {

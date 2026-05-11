@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- HOOFDPAGINA'S -->
   <url>
     <loc>https://arabdutch.com/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://arabdutch.com/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://arabdutch.com/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://arabdutch.com/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://arabdutch.com/" />
   </url>
   <url>
     <loc>https://arabdutch.com/over-ons</loc>
@@ -21,53 +28,51 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://arabdutch.com/blog</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://arabdutch.com/blog/temara-investering</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://arabdutch.com/blog/klantentour-saoedi-arabie</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://arabdutch.com/blog/partnership-manea</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://arabdutch.com/blog/fossielen-ourika-vallei</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://arabdutch.com/contact</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+
+  <!-- DATA & INZICHTEN -->
   <url>
-    <loc>https://arabdutch.com/privacyverklaring</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
+    <loc>https://arabdutch.com/inzichten</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
   </url>
+
+  <!-- LANDENGIDSEN -->
   <url>
-    <loc>https://arabdutch.com/disclaimer</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
+    <loc>https://arabdutch.com/landen</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
   </url>
+  <url><loc>https://arabdutch.com/landen/marokko</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://arabdutch.com/landen/vae</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://arabdutch.com/landen/saoedi-arabie</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://arabdutch.com/landen/tunesie</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://arabdutch.com/landen/egypte</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://arabdutch.com/landen/jordanie</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://arabdutch.com/landen/qatar</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://arabdutch.com/landen/libie</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://arabdutch.com/landen/irak</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+
+  <!-- BLOG -->
   <url>
-    <loc>https://arabdutch.com/algemene-voorwaarden</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
+    <loc>https://arabdutch.com/blog</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
   </url>
-  <url>
-    <loc>https://arabdutch.com/cookiebeleid</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
+  <url><loc>https://arabdutch.com/blog/vision-2030-vs-vision-2040</loc><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://arabdutch.com/blog/wk-2030-marokko-kansen</loc><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://arabdutch.com/blog/temara-investering</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://arabdutch.com/blog/klantentour-saoedi-arabie</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://arabdutch.com/blog/partnership-manea</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://arabdutch.com/blog/fossielen-ourika-vallei</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+  <!-- JURIDISCH -->
+  <url><loc>https://arabdutch.com/privacyverklaring</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://arabdutch.com/disclaimer</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://arabdutch.com/algemene-voorwaarden</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://arabdutch.com/cookiebeleid</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+
 </urlset>

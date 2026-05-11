@@ -2,7 +2,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import CookieBanner from "./components/CookieBanner";
-import CustomCursor from "./components/CustomCursor";
 import Home from "./pages/Home";
 import OverOns from "./pages/OverOns";
 import Diensten from "./pages/Diensten";
@@ -22,7 +21,6 @@ import LandGids from "./pages/LandGids";
 export default function App() {
   return (
     <BrowserRouter>
-      <CustomCursor />
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />

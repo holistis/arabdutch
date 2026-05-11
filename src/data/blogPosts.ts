@@ -19,6 +19,143 @@ export interface Section {
 
 const posts: BlogPost[] = [
   {
+    slug: "vision-2030-vs-vision-2040",
+    datum: "8 mei 2026",
+    tag: "Strategie",
+    titel: "Vision 2030 of Vision 2040? Waar moet u nú instappen",
+    excerpt: "Saoedi-Arabië, VAE, Qatar én Oman publiceren strategische masterplannen. Welk land past bij welk type Nederlands bedrijf?",
+    inhoud: [
+      {
+        type: "intro",
+        tekst: "De Golfregio is in volle transformatie. Saoedi-Arabië pompt $1 biljoen in Vision 2030, de VAE positioneert zich als wereldspeler met We the UAE 2031, Qatar werkt aan National Vision 2030, en Oman volgt met Vision 2040. Voor Nederlandse bedrijven is dit hét moment om te kiezen — maar waar?",
+      },
+      {
+        type: "h2",
+        tekst: "Saoedi-Arabië — schaal en snelheid",
+      },
+      {
+        type: "p",
+        tekst: "Vision 2030 is geen marketingplaatje. NEOM ($500 miljard), Qiddiya (entertainment-mega-city), de Rode Zee Resorts en Diriyah maken het land tot 's werelds grootste bouwplaats. Voor Nederlandse bedrijven in agritech, infrastructuur, watertechnologie, smart cities en duurzame energie is dit goud — als u snel kunt opschalen en bereid bent om in een complex bureaucratisch systeem te opereren.",
+      },
+      {
+        type: "lijst",
+        items: [
+          "Beste fit: agritech, watertechnologie, infra, mining, toerisme",
+          "Investering: hoog ($500K+ voor serieuze marktbetreding)",
+          "Tempo: zeer snel — beslissingen binnen weken mogelijk",
+          "Risico: bureaucratie, lokaliseringsverplichtingen, langetermijncommitment vereist",
+        ],
+      },
+      {
+        type: "h2",
+        tekst: "VAE — hub voor de hele regio",
+      },
+      {
+        type: "p",
+        tekst: "Geen masterplan vraagt zoveel kapitaal als Dubai of Abu Dhabi. De VAE is uw springplank: 50+ free zones, 0% inkomstenbelasting, banken die internationaal opereren en het beste talent uit de hele regio. Voor Nederlandse SaaS-, fintech-, logistiek- en B2B-services-bedrijven is het de logische eerste stap.",
+      },
+      {
+        type: "lijst",
+        items: [
+          "Beste fit: fintech, SaaS, logistiek, professionele dienstverlening",
+          "Investering: gemiddeld (€50K-€150K opstart)",
+          "Tempo: zeer snel — bedrijf binnen 2 weken operationeel",
+          "Risico: hoge operationele kosten, intense concurrentie",
+        ],
+      },
+      {
+        type: "h2",
+        tekst: "Qatar — strategische precisie",
+      },
+      {
+        type: "p",
+        tekst: "Qatar Financial Centre opereert onder Engels recht, biedt 10% vennootschapsbelasting en 100% buitenlands eigendom. Sinds het WK 2022 is het land geopend voor toerisme én voor zakelijke buitenlanders. Nederlandse bedrijven in energie, financiële diensten, sport en MICE (Meetings, Incentives, Conferences, Exhibitions) vinden hier een klein maar kapitaalkrachtig publiek.",
+      },
+      {
+        type: "h2",
+        tekst: "Oman — de onontdekte kans",
+      },
+      {
+        type: "p",
+        tekst: "Vision 2040 is bewust minder bombastisch. Oman positioneert zich als de logistieke poort tussen Afrika, Azië en de Golf via de haven van Duqm. Geen Dubai-prijzen, wél Vision 2040-subsidies voor logistiek, toerisme, mining en visserij. Voor Nederlandse MKB-bedrijven die zonder kapitaalgevecht willen opereren is dit hét moment.",
+      },
+      {
+        type: "quote",
+        tekst: "Wie nu kiest tussen deze vier kan over vijf jaar terugkijken op de slimste businessbeslissing van zijn carrière. Wie wacht, kijkt vanaf de zijlijn.",
+      },
+      {
+        type: "h2",
+        tekst: "Welke kiezen?",
+      },
+      {
+        type: "p",
+        tekst: "De juiste keuze hangt af van uw sector, kapitaal, tempo en risicotolerantie. ArabDutch maakt voor klanten een gepersonaliseerde landenmatching — gebaseerd op uw KPI's en netwerk-aanwezigheid. Neem contact op voor een vrijblijvende analyse.",
+      },
+    ],
+  },
+  {
+    slug: "wk-2030-marokko-kansen",
+    datum: "20 maart 2026",
+    tag: "Investering",
+    titel: "WK 2030 in Marokko: €5 miljard infrastructuurkansen voor NL-bedrijven",
+    excerpt: "Marokko organiseert samen met Spanje en Portugal het WK 2030. De investeringen zijn er nu al. Dit zijn de sectoren waar Nederlandse bedrijven écht kunnen instappen.",
+    inhoud: [
+      {
+        type: "intro",
+        tekst: "Dat Marokko het WK 2030 binnenhaalde was een verrassing — voor de buitenwacht. Voor wie de regio kent, was het de logische uitkomst van vijf jaar strategisch positioneren. En het echte werk begint nu: €5 miljard aan investeringen in stadions, hotels, snelwegen, hogesnelheidstreinen en luchthavens. Voor Nederlandse bedrijven zijn de openingen aanzienlijk — als u weet waar u moet kijken.",
+      },
+      {
+        type: "h2",
+        tekst: "Stadioncluster — Casablanca, Tanger, Marrakech, Agadir",
+      },
+      {
+        type: "p",
+        tekst: "Vijf stadions worden gebouwd of gerenoveerd. Het Grand Stade Hassan II in Casablanca wordt met 115.000 plaatsen het grootste voetbalstadion ter wereld. Nederlandse expertise in stadionakoestiek (Royal HaskoningDHV), gras- en sportveldtechnologie, evacuatie-engineering en duurzame koeltechnieken is ronduit gewild. Lokale aannemers zoeken actief Europese specialisten.",
+      },
+      {
+        type: "h2",
+        tekst: "HSR — Casablanca naar Marrakech",
+      },
+      {
+        type: "p",
+        tekst: "De TGV Al Boraq wordt verlengd van Tanger via Rabat-Casablanca tot Marrakech en Agadir. Dat is €3 miljard aan rails, stations en signaling. Nederlandse bedrijven (Strukton, BAM Infra, Movares) hebben al ervaring in de regio en de aanbestedingen lopen via 2027.",
+      },
+      {
+        type: "h2",
+        tekst: "Hotels — €1.5 miljard tot 2030",
+      },
+      {
+        type: "p",
+        tekst: "Voor het WK is een capaciteit van 50.000 extra bedden nodig. Vier- en vijfsterren hotels rond de speelsteden. Voor Nederlandse hotelketens (Citizen M, Eden), interieurbouwers, technische installateurs en horeca-tech is dit een open markt — Marokkaanse vastgoedontwikkelaars zoeken actief Europese kwaliteitspartners.",
+      },
+      {
+        type: "lijst",
+        items: [
+          "Tanger Med — uitbreiding container terminal (logistiek-tech, automatisering)",
+          "Rabat-Salé Airport — nieuwe terminal (luchtvaarttech, beveiliging)",
+          "Casablanca Finance City — €800M uitbreiding (fintech, juridische dienstverlening)",
+          "Marrakech Smart City — sensor-infrastructuur en data-platforms",
+        ],
+      },
+      {
+        type: "h2",
+        tekst: "Hoe instappen?",
+      },
+      {
+        type: "p",
+        tekst: "Marokkaanse aanbestedingen vereisen vrijwel altijd een lokale partner. Het opbouwen van die relaties duurt maanden tot jaren — wie nu start, is in 2027 operationeel. ArabDutch begeleidt Nederlandse bedrijven door dit proces: van partnerselectie tot due diligence en contractbesprekingen.",
+      },
+      {
+        type: "quote",
+        tekst: "WK's zijn voor de meeste landen een uitgavenpost. Voor Marokko is het de katalysator van een complete economische upgrade. Wie meedoet, profiteert decennialang.",
+      },
+      {
+        type: "p",
+        tekst: "Wilt u weten welke kansen passen bij uw bedrijf? Neem contact op met ArabDutch voor een vrijblijvende verkenning.",
+      },
+    ],
+  },
+  {
     slug: "temara-investering",
     datum: "14 oktober 2025",
     tag: "Investering",
