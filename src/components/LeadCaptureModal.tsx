@@ -1,5 +1,6 @@
-import { useState, type FormEvent } from "react";
+import { useState } from "react";
 import { X, Download, Lock, CheckCircle } from "lucide-react";
+import { supabase } from "../lib/supabase";
 
 interface Props {
   rapport: { titel: string; beschrijving: string; land?: string };
@@ -12,21 +13,33 @@ export default function LeadCaptureModal({ rapport, onClose }: Props) {
   const [bedrijf, setBedrijf] = useState("");
   const [status, setStatus] = useState<"idle" | "loading" | "done" | "error">("idle");
 
-  async function submit(e: FormEvent) {
+  async function submit(e: { preventDefault(): void }) {
     e.preventDefault();
     setStatus("loading");
     try {
+      // 1. Sla lead op in Supabase
+      await supabase.from("leads").insert({
+        email,
+        naam,
+        bedrijf: bedrijf || null,
+        land_interesse: rapport.land ?? null,
+        bron: "rapport",
+      });
+
+      // 2. E-mail notificatie via Web3Forms (als key beschikbaar is)
       const key = import.meta.env.VITE_WEB3FORMS_KEY as string;
-      const fd = new FormData();
-      fd.append("access_key", key);
-      fd.append("subject", `📥 Rapport download: ${rapport.titel}`);
-      fd.append("naam", naam);
-      fd.append("email", email);
-      fd.append("bedrijf", bedrijf || "—");
-      fd.append("rapport", rapport.titel);
-      const res = await fetch("https://api.web3forms.com/submit", { method: "POST", body: fd });
-      if (res.ok) setStatus("done");
-      else setStatus("error");
+      if (key) {
+        const fd = new FormData();
+        fd.append("access_key", key);
+        fd.append("subject", `📥 Rapport download: ${rapport.titel}`);
+        fd.append("naam", naam);
+        fd.append("email", email);
+        fd.append("bedrijf", bedrijf || "—");
+        fd.append("rapport", rapport.titel);
+        await fetch("https://api.web3forms.com/submit", { method: "POST", body: fd });
+      }
+
+      setStatus("done");
     } catch {
       setStatus("error");
     }
