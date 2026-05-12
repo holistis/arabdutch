@@ -19,6 +19,115 @@ export interface Section {
 
 const posts: BlogPost[] = [
   {
+    slug: "gitex-future-health-africa-casablanca-2026",
+    datum: "8 mei 2026",
+    tag: "Netwerk & Events",
+    titel: "Casablanca als Afrika's gezondheidshub: wat GITEX Future Health 2026 betekent voor Nederlandse healthtech",
+    excerpt: "Drie dagen op de eerste editie ooit van GITEX Future Health Africa. 300+ exposanten, 50+ investeerders uit 30 landen, en een continent dat hardop kiest voor gezondheidssoevereiniteit. ArabDutch was er — en wat we zagen, verandert het speelveld.",
+    afbeelding: "/gitex-health-casablanca-cover.png",
+    inhoud: [
+      {
+        type: "intro",
+        tekst: "Van 4 tot 6 mei 2026 was Casablanca het zenuwcentrum van de Afrikaanse gezondheidszorg. De eerste editie van GITEX Future Health Africa bracht ministers, ziekenhuisdirecteuren, AI-onderzoekers, fondsen en honderden bedrijven samen onder één centraal thema: hoe bouwt Afrika een eigen, soevereine gezondheidssector? ArabDutch was er drie dagen lang — en kwam thuis met een glasheldere overtuiging: Nederlandse healthtech mag deze trein niet missen.",
+      },
+      {
+        type: "afbeelding",
+        src: "/gitex-health-casablanca-organizers.png",
+        alt: "Abdoellah Ouaoudi bij Organizers Office van GITEX Future Health Africa Morocco 2026",
+        bijschrift: "Founder Abdoellah Ouaoudi bij het Organizers Office — GITEX Future Health Africa, Casablanca",
+      },
+      {
+        type: "h2",
+        tekst: "Waarom Casablanca, en waarom nu?",
+      },
+      {
+        type: "p",
+        tekst: "GITEX is Dubai. Het is geen vanzelfsprekendheid dat het merk zijn eerste health-editie buiten de Golf neerzet — laat staan in Marokko. Toch is de keuze logisch: Casablanca ligt op vier uur van Amsterdam, vormt de toegangspoort tot Franstalig Afrika én tot de Atlantische kust, en Marokko investeert miljarden in ziekenhuizen, medische universiteiten en digitale gezondheidsinfrastructuur. De Mohammed VI Foundation for Science and Health (FM6SS), het Ministerie van Volksgezondheid en Kaoun International tilden de eerste editie samen op.",
+      },
+      {
+        type: "p",
+        tekst: "Het resultaat: meer dan 300 exposanten, 50+ investeerders, delegaties uit ruim 30 landen — van Senegal en Nigeria tot Saoedi-Arabië, de VAE, Frankrijk en de Verenigde Staten. Het Executive Summit voerde de boventoon onder een titel die je niet snel vergeet: 'Financing Health Sovereignty: From Dependency to Dominance.'",
+      },
+      {
+        type: "afbeelding",
+        src: "/gitex-health-casablanca-hall.png",
+        alt: "GITEX Future Health Africa beursvloer Casablanca",
+        bijschrift: "De beursvloer met startup-zones: Idea Stage, Pre-Seed en Series & Beyond",
+      },
+      {
+        type: "h2",
+        tekst: "Vier verhalen die boven kwamen drijven",
+      },
+      {
+        type: "p",
+        tekst: "Een beursvloer met 300 exposanten levert ruis op. Maar als je drie dagen lang luistert in plaats van verkoopt, kristalliseren er een paar thema's uit. Dit zijn de vier die we mee terug namen naar Nederland.",
+      },
+      {
+        type: "lijst",
+        items: [
+          "Soevereiniteit boven afhankelijkheid — Afrikaanse ministers willen geen donatiemodel meer, maar eigen productie, eigen data, eigen infrastructuur. Wie zo praat, zoekt partners, geen leveranciers.",
+          "AI in de spreekkamer — De MedAI 2026 Conference (FM6SS) bracht clinici, onderzoekers en wereldwijde AI-leiders samen. Diagnostiek, beeldvorming en taalmodellen voor onderbediende talen kregen het podium.",
+          "Het ziekenhuis verlaat het ziekenhuis — Zorg verschuift naar preventie, monitoring en telehealth. Imani Health uit de VS, dat we op de Pre-Seed plein troffen, bouwt aan AI-vertaling tussen patiënt en arts over heel Afrika — precies het soort schaalbare missie waar GITEX op draait.",
+          "Geld is er — als je voorbereid binnenkomt — Sponsors op platinum-niveau (Morocco Healthcare Supplier, Orange, Sanofi) gaven aan dat ze actief joint ventures zoeken met Europese partijen die schaalbare technologie kunnen leveren.",
+        ],
+      },
+      {
+        type: "afbeelding",
+        src: "/gitex-health-casablanca-team.jpg",
+        alt: "ArabDutch team Abdoellah Ouaoudi en Marouane Arrob bij GITEX Future Health Africa",
+        bijschrift: "Abdoellah Ouaoudi (founder) en Marouane Arrob (project manager) — de ArabDutch-delegatie in Casablanca",
+      },
+      {
+        type: "h2",
+        tekst: "Wat dit betekent voor Nederlandse bedrijven",
+      },
+      {
+        type: "p",
+        tekst: "Nederland heeft een onderschatte positie in healthtech. We bouwen MRI-software, klinische beslissingssystemen, beademings-IoT, e-health-platforms en chirurgische robotica op wereldniveau — én we hebben de traditie om met opkomende markten samen te werken zonder paternalisme. Dat laatste hoorde ik op deze beurs vaak terug: Afrikaanse beslissers zoeken partners die luisteren in plaats van dicteren.",
+      },
+      {
+        type: "p",
+        tekst: "Concreet: voor Nederlandse medtech-leveranciers, ziekenhuis-IT-bedrijven, AI-startups in de zorg, opleidingsinstellingen en investeringsfondsen liggen er nu kansen die er over twee jaar veel duurder uitzien. De pre-seed en seed-rondes worden nu gevoerd. De pilots worden nu opgezet. De distributie-partnerschappen worden nu beklonken.",
+      },
+      {
+        type: "quote",
+        tekst: "Wij willen niet alleen technologie importeren. Wij willen partners die met ons opbouwen, die hun engineers naar Casablanca sturen en die geloven dat Afrika geen testmarkt is, maar een thuismarkt.",
+      },
+      {
+        type: "h2",
+        tekst: "Wie we spraken",
+      },
+      {
+        type: "p",
+        tekst: "We hadden gesprekken met platinum-sponsor MHS (Morocco Healthcare Supplier) over distributie van Nederlandse medische technologie in Marokko en West-Afrika; met Orange over telemedicine-infrastructuur; met Sanofi-vertegenwoordigers over publiek-private samenwerking in Noord-Afrika; en met meerdere Afrikaanse healthtech-startups die op zoek zijn naar Europese productontwikkeling en CE-certificering. Daarnaast troffen we de organisatoren van GITEX Future Health en de FM6SS — die volgend jaar opnieuw in Casablanca samenkomen.",
+      },
+      {
+        type: "h2",
+        tekst: "De rol van ArabDutch",
+      },
+      {
+        type: "p",
+        tekst: "Een beurs bezoeken is één ding. Er rendement uit halen, is iets heel anders. ArabDutch doet precies wat onze naam belooft: we vormen de brug tussen Nederlandse healthtech-bedrijven en Arabisch-Afrikaanse beslissers. Wij kennen de taal, de cultuur, de juridische voetangels en — minstens zo belangrijk — de mensen die op deze beurs koffie dronken. Onze rol is om Nederlandse partijen niet als toeristen, maar als geloofwaardige partners te introduceren.",
+      },
+      {
+        type: "quote",
+        tekst: "GITEX Future Health Africa was geen netwerkfeestje. Het was een statement: Afrika bouwt zelf aan zijn gezondheidssysteem, en Europa is welkom — mits met respect en serieuze waarde.",
+      },
+      {
+        type: "h2",
+        tekst: "Vooruit kijken",
+      },
+      {
+        type: "p",
+        tekst: "ArabDutch komt terug naar Casablanca. We werken op dit moment aan een Nederlandse healthtech-delegatie voor de tweede editie in 2027 — een gecureerde groep bedrijven die we vooraf matchen met de juiste Marokkaanse en pan-Afrikaanse partijen. Geen massabezoek, maar gerichte gesprekken die ergens toe leiden.",
+      },
+      {
+        type: "p",
+        tekst: "Bent u een Nederlands healthtech-bedrijf, ziekenhuis, fonds of onderzoeksinstelling met ambitie in Noord-Afrika of de Golfregio? Neem contact op met ArabDutch voor een vrijblijvend verkennend gesprek. We delen graag onze observaties, contacten en aanbevelingen uit Casablanca.",
+      },
+    ],
+  },
+  {
     slug: "vision-2030-vs-vision-2040",
     datum: "8 mei 2026",
     tag: "Strategie",
