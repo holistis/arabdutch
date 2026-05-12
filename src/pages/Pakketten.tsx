@@ -23,7 +23,7 @@ const pakketten = [
     ],
     cta: "Boek Starter",
     populair: false,
-    stripeLink: "https://buy.stripe.com/3cIbJ13XWaVdae2d8T7ok0c",
+    stripeLink: "https://buy.stripe.com/aFaaEX7a8fbtgCq8SD7ok0f",
   },
   {
     icon: <Briefcase className="w-7 h-7" />,
@@ -45,7 +45,7 @@ const pakketten = [
     ],
     cta: "Boek Business",
     populair: true,
-    stripeLink: "https://buy.stripe.com/dRm3cv3XW5ATgCq9WH7ok0d",
+    stripeLink: "https://buy.stripe.com/cNibJ15203sL3PEc4P7ok0g",
   },
   {
     icon: <Building2 className="w-7 h-7" />,
@@ -69,7 +69,7 @@ const pakketten = [
     ],
     cta: "Boek Enterprise",
     populair: false,
-    stripeLink: "https://buy.stripe.com/9B628r1PO2oHae26Kv7ok0e",
+    stripeLink: "https://buy.stripe.com/4gM3cv6644wPbi6c4P7ok0h",
   },
 ];
 
