@@ -1,17 +1,46 @@
-import { Mail, Phone, MapPin, Clock, Send, CheckCircle, AlertCircle, Sparkles } from "lucide-react";
+import { Mail, Phone, MapPin, Clock, Send, CheckCircle, AlertCircle, Sparkles, Package } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
 import { useTranslation } from "react-i18next";
+import { useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 import useSpotlight from "../components/Spotlight";
 
 const WEB3FORMS_KEY = import.meta.env.VITE_WEB3FORMS_KEY as string;
 
+const PAKKETTEN = [
+  { titel: "Starter Marokko", prijs: "€3.000" },
+  { titel: "Business Marokko", prijs: "€25.000" },
+  { titel: "Enterprise Marokko", prijs: "€70.000" },
+];
+
+const LOSSE_DIENSTEN = [
+  { titel: "Bedrijfsoprichting Marokko (SARL)", prijs: "€1.800" },
+  { titel: "FZE in Dubai of Abu Dhabi", prijs: "€2.500" },
+  { titel: "Bankaccount opening Marokko/VAE", prijs: "€950" },
+  { titel: "Beëdigde NL ↔ AR vertaling (per pagina)", prijs: "€45" },
+  { titel: "Live tolkdienst (per dag)", prijs: "€450" },
+  { titel: "Cultureel training (per dag, in-house)", prijs: "€1.200" },
+];
+
 export default function Contact() {
   useSpotlight();
   const { t } = useTranslation();
+  const location = useLocation();
   useEffect(() => { document.title = "Contact — ArabDutch | Neem contact op"; }, []);
   const [status, setStatus] = useState<"idle" | "loading" | "sent" | "error">("idle");
+  const [selected, setSelected] = useState<string[]>([]);
   const formRef = useRef<HTMLFormElement>(null);
+
+  // Prefill via ?service=... query param (bv. vanuit Pakketten-pagina)
+  useEffect(() => {
+    const params = new URLSearchParams(location.search);
+    const svc = params.get("service");
+    if (svc) setSelected([svc]);
+  }, [location.search]);
+
+  const toggle = (titel: string) => {
+    setSelected(s => s.includes(titel) ? s.filter(x => x !== titel) : [...s, titel]);
+  };
 
   const handleSubmit = async (e: React.SyntheticEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -19,9 +48,14 @@ export default function Contact() {
 
     const formData = new FormData(e.currentTarget);
     formData.append("access_key", WEB3FORMS_KEY ?? "");
-    formData.append("subject", "Nieuw contactbericht via arabdutch.com");
+    formData.append("subject", selected.length > 0
+      ? `Offerte-aanvraag: ${selected.join(", ")}`
+      : "Nieuw contactbericht via arabdutch.com");
     formData.append("from_name", "ArabDutch Website");
     formData.append("redirect", "false");
+    if (selected.length > 0) {
+      formData.append("geselecteerde_diensten", selected.join(" | "));
+    }
 
     try {
       const endpoint = "https://api.web3forms.com/submit";
@@ -30,6 +64,7 @@ export default function Contact() {
       if (data.success) {
         setStatus("sent");
         formRef.current?.reset();
+        setSelected([]);
       } else {
         setStatus("error");
       }
@@ -111,9 +146,91 @@ export default function Contact() {
                   <label className="block text-sm font-semibold text-navy-900 mb-2">{t("contact.company")}</label>
                   <input name="onderwerp" className="w-full border-2 border-gray-200 rounded-xl px-4 py-3.5 focus:outline-none focus:border-gold-500 transition-colors" />
                 </div>
+
+                {/* SERVICE SELECTOR */}
+                <div className="bg-gradient-to-br from-gold-500/5 to-transparent border-2 border-gold-500/20 rounded-2xl p-5">
+                  <div className="flex items-center gap-2 mb-3">
+                    <Package className="w-4 h-4 text-gold-600" />
+                    <label className="text-sm font-semibold text-navy-900">
+                      Waarin bent u geïnteresseerd? <span className="text-gray-400 font-normal">(optioneel — meerdere mogelijk)</span>
+                    </label>
+                  </div>
+
+                  <p className="text-xs font-semibold text-gold-700 uppercase tracking-widest mb-2">Pakketten Marokko</p>
+                  <div className="grid sm:grid-cols-3 gap-2 mb-4">
+                    {PAKKETTEN.map(p => {
+                      const isSel = selected.includes(p.titel);
+                      return (
+                        <button
+                          key={p.titel}
+                          type="button"
+                          onClick={() => toggle(p.titel)}
+                          className={`text-left rounded-xl border-2 px-3 py-2.5 transition-all ${
+                            isSel
+                              ? "border-gold-500 bg-gold-500/10 shadow-md"
+                              : "border-gray-200 bg-white hover:border-gold-500/40"
+                          }`}>
+                          <p className={`text-xs font-bold leading-tight ${isSel ? "text-navy-900" : "text-navy-900"}`}>{p.titel}</p>
+                          <p className={`text-xs mt-0.5 ${isSel ? "text-gold-700" : "text-gray-400"}`}>vanaf {p.prijs}</p>
+                        </button>
+                      );
+                    })}
+                  </div>
+
+                  <p className="text-xs font-semibold text-gold-700 uppercase tracking-widest mb-2">Losse diensten</p>
+                  <div className="grid sm:grid-cols-2 gap-2">
+                    {LOSSE_DIENSTEN.map(d => {
+                      const isSel = selected.includes(d.titel);
+                      return (
+                        <button
+                          key={d.titel}
+                          type="button"
+                          onClick={() => toggle(d.titel)}
+                          className={`flex items-start gap-2 text-left rounded-xl border-2 px-3 py-2 transition-all ${
+                            isSel
+                              ? "border-gold-500 bg-gold-500/10"
+                              : "border-gray-200 bg-white hover:border-gold-500/40"
+                          }`}>
+                          <div className={`w-4 h-4 rounded border-2 flex-shrink-0 mt-0.5 flex items-center justify-center transition-colors ${
+                            isSel ? "bg-gold-500 border-gold-500" : "border-gray-300"
+                          }`}>
+                            {isSel && <CheckCircle className="w-3 h-3 text-white" strokeWidth={3} />}
+                          </div>
+                          <div className="min-w-0 flex-1">
+                            <p className="text-xs font-semibold text-navy-900 leading-tight">{d.titel}</p>
+                            <p className={`text-xs mt-0.5 ${isSel ? "text-gold-700 font-semibold" : "text-gray-400"}`}>{d.prijs}</p>
+                          </div>
+                        </button>
+                      );
+                    })}
+                  </div>
+
+                  {selected.length > 0 && (
+                    <div className="mt-3 pt-3 border-t border-gold-500/20 flex items-center justify-between gap-3">
+                      <p className="text-xs text-gray-600">
+                        <span className="font-bold text-navy-900">{selected.length}</span> geselecteerd
+                      </p>
+                      <button type="button" onClick={() => setSelected([])}
+                        className="text-xs text-gray-500 hover:text-gold-600 underline">
+                        Selectie wissen
+                      </button>
+                    </div>
+                  )}
+
+                  <p className="text-xs text-gray-500 mt-3 italic">
+                    Niet zeker wat u zoekt? Laat het veld leeg en omschrijf uw vraag hieronder — wij denken met u mee.
+                  </p>
+                </div>
+
                 <div>
-                  <label className="block text-sm font-semibold text-navy-900 mb-2">{t("contact.message")}</label>
-                  <textarea name="message" required rows={5} className="w-full border-2 border-gray-200 rounded-xl px-4 py-3.5 focus:outline-none focus:border-gold-500 transition-colors resize-none" />
+                  <label className="block text-sm font-semibold text-navy-900 mb-2">
+                    {t("contact.message")} {selected.length === 0 && <span className="text-gray-400 font-normal text-xs">(of beschrijf vrij wat u zoekt)</span>}
+                  </label>
+                  <textarea name="message" required rows={5}
+                    placeholder={selected.length > 0
+                      ? "Vertel ons meer over uw situatie, tijdlijn en budget..."
+                      : "Beschrijf vrijuit wat u zoekt — wij koppelen het aan de juiste dienst of stellen maatwerk voor."}
+                    className="w-full border-2 border-gray-200 rounded-xl px-4 py-3.5 focus:outline-none focus:border-gold-500 transition-colors resize-none placeholder:text-gray-400 placeholder:text-sm" />
                 </div>
                 <button type="submit" disabled={status === "loading"} className="btn-shine inline-flex items-center justify-center gap-2 bg-gradient-to-r from-gold-500 to-gold-600 hover:from-gold-400 hover:to-gold-500 disabled:opacity-60 disabled:cursor-not-allowed text-white font-semibold px-8 py-4 rounded-full transition-all w-full shadow-xl shadow-gold-500/30 hover:shadow-gold-500/50 mt-2">
                   {status === "loading" ? (
