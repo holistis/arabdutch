@@ -8,17 +8,17 @@ import useSpotlight from "../components/Spotlight";
 const pakketten = [
   {
     icon: <Rocket className="w-7 h-7" />,
-    naam: "Starter",
-    voorWie: "MKB-ondernemer met concrete vraag",
+    naam: "Starter Marokko",
+    voorWie: "MKB-ondernemer die Marokko verkent",
     prijs: "€3.000",
     marktPrijs: "€10.000",
     duur: "2–4 weken",
     includes: [
-      "Verdiepende marktscan van uw doelland (15-25p rapport)",
-      "Shortlist van 5 potentiële partners",
-      "Eén begeleid Zoom-introductiegesprek",
-      "Cultuurbriefing voor uw team (2 uur webinar)",
-      "Templates: NDA + intentieverklaring NL/AR",
+      "Marktscan Marokko voor uw sector (20-30p rapport)",
+      "Shortlist van 5 Marokkaanse partners (Casablanca, Rabat, Tanger of Marrakech)",
+      "Eén begeleide intro-call (Zoom) met één partner",
+      "Cultuurbriefing Marokkaans zakendoen (2 uur webinar)",
+      "Templates: NDA + intentieverklaring in NL / FR / AR",
       "30 dagen e-mail support",
     ],
     cta: "Boek Starter",
@@ -27,41 +27,42 @@ const pakketten = [
   },
   {
     icon: <Briefcase className="w-7 h-7" />,
-    naam: "Professional",
-    voorWie: "Bedrijf dat marktentree wil realiseren",
+    naam: "Business Marokko",
+    voorWie: "Bedrijf dat marktentree in Marokko realiseert",
     prijs: "€25.000",
     marktPrijs: "€85.000",
     duur: "6–10 weken",
     includes: [
-      "Volledige marktentree-strategie (40-60p strategiedocument)",
-      "Bedrijfsoprichting in doelland (SARL/FZE/LLC)",
-      "Bankaccount opening — wij regelen de procedure",
-      "Belasting- en juridische structurering",
-      "10 geverifieerde lokale partners + warme introductie",
-      "On-site bezoek (1 dag, exclusief reiskosten)",
-      "Cultureel training (4 uur on-site of online)",
+      "Volledige marktentree-strategie Marokko (40-60p strategiedocument)",
+      "Bedrijfsoprichting in Marokko (SARL of succursale) via onze notaris",
+      "Bankaccount opening (AttijariWafa / BMCE / CIH)",
+      "Belasting- en juridische structurering (incl. CFC-statuut indien van toepassing)",
+      "10 geverifieerde Marokkaanse partners + warme introducties",
+      "3-daagse handelsmissie Casablanca–Rabat (excl. reiskosten/hotel)",
+      "Cultureel training team Marokkaans zakelijk klimaat (4 uur)",
       "90 dagen WhatsApp-support",
       "Toegang Premium kennisbank (12 maanden)",
     ],
-    cta: "Boek Professional",
+    cta: "Boek Business",
     populair: true,
     stripeLink: "https://buy.stripe.com/dRm3cv3XW5ATgCq9WH7ok0d",
   },
   {
     icon: <Building2 className="w-7 h-7" />,
-    naam: "Enterprise",
-    voorWie: "Multinational of investment vehicle",
+    naam: "Enterprise Marokko",
+    voorWie: "Grote organisatie of investment vehicle",
     prijs: "€70.000",
     marktPrijs: "€235.000",
     duur: "3–6 maanden",
     includes: [
-      "Multi-landen strategiedocument (80-120p)",
-      "Bedrijfsoprichting in 1-3 landen + bank- en fiscale structurering",
+      "Multi-regio strategiedocument Marokko (80-120p) — Casablanca, Rabat, Tanger, Marrakech, Agadir",
+      "Bedrijfsoprichting + CFC of Tanger Med vrije zone setup",
+      "Banking, fiscaal en juridische structurering compleet",
       "Dedicated project manager + 2 senior consultants",
-      "Stakeholder mapping bij overheid en branche",
-      "Handelsmissie of investor tour (3-5 dagen)",
-      "M&A / JV begeleiding indien van toepassing",
-      "Volledige due diligence van 3 partners",
+      "Stakeholder mapping bij ministeries en CRI's (Centres Régionaux d'Investissement)",
+      "5-daagse handelsmissie (Casablanca, Rabat, Tanger en optioneel Marrakech/Agadir)",
+      "M&A / Joint Venture begeleiding indien van toepassing",
+      "Volledige due diligence van 3 Marokkaanse partners",
       "Maandelijkse strategie-reviews (12 maanden)",
       "Directe lijn met ArabDutch Founder",
       "20% korting op vervolg-engagement",
@@ -83,14 +84,14 @@ const losseDiensten = [
 
 export default function Pakketten() {
   useSpotlight();
-  useEffect(() => { document.title = "Pakketten — ArabDutch | Done-for-you marktentree NL ↔ Arabische wereld"; }, []);
+  useEffect(() => { document.title = "Marokko Pakketten — ArabDutch | Done-for-you marktentree Nederland ↔ Marokko"; }, []);
 
   return (
     <main className="pt-20 bg-[#0a0f1f]">
       <LuxeHero
-        badge="Done-for-you pakketten"
-        title={<>U levert de visie.<br /><span className="gradient-luxe italic">Wij leveren het traject.</span></>}
-        subtitle="Transparante pakketprijzen voor de complete marktentree-route. 60-70% onder de tarieven van Big 4 consultancies — zonder concessies aan kwaliteit."
+        badge="🇲🇦 Marokko · Done-for-you pakketten"
+        title={<>U levert de visie.<br /><span className="gradient-luxe italic">Wij leveren Marokko.</span></>}
+        subtitle="Drie heldere pakketten voor uw marktentree in Marokko — van verkenning tot volledige expansie. 70% onder de tarieven van Big 4 consultancies, met diepe lokale expertise in Casablanca, Rabat, Tanger en Marrakech."
       />
 
       {/* PAKKETTEN */}
@@ -159,6 +160,45 @@ export default function Pakketten() {
               </motion.div>
             ))}
           </div>
+
+          {/* ANDERE LANDEN */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }} transition={{ duration: 0.6 }}
+            className="mt-20 bg-gradient-to-br from-navy-900 to-[#0a0f1f] rounded-3xl p-10 md:p-14 text-white relative overflow-hidden">
+            <div className="absolute inset-0 bg-aurora opacity-20 pointer-events-none" />
+            <div className="relative z-10 grid md:grid-cols-2 gap-10 items-center">
+              <div>
+                <div className="inline-flex items-center gap-3 mb-6 glass-gold px-4 py-2 rounded-full">
+                  <span className="text-gold-200 text-xs font-semibold uppercase tracking-[0.25em]">Andere landen</span>
+                </div>
+                <h3 className="font-display font-bold text-4xl mb-5 leading-tight">
+                  Op zoek naar de <span className="shimmer-text">Golfregio of Levant</span>?
+                </h3>
+                <p className="text-white/70 leading-relaxed mb-4">
+                  Onze pakketten zijn gespecialiseerd op Marokko — daar zit onze diepste expertise en ons sterkste netwerk. Voor de VAE, Saoedi-Arabië, Qatar, Oman, Egypte, Jordanië, Tunesië, Irak of Libië werken wij op maat.
+                </p>
+                <p className="text-white/50 text-sm mb-8">
+                  Begin met een strategiegesprek — daar bepalen we samen welk traject bij uw situatie past.
+                </p>
+              </div>
+              <div className="flex flex-col gap-3">
+                <Link to="/strategiegesprek"
+                  className="btn-shine inline-flex items-center justify-center gap-2 bg-gradient-to-r from-gold-500 to-gold-600 hover:from-gold-400 hover:to-gold-500 text-white font-semibold px-6 py-4 rounded-full transition-all shadow-xl shadow-gold-500/40">
+                  Boek strategiegesprek <ArrowRight className="w-4 h-4" />
+                </Link>
+                <Link to="/contact"
+                  className="inline-flex items-center justify-center gap-2 glass-strong hover:bg-white/10 text-white font-semibold px-6 py-4 rounded-full transition-all">
+                  Maatwerk-offerte aanvragen <ArrowRight className="w-4 h-4" />
+                </Link>
+                <div className="flex flex-wrap gap-2 mt-2 justify-center">
+                  {["🇦🇪 VAE", "🇸🇦 KSA", "🇶🇦 Qatar", "🇴🇲 Oman", "🇪🇬 Egypte", "🇯🇴 Jordanië", "🇹🇳 Tunesië", "🇮🇶 Irak", "🇱🇾 Libië"].map(l => (
+                    <span key={l} className="glass-gold rounded-full px-3 py-1 text-xs font-medium text-white">{l}</span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </motion.div>
         </div>
       </section>
 
