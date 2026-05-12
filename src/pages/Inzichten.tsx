@@ -377,7 +377,7 @@ export default function Inzichten() {
                   Onze rapporten hebben dezelfde diepgang als die van McKinsey, BCG of Euromonitor — maar geen €1.500+ per stuk. Wij geloven dat kwalitatieve kennis toegankelijk moet zijn voor het Nederlandse MKB, niet alleen voor Big 4 klanten.
                 </p>
                 <p className="text-white/50 text-sm">
-                  Elke betaalde rapport heeft een gratis preview van 6 pagina's. Niet tevreden? Geld terug binnen 14 dagen.
+                  Elk betaald rapport heeft een gratis preview van 6 pagina's, zodat u vooraf de kwaliteit en inhoud kunt beoordelen voor aanschaf.
                 </p>
               </div>
               <div className="space-y-3">

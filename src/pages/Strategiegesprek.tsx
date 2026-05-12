@@ -172,7 +172,7 @@ export default function Strategiegesprek() {
                   Boek {p.duur} — {p.prijs} <ArrowRight className="w-4 h-4" />
                 </a>
                 <p className={`text-center text-xs mt-3 ${p.populair ? "text-white/40" : "text-gray-400"}`}>
-                  <Shield className="w-3 h-3 inline mr-1" /> 100% geld terug bij ongenoegen
+                  <Shield className="w-3 h-3 inline mr-1" /> Vaste prijs · Direct bevestigd na betaling
                 </p>
               </motion.div>
             ))}
@@ -198,7 +198,7 @@ export default function Strategiegesprek() {
                   "Senior consultants — geen junior medewerkers",
                   "Voorbereiding op basis van uw industrie",
                   "100% vertrouwelijk — NDA op verzoek",
-                  "Geld-terug-garantie binnen 14 dagen",
+                  "Schriftelijke samenvatting binnen 48 uur na gesprek",
                 ].map((p, i) => (
                   <div key={i} className="flex items-center gap-3 text-gray-700">
                     <CheckCircle className="w-5 h-5 text-gold-500 flex-shrink-0" />

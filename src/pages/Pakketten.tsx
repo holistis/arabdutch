@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { motion } from "framer-motion";
-import { CheckCircle, ArrowRight, Rocket, Briefcase, Building2, Star, Shield } from "lucide-react";
+import { CheckCircle, ArrowRight, Rocket, Briefcase, Building2, Star, Shield, Languages, User, Clock, Wallet, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
 import LuxeHero from "../components/LuxeHero";
 import useSpotlight from "../components/Spotlight";
@@ -248,6 +248,85 @@ export default function Pakketten() {
         </div>
       </section>
 
+      {/* WAAROM ARABDUTCH */}
+      <section className="py-32 bg-luxe-light relative overflow-hidden">
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] opacity-30 pointer-events-none"
+          style={{ background: "radial-gradient(ellipse, rgba(196,149,42,.3) 0%, transparent 60%)" }} />
+        <div className="max-w-7xl mx-auto px-6 relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }} className="text-center mb-16">
+            <div className="inline-flex items-center gap-3 mb-6 bg-gold-500/10 border border-gold-500/30 px-4 py-2 rounded-full">
+              <div className="w-1.5 h-1.5 rounded-full bg-gold-500 animate-pulse" />
+              <span className="text-gold-600 text-xs font-semibold uppercase tracking-[0.25em]">Waarom ArabDutch</span>
+            </div>
+            <h2 className="font-display font-bold text-5xl md:text-6xl text-navy-900 mb-4 leading-[0.95]">
+              Vijf redenen waarom<br />
+              <span className="gradient-luxe italic">opdrachtgevers voor ons kiezen</span>
+            </h2>
+            <p className="text-gray-500 text-lg max-w-2xl mx-auto mt-6">
+              Geen verkooppraat — feitelijk en structureel onderbouwd waarom wij anders zijn dan Big 4 of lokale advocatenkantoren.
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              {
+                icon: <Languages className="w-6 h-6" />,
+                titel: "Tweetalig op senior niveau",
+                tekst: "Native Nederlands én native Marokkaans Arabisch / Frans, in één persoon. Geen tolk nodig — uw consultant is zelf de culturele brug.",
+                bewijs: "Vrijwel uniek in de NL-MA consultancy-markt",
+              },
+              {
+                icon: <User className="w-6 h-6" />,
+                titel: "Directe lijn met de founder",
+                tekst: "U werkt rechtstreeks met de oprichter — geen junior consultants, geen accountmanager, geen relay van informatie.",
+                bewijs: "Bij Big 4 is dit alleen mogelijk vanaf zes-cijferige projecten",
+              },
+              {
+                icon: <Wallet className="w-6 h-6" />,
+                titel: "Vaste prijs, geen scope creep",
+                tekst: "Wat u ziet is wat u betaalt. Geen 'billable hours surprise', geen verborgen meerwerk-uitnodigingen halverwege het traject.",
+                bewijs: "Big 4 factureert per uur en overschrijdt scope in 60% van projecten",
+              },
+              {
+                icon: <Shield className="w-6 h-6" />,
+                titel: "70% lagere overhead",
+                tekst: "Geen kantoor in Casablanca, geen junior staff op de loonlijst, geen marketingbudget van 10% van omzet. Onze structuur is bewust slank.",
+                bewijs: "Verklaart structureel onze prijzen — geen tijdelijke korting",
+              },
+              {
+                icon: <Clock className="w-6 h-6" />,
+                titel: "Zelfde tijdzone",
+                tekst: "Marokko draait op CET — dezelfde klok als Nederland. Geen vertraging, geen 'we komen er morgen op terug' uit Dubai of Riyadh.",
+                bewijs: "Werkdag begint én eindigt synchroon met uw kantoor",
+              },
+              {
+                icon: <MapPin className="w-6 h-6" />,
+                titel: "Lokaal netwerk, niet uitbesteed",
+                tekst: "Wij werken met vaste notarissen, fiscalisten en banking-contacten in Casablanca, Rabat en Tanger die wij persoonlijk kennen — geen anonieme onderaanneming.",
+                bewijs: "Verkort doorlooptijden met gemiddeld 30-40%",
+              },
+            ].map((r, i) => (
+              <motion.div key={i}
+                initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }} transition={{ delay: i * 0.07 }}
+                data-spotlight
+                className="card-luxe-light rounded-2xl p-7 flex flex-col">
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-gold-500/20 to-gold-500/5 text-gold-600 flex items-center justify-center mb-5">
+                  {r.icon}
+                </div>
+                <h3 className="font-display font-bold text-navy-900 text-xl mb-3 leading-tight">{r.titel}</h3>
+                <p className="text-gray-500 text-sm leading-relaxed mb-4 flex-1">{r.tekst}</p>
+                <p className="text-gold-600 text-xs font-semibold pt-3 border-t border-gold-500/20">
+                  {r.bewijs}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* FAQ */}
       <section className="py-32 bg-luxe-light relative overflow-hidden">
         <div className="max-w-4xl mx-auto px-6 relative z-10">
@@ -260,7 +339,7 @@ export default function Pakketten() {
           <div className="space-y-4">
             {[
               { v: "Waarom zijn jullie prijzen zoveel lager dan Big 4?", a: "Wij hebben een fundamenteel andere structuur: dedicated specialisten zonder dure kantoorhiërarchieën in London of Riyadh. Onze overheadkosten zijn 70% lager dan McKinsey of BCG — die besparing geven wij direct door aan onze klanten zonder kwaliteitsconcessie." },
-              { v: "Krijg ik mijn geld terug als ik niet tevreden ben?", a: "Ja. Bij elke betaalde dienst geldt een 14-dagen geld-terug-garantie. Bij projecten van >€3.000 geldt een tussentijds review-moment na week 2, waarbij u kunt stoppen tegen vergoeding van geleverde uren." },
+              { v: "Hoe werkt betaling en tussentijdse stopzetting?", a: "Onze pakketten zijn zakelijke (B2B) diensten — het wettelijke herroepingsrecht voor consumenten is niet van toepassing. Bij projecten van >€3.000 geldt een tussentijds review-moment na week 2: u kunt op dat moment besluiten te stoppen, waarbij u alleen de reeds verrichte werkzaamheden betaalt. Zo houdt u grip op het traject zonder onnodig risico." },
               { v: "Werken jullie ook voor non-EU klanten?", a: "Ja. Wij werken voor Nederlandse, Belgische, Duitse en Arabische klanten. Voor non-EU klanten geldt reverse charge op BTW." },
               { v: "Hoe garanderen jullie kwaliteit?", a: "Elke opdracht heeft een senior consultant als hoofdverantwoordelijke met minimaal 10 jaar regio-ervaring. Onze deliverables worden intern gepeer-reviewed. Klanten krijgen wekelijkse updates en een dedicated project-portaal." },
               { v: "Wat is jullie ervaring met Sharia-compliance?", a: "Voor opdrachten waar Sharia-compliance vereist is (Saoedi-Arabië, Bahrein, Koeweit) werken wij samen met gecertificeerde Sharia-adviseurs. Wij coördineren het volledige proces." },

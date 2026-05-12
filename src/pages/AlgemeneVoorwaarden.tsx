@@ -64,10 +64,15 @@ export default function AlgemeneVoorwaarden() {
           <h2>Artikel 9 — Opzegging en ontbinding</h2>
           <p>Opdrachtgever kan een lopende opdracht opzeggen met inachtneming van een opzegtermijn van 30 dagen. Bij tussentijdse opzegging door Opdrachtgever zijn alle verrichte werkzaamheden en gemaakte kosten direct opeisbaar. ArabDutch kan de overeenkomst met onmiddellijke ingang ontbinden bij wanbetaling of surseance van betaling van Opdrachtgever.</p>
 
-          <h2>Artikel 10 — Toepasselijk recht en geschillen</h2>
+          <h2>Artikel 10 — Herroeping en restitutie</h2>
+          <p>Alle door ArabDutch aangeboden diensten en producten — waaronder consultancy, strategiegesprekken, marktrapporten en pakketten — zijn uitsluitend bestemd voor zakelijke afnemers (B2B). Het wettelijke herroepingsrecht voor consumenten zoals bedoeld in artikel 6:230o van het Burgerlijk Wetboek is op deze overeenkomsten niet van toepassing.</p>
+          <p>Voor digitale producten (zoals downloadbare rapporten en gidsen) geldt dat de levering direct aanvangt na ontvangst van de betaling. Door tot aanschaf over te gaan, stemt Opdrachtgever uitdrukkelijk in met deze directe levering en doet daarmee — voor zover van toepassing — afstand van enig herroepingsrecht. Reeds geleverde digitale producten worden niet gerestitueerd.</p>
+          <p>Voor consultancy- en pakketdiensten zijn de in Artikel 9 genoemde voorwaarden voor tussentijdse opzegging van toepassing.</p>
+
+          <h2>Artikel 11 — Toepasselijk recht en geschillen</h2>
           <p>Op alle overeenkomsten met ArabDutch is uitsluitend Nederlands recht van toepassing. Geschillen worden in eerste instantie door partijen in onderling overleg opgelost. Indien dat niet lukt, worden zij voorgelegd aan de bevoegde rechter van het arrondissement Oost-Brabant te 's-Hertogenbosch.</p>
 
-          <h2>Artikel 11 — Wijzigingen</h2>
+          <h2>Artikel 12 — Wijzigingen</h2>
           <p>ArabDutch behoudt zich het recht voor deze algemene voorwaarden te wijzigen. De meest actuele versie is gepubliceerd op arabdutch.com/algemene-voorwaarden. Bij wijzigingen worden lopende overeenkomsten gerespecteerd.</p>
 
           <p className="text-sm text-gray-400 mt-12">© {new Date().getFullYear()} ArabDutch — Boschdijk 520, 5621 JG Eindhoven</p>
