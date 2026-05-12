@@ -6,12 +6,12 @@ import LuxeHero from "../components/LuxeHero";
 import useSpotlight from "../components/Spotlight";
 
 const teamGroepen = [
-  { rol: "Directeur & Founder", omschrijving: "Stuurt het bedrijf aan en zorgt voor strategische richting en klantrelaties.", leden: ["Abdoellah Ouaoudi"] },
+  { rol: "Directeur & Founder", omschrijving: "Stuurt het bedrijf aan en zorgt voor strategische richting en klantrelaties.", leden: ["Abdoellah Ouadoudi"] },
   { rol: "Consultants", omschrijving: "Bieden op maat gemaakte adviezen en begeleiding bij projecten in beide markten.", leden: ["Samir Kheder", "Yasmine Bousandrous", "Mariam Kheder"] },
   { rol: "Project Managers", omschrijving: "Coördineren de uitvoering van opdrachten en zorgen dat projecten soepel verlopen.", leden: ["Ismael Gumbs", "Joyce Rademakers", "Abdelsamad El-Hasni", "Marouane Arrob"] },
-  { rol: "Marketing & Communicatie", omschrijving: "Versterkt onze zichtbaarheid, branding, website en interculturele communicatie.", leden: ["Harry"] },
+  { rol: "Marketing & Communicatie", omschrijving: "Versterkt onze zichtbaarheid, branding, website en interculturele communicatie.", leden: ["Jasper van Dijk"] },
   { rol: "Vertalers", omschrijving: "Faciliteren professionele vertalingen NL ↔ AR zodat communicatie altijd vloeiend verloopt.", leden: ["Said Kadir", "Fatima Radi"] },
-  { rol: "Financiën & Administratie", omschrijving: "Beheert boekhouding, facturatie en financiële planning.", leden: ["Anton"] },
+  { rol: "Financiën & Administratie", omschrijving: "Beheert boekhouding, facturatie en financiële planning.", leden: ["Jasper van Dijk"] },
 ];
 
 const initialen = (naam: string) =>

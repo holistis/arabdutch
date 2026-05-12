@@ -33,8 +33,8 @@ const posts: BlogPost[] = [
       {
         type: "afbeelding",
         src: "/gitex-health-casablanca-organizers.png",
-        alt: "Abdoellah Ouaoudi bij Organizers Office van GITEX Future Health Africa Morocco 2026",
-        bijschrift: "Founder Abdoellah Ouaoudi bij het Organizers Office — GITEX Future Health Africa, Casablanca",
+        alt: "Abdoellah Ouadoudi bij Organizers Office van GITEX Future Health Africa Morocco 2026",
+        bijschrift: "Founder Abdoellah Ouadoudi bij het Organizers Office — GITEX Future Health Africa, Casablanca",
       },
       {
         type: "h2",
@@ -74,8 +74,8 @@ const posts: BlogPost[] = [
       {
         type: "afbeelding",
         src: "/gitex-health-casablanca-team.jpg",
-        alt: "ArabDutch team Abdoellah Ouaoudi en Marouane Arrob bij GITEX Future Health Africa",
-        bijschrift: "Abdoellah Ouaoudi (founder) en Marouane Arrob (project manager) — de ArabDutch-delegatie in Casablanca",
+        alt: "ArabDutch team Abdoellah Ouadoudi en Marouane Arrob bij GITEX Future Health Africa",
+        bijschrift: "Abdoellah Ouadoudi (founder) en Marouane Arrob (project manager) — de ArabDutch-delegatie in Casablanca",
       },
       {
         type: "h2",
