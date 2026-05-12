@@ -6,13 +6,16 @@ import LuxeHero from "../components/LuxeHero";
 import useSpotlight from "../components/Spotlight";
 
 const teamGroepen = [
-  { rol: "Directeur & Founder", omschrijving: "Stuurt het bedrijf aan en zorgt voor strategische richting en klantrelaties.", leden: ["Abdoellah"] },
-  { rol: "Consultants", omschrijving: "Bieden op maat gemaakte adviezen en begeleiding bij projecten in beide markten.", leden: ["Ahmed", "Samir", "Yasmine", "Mariam"] },
-  { rol: "Project Managers", omschrijving: "Coördineren de uitvoering van opdrachten en zorgen dat projecten soepel verlopen.", leden: ["Ismael", "Joyce", "Abdelsamad"] },
+  { rol: "Directeur & Founder", omschrijving: "Stuurt het bedrijf aan en zorgt voor strategische richting en klantrelaties.", leden: ["Abdoellah Ouaoudi"] },
+  { rol: "Consultants", omschrijving: "Bieden op maat gemaakte adviezen en begeleiding bij projecten in beide markten.", leden: ["Samir Kheder", "Yasmine Bousandrous", "Mariam Kheder"] },
+  { rol: "Project Managers", omschrijving: "Coördineren de uitvoering van opdrachten en zorgen dat projecten soepel verlopen.", leden: ["Ismael Gumbs", "Joyce Rademakers", "Abdelsamad El-Hasni", "Marouane Arrob"] },
   { rol: "Marketing & Communicatie", omschrijving: "Versterkt onze zichtbaarheid, branding, website en interculturele communicatie.", leden: ["Harry"] },
-  { rol: "Vertalers", omschrijving: "Faciliteren professionele vertalingen NL ↔ AR zodat communicatie altijd vloeiend verloopt.", leden: ["Mohammed", "Fatima"] },
+  { rol: "Vertalers", omschrijving: "Faciliteren professionele vertalingen NL ↔ AR zodat communicatie altijd vloeiend verloopt.", leden: ["Said Kadir", "Fatima Radi"] },
   { rol: "Financiën & Administratie", omschrijving: "Beheert boekhouding, facturatie en financiële planning.", leden: ["Anton"] },
 ];
+
+const initialen = (naam: string) =>
+  naam.split(" ").filter(Boolean).map(w => w[0]).join("").slice(0, 2).toUpperCase();
 
 const waarden = [
   { icon: <Target className="w-6 h-6" />, title: "Onze missie", text: "Ondernemers, investeerders en instellingen succesvol verbinden met de Arabische wereld — en andersom. Niet als tussenpersoon, maar als strategische partner." },
@@ -50,7 +53,7 @@ export default function OverOns() {
             </h2>
             <div className="space-y-5 text-gray-600 leading-relaxed text-lg">
               <p>ArabDutch is opgericht door Abdoellah — in Nederland geboren, met diepe culturele wortels in de Arabische wereld. Die tweeledige identiteit is geen bijzaak; het is precies wat ons onderscheidt. Wij spreken beide talen, kennen beide culturen van binnenuit en weten hoe zaken écht gedaan worden aan weerszijden van de brug.</p>
-              <p>Waar andere adviseurs werken vanuit theorie, werken wij vanuit vertrouwen en relaties die door de jaren zijn opgebouwd — in Marokko, Saoedi-Arabië, Libië, de VAE en Nederland. Ons team van 13 professionals combineert juridische, financiële, taalkundige en zakelijke expertise.</p>
+              <p>Waar andere adviseurs werken vanuit theorie, werken wij vanuit vertrouwen en relaties die door de jaren zijn opgebouwd — in Marokko, Saoedi-Arabië, Libië, de VAE en Nederland. Ons team van 12 professionals combineert juridische, financiële, taalkundige en zakelijke expertise.</p>
               <p>Wij geloven dat de grootste kansen liggen op het snijvlak van twee werelden. Ons werk is om u daar te brengen — efficiënt, betrouwbaar en met resultaat.</p>
             </div>
           </motion.div>
@@ -87,7 +90,7 @@ export default function OverOns() {
               <span className="text-gold-200 text-xs font-semibold uppercase tracking-[0.25em]">Ons team</span>
             </div>
             <h2 className="font-display font-bold text-5xl md:text-6xl mb-4 gradient-luxe">
-              13 professionals · 2 continenten
+              12 professionals · 2 continenten
             </h2>
             <p className="text-white/60 text-lg max-w-2xl mx-auto">
               Eén gemeenschappelijk doel: uw project laten slagen.
@@ -110,7 +113,7 @@ export default function OverOns() {
                       data-spotlight
                       className="card-luxe rounded-2xl px-6 py-4 flex items-center gap-3 group">
                       <div className="w-12 h-12 bg-gradient-to-br from-gold-500 to-gold-600 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg shadow-gold-500/30 group-hover:scale-110 transition-transform">
-                        <span className="text-white font-bold">{naam[0]}</span>
+                        <span className="text-white font-bold text-sm">{initialen(naam)}</span>
                       </div>
                       <span className="font-semibold text-white">{naam}</span>
                     </div>
