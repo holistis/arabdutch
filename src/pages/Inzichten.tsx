@@ -84,11 +84,11 @@ const rapporten = [
 
   // === €79 STANDAARD ===
   {
-    slug: "vastgoed-marokko-temara",
-    titel: "Vastgoedinvestering Temara & Rabat",
-    beschrijving: "Diepgaande marktanalyse van de snelst groeiende vastgoedmarkt in Marokko — rendement, risico, procedure, notaris, ArabDutch-selectie van 12 projecten. Gratis 6-pagina preview.",
+    slug: "vastgoed-marokko-complete-gids",
+    titel: "Vastgoed in heel Marokko — Complete marktgids 2026",
+    beschrijving: "De meest complete vastgoedgids voor Marokko: marktanalyse en rendementen per stad (Casablanca, Rabat, Marrakech, Tanger, Agadir, Fes), koopprocedure voor Nederlanders stap voor stap, belasting & notariskosten, hypotheekmogelijkheden en 18 geselecteerde projecten. Gratis 6-pagina preview.",
     land: "marokko", landNaam: "Marokko", vlag: "🇲🇦",
-    categorie: "vastgoed", isGratis: false, paginas: 28, datum: "April 2026", prijs: "€79", marktPrijs: "€220", tier: "standaard",
+    categorie: "vastgoed", isGratis: false, paginas: 34, datum: "Mei 2026", prijs: "€79", marktPrijs: "€220", tier: "standaard",
   },
   {
     slug: "jordanie-asez-vrije-zone",
