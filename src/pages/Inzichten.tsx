@@ -105,6 +105,7 @@ const rapporten = [
     beschrijving: "De Mediterraanse goudkust: marktanalyse, vergunningseisen voor buitenlanders, rendementen en infrastructuurontwikkeling 2026-2030. Gratis preview beschikbaar.",
     land: "egypte", landNaam: "Egypte", vlag: "🇪🇬",
     categorie: "vastgoed", isGratis: false, paginas: 26, datum: "Juni 2026", prijs: "€79", marktPrijs: "€220", tier: "standaard",
+    stripeUrl: "https://buy.stripe.com/dRmcN5fGE6EX99Yc4P7ok08",
   },
 
   // === €149 DIEPGAAND ===

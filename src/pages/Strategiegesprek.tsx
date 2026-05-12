@@ -16,7 +16,7 @@ const pakketten = [
     marktPrijs: "€420",
     ideaal: "Eerste oriëntatie, gerichte vraag",
     levering: "Direct via video-call, follow-up notities binnen 24u",
-    stripeLink: "", // user moet invullen
+    stripeLink: "https://buy.stripe.com/aFafZhcusfbtae29WH7ok09",
     features: [
       "30-minuten one-on-one met senior consultant",
       "Vooraf intake-formulier voor focus",
@@ -32,7 +32,7 @@ const pakketten = [
     marktPrijs: "€840",
     ideaal: "Diepgaand vraagstuk, marktentree-strategie",
     levering: "Video-call + analyse-document, follow-up gesprek na 14 dagen",
-    stripeLink: "",
+    stripeLink: "https://buy.stripe.com/14A9AT0LK5AT0Dsc4P7ok0a",
     features: [
       "60-minuten diepgaande sessie",
       "Maatwerk-analyse vooraf op uw casus",
@@ -50,7 +50,7 @@ const pakketten = [
     marktPrijs: "€1.400",
     ideaal: "Board-level beslissing, multi-landenstrategie",
     levering: "Premium video-call met 2 consultants, volledig strategiedocument",
-    stripeLink: "",
+    stripeLink: "https://buy.stripe.com/14AeVdgKId3lae22uf7ok0b",
     features: [
       "90-minuten met 2 senior consultants (NL + AR expertise)",
       "Pre-call due diligence van uw markt",
@@ -153,11 +153,15 @@ export default function Strategiegesprek() {
                 </ul>
 
                 <a
-                  href={`#boeken-${i}`}
+                  href={p.stripeLink || "#boeken"}
+                  target={p.stripeLink ? "_blank" : undefined}
+                  rel={p.stripeLink ? "noopener noreferrer" : undefined}
                   onClick={(e) => {
-                    e.preventDefault();
-                    setForm(f => ({ ...f, pakket: p.titel }));
-                    document.getElementById("boeken")?.scrollIntoView({ behavior: "smooth" });
+                    if (!p.stripeLink) {
+                      e.preventDefault();
+                      setForm(f => ({ ...f, pakket: p.titel }));
+                      document.getElementById("boeken")?.scrollIntoView({ behavior: "smooth" });
+                    }
                   }}
                   className={`btn-shine inline-flex items-center justify-center gap-2 font-semibold px-6 py-3 rounded-full transition-all w-full ${
                     p.populair
@@ -165,7 +169,7 @@ export default function Strategiegesprek() {
                       : "bg-navy-900 hover:bg-navy-800 text-white shadow-lg"
                   }`}
                 >
-                  Boek {p.duur} <ArrowRight className="w-4 h-4" />
+                  Boek {p.duur} — {p.prijs} <ArrowRight className="w-4 h-4" />
                 </a>
                 <p className={`text-center text-xs mt-3 ${p.populair ? "text-white/40" : "text-gray-400"}`}>
                   <Shield className="w-3 h-3 inline mr-1" /> 100% geld terug bij ongenoegen

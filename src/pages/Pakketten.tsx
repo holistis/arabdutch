@@ -23,6 +23,7 @@ const pakketten = [
     ],
     cta: "Boek Starter",
     populair: false,
+    stripeLink: "https://buy.stripe.com/3cIbJ13XWaVdae2d8T7ok0c",
   },
   {
     icon: <Briefcase className="w-7 h-7" />,
@@ -44,6 +45,7 @@ const pakketten = [
     ],
     cta: "Boek Professional",
     populair: true,
+    stripeLink: "https://buy.stripe.com/dRm3cv3XW5ATgCq9WH7ok0d",
   },
   {
     icon: <Building2 className="w-7 h-7" />,
@@ -66,6 +68,7 @@ const pakketten = [
     ],
     cta: "Boek Enterprise",
     populair: false,
+    stripeLink: "https://buy.stripe.com/9B628r1PO2oHae26Kv7ok0e",
   },
 ];
 
@@ -138,16 +141,18 @@ export default function Pakketten() {
                   ))}
                 </ul>
 
-                <Link
-                  to="/contact"
+                <a
+                  href={p.stripeLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className={`btn-shine inline-flex items-center justify-center gap-2 font-semibold px-6 py-3.5 rounded-full transition-all w-full ${
                     p.populair
                       ? "bg-gradient-to-r from-gold-500 to-gold-600 hover:from-gold-400 hover:to-gold-500 text-white shadow-xl shadow-gold-500/40"
                       : "bg-navy-900 hover:bg-navy-800 text-white shadow-lg"
                   }`}
                 >
-                  {p.cta} <ArrowRight className="w-4 h-4" />
-                </Link>
+                  {p.cta} — {p.prijs} <ArrowRight className="w-4 h-4" />
+                </a>
                 <p className={`text-center text-xs mt-3 ${p.populair ? "text-white/40" : "text-gray-400"}`}>
                   <Shield className="w-3 h-3 inline mr-1" /> Vaste prijs · Geen verrassingen
                 </p>
