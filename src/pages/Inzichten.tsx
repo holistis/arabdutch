@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { ArrowRight, Download, FileText, Globe, TrendingUp, Building, Home as HomeIcon, Users, BookOpen, Sparkles } from "lucide-react";
+import { ArrowRight, Download, FileText, Globe, TrendingUp, Building, Home as HomeIcon, Users, BookOpen, Sparkles, Eye } from "lucide-react";
 import { Link } from "react-router-dom";
 import LeadCaptureModal from "../components/LeadCaptureModal";
 import LuxeHero from "../components/LuxeHero";
@@ -89,6 +89,7 @@ const rapporten = [
     beschrijving: "De meest complete vastgoedgids voor Marokko: marktanalyse en rendementen per stad (Casablanca, Rabat, Marrakech, Tanger, Agadir, Fes), koopprocedure voor Nederlanders stap voor stap, belasting & notariskosten, hypotheekmogelijkheden en 18 geselecteerde projecten. Gratis 6-pagina preview.",
     land: "marokko", landNaam: "Marokko", vlag: "🇲🇦",
     categorie: "vastgoed", isGratis: false, paginas: 34, datum: "Mei 2026", prijs: "€79", marktPrijs: "€220", tier: "standaard",
+    stripeUrl: "https://buy.stripe.com/14A00j3XW2oHdqe3yj7ok00",
   },
   {
     slug: "jordanie-asez-vrije-zone",
@@ -96,6 +97,7 @@ const rapporten = [
     beschrijving: "Speciale Economische Zone Aqaba: 5% vennootschapsbelasting, 100% buitenlands eigendom, strategische haven richting Saoedi-Arabië en de Golf. Inclusief stappenplan.",
     land: "jordanie", landNaam: "Jordanië", vlag: "🇯🇴",
     categorie: "bedrijfsoprichting", isGratis: false, paginas: 24, datum: "Mei 2026", prijs: "€79", marktPrijs: "€220", tier: "standaard",
+    stripeUrl: "https://buy.stripe.com/dRmfZh0LKaVd99Y5Gr7ok01",
   },
   {
     slug: "egypte-vastgoed-mar-mediterranee",
@@ -112,6 +114,7 @@ const rapporten = [
     beschrijving: "Diepgaande sector-analyse: van NEOM tot agritech, infrastructuur en watertechnologie. €1 biljoen investeringen ontleed per sector. Inclusief aanbestedingenmatrix en 25 lokale contacten.",
     land: "saoedi-arabie", landNaam: "Saoedi-Arabië", vlag: "🇸🇦",
     categorie: "bedrijfsoprichting", isGratis: false, paginas: 38, datum: "Februari 2026", prijs: "€149", marktPrijs: "€420", tier: "diepgaand",
+    stripeUrl: "https://buy.stripe.com/14A3cv664fbt3PE1qb7ok02",
   },
   {
     slug: "qatar-financial-centre-gids",
@@ -119,6 +122,7 @@ const rapporten = [
     beschrijving: "Volledige procedure voor Nederlandse ondernemers: QFC vs Free Zone, kapitaaleisen, belasting (10%), residency, bankvoorkeuren en compliance. Stap-voor-stap met juridische templates.",
     land: "qatar", landNaam: "Qatar", vlag: "🇶🇦",
     categorie: "bedrijfsoprichting", isGratis: false, paginas: 34, datum: "Juni 2026", prijs: "€149", marktPrijs: "€420", tier: "diepgaand",
+    stripeUrl: "https://buy.stripe.com/dRm28r9ig4wP4TIgl57ok03",
   },
   {
     slug: "oman-2040-nederlandse-kansen",
@@ -126,6 +130,7 @@ const rapporten = [
     beschrijving: "Geen Dubai-prijzen, wél strategische ligging. Sectoren: logistiek (Duqm), toerisme, mining en visserij. Belasting, residency, partnerstructuren en 15 geverifieerde lokale contacten.",
     land: "oman", landNaam: "Oman", vlag: "🇴🇲",
     categorie: "bedrijfsoprichting", isGratis: false, paginas: 36, datum: "Juni 2026", prijs: "€149", marktPrijs: "€420", tier: "diepgaand",
+    stripeUrl: "https://buy.stripe.com/eVq3cv7a8bZh0Ds4Cn7ok04",
   },
 
   // === €249 PREMIUM ===
@@ -135,6 +140,7 @@ const rapporten = [
     beschrijving: "Premium strategische gids: alle 23 sectoren, €5 miljard aan stadia/HSR/hotels/luchthavens, tendering-procedures, 40+ lokale partnerprofielen, juridische templates en regionale prioriteiten Casablanca-Tanger-Marrakech-Agadir.",
     land: "marokko", landNaam: "Marokko", vlag: "🇲🇦",
     categorie: "bedrijfsoprichting", isGratis: false, paginas: 56, datum: "Juni 2026", prijs: "€249", marktPrijs: "€700", tier: "premium",
+    stripeUrl: "https://buy.stripe.com/fZueVddyw2oH71Q0m77ok05",
   },
   {
     slug: "irak-wederopbouw-nederlandse-bedrijven",
@@ -142,6 +148,7 @@ const rapporten = [
     beschrijving: "Premium-rapport: $88 miljard aan aanbestedingen tot 2030. Sectoren waterzuivering, energie, telecom, infrastructuur — gefocust op Koerdistan en Basra. Risk-rating per provincie, 30+ contacten, juridische analyse en sectie security/operations.",
     land: "irak", landNaam: "Irak", vlag: "🇮🇶",
     categorie: "bedrijfsoprichting", isGratis: false, paginas: 52, datum: "Juni 2026", prijs: "€249", marktPrijs: "€700", tier: "premium",
+    stripeUrl: "https://buy.stripe.com/3cI6oH7a80gz5XMfh17ok06",
   },
   {
     slug: "vision-2030-vs-2040-vergelijking",
@@ -149,6 +156,7 @@ const rapporten = [
     beschrijving: "De ultieme keuzegids: KSA, VAE, Qatar of Oman — welk land past bij welk type Nederlands bedrijf? Volledige beslismatrix, kosten-baten per sector, 50+ contacten regionaal, en ArabDutch's eigen positioneringsraamwerk.",
     land: "algemeen", landNaam: "Golfregio", vlag: "🕌",
     categorie: "bedrijfsoprichting", isGratis: false, paginas: 48, datum: "Mei 2026", prijs: "€249", marktPrijs: "€700", tier: "premium",
+    stripeUrl: "https://buy.stripe.com/6oUfZhcus4wP3PEgl57ok07",
   },
 ];
 
@@ -310,13 +318,40 @@ export default function Inzichten() {
 
                   <div className="flex items-center justify-between pt-4 border-t border-gray-100">
                     <span className="text-gray-400 text-xs">{r.paginas} pag · {r.datum}</span>
-                    <button
-                      onClick={() => setModalRapport(r)}
-                      className="flex items-center gap-1.5 text-gold-500 hover:text-gold-600 font-semibold text-sm transition-colors group-hover:gap-2"
-                    >
-                      <Download className="w-4 h-4" />
-                      {r.isGratis ? "Download" : "Bekijk"}
-                    </button>
+                    <div className="flex items-center gap-3">
+                      {!r.isGratis && (
+                        <button
+                          onClick={() => setModalRapport(r)}
+                          className="flex items-center gap-1 text-gray-400 hover:text-gray-600 text-xs transition-colors"
+                        >
+                          <Eye className="w-3.5 h-3.5" /> Preview
+                        </button>
+                      )}
+                      {r.isGratis ? (
+                        <button
+                          onClick={() => setModalRapport(r)}
+                          className="flex items-center gap-1.5 text-gold-500 hover:text-gold-600 font-semibold text-sm transition-colors"
+                        >
+                          <Download className="w-4 h-4" /> Download
+                        </button>
+                      ) : (r as any).stripeUrl ? (
+                        <a
+                          href={(r as any).stripeUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-1.5 bg-gradient-to-r from-gold-500 to-gold-600 hover:from-gold-400 hover:to-gold-500 text-white font-semibold text-xs px-4 py-2 rounded-full transition-all shadow-md shadow-gold-500/30"
+                        >
+                          Kopen — {r.prijs}
+                        </a>
+                      ) : (
+                        <button
+                          onClick={() => setModalRapport(r)}
+                          className="flex items-center gap-1.5 text-gold-500 hover:text-gold-600 font-semibold text-sm transition-colors"
+                        >
+                          <Download className="w-4 h-4" /> Bekijk
+                        </button>
+                      )}
+                    </div>
                   </div>
                 </div>
               </motion.div>
