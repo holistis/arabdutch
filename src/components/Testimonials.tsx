@@ -18,7 +18,7 @@ const testimonials = [
     rating: 5,
   },
   {
-    quote: "Wij wilden uitbreiden naar de VAE maar wisten niet waar te beginnen. ArabDutch heeft binnen 6 weken bedrijf opgericht, banking geregeld en eerste klanten geleverd. Hun €7.500 pakket is een fractie van wat de Big 4 vroeg.",
+    quote: "Wij wilden uitbreiden naar de VAE maar wisten niet waar te beginnen. ArabDutch heeft binnen 6 weken bedrijf opgericht, banking geregeld en eerste klanten geleverd. Hun €25.000 pakket is een fractie van wat de Big 4 vroeg.",
     naam: "Marlies de B.",
     functie: "Founder",
     sector: "SaaS · Nederland",

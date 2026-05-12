@@ -10,8 +10,8 @@ const pakketten = [
     icon: <Rocket className="w-7 h-7" />,
     naam: "Starter",
     voorWie: "MKB-ondernemer met concrete vraag",
-    prijs: "€2.500",
-    marktPrijs: "€7.000",
+    prijs: "€3.000",
+    marktPrijs: "€10.000",
     duur: "2–4 weken",
     includes: [
       "Verdiepende marktscan van uw doelland (15-25p rapport)",
@@ -29,8 +29,8 @@ const pakketten = [
     icon: <Briefcase className="w-7 h-7" />,
     naam: "Professional",
     voorWie: "Bedrijf dat marktentree wil realiseren",
-    prijs: "€7.500",
-    marktPrijs: "€21.000",
+    prijs: "€25.000",
+    marktPrijs: "€85.000",
     duur: "6–10 weken",
     includes: [
       "Volledige marktentree-strategie (40-60p strategiedocument)",
@@ -51,8 +51,8 @@ const pakketten = [
     icon: <Building2 className="w-7 h-7" />,
     naam: "Enterprise",
     voorWie: "Multinational of investment vehicle",
-    prijs: "€19.500",
-    marktPrijs: "€55.000",
+    prijs: "€70.000",
+    marktPrijs: "€235.000",
     duur: "3–6 maanden",
     includes: [
       "Multi-landen strategiedocument (80-120p)",
@@ -220,7 +220,7 @@ export default function Pakketten() {
           <div className="space-y-4">
             {[
               { v: "Waarom zijn jullie prijzen zoveel lager dan Big 4?", a: "Wij hebben een fundamenteel andere structuur: dedicated specialisten zonder dure kantoorhiërarchieën in London of Riyadh. Onze overheadkosten zijn 70% lager dan McKinsey of BCG — die besparing geven wij direct door aan onze klanten zonder kwaliteitsconcessie." },
-              { v: "Krijg ik mijn geld terug als ik niet tevreden ben?", a: "Ja. Bij elke betaalde dienst geldt een 14-dagen geld-terug-garantie. Bij projecten van >€2.500 geldt een tussentijds review-moment na week 2, waarbij u kunt stoppen tegen vergoeding van geleverde uren." },
+              { v: "Krijg ik mijn geld terug als ik niet tevreden ben?", a: "Ja. Bij elke betaalde dienst geldt een 14-dagen geld-terug-garantie. Bij projecten van >€3.000 geldt een tussentijds review-moment na week 2, waarbij u kunt stoppen tegen vergoeding van geleverde uren." },
               { v: "Werken jullie ook voor non-EU klanten?", a: "Ja. Wij werken voor Nederlandse, Belgische, Duitse en Arabische klanten. Voor non-EU klanten geldt reverse charge op BTW." },
               { v: "Hoe garanderen jullie kwaliteit?", a: "Elke opdracht heeft een senior consultant als hoofdverantwoordelijke met minimaal 10 jaar regio-ervaring. Onze deliverables worden intern gepeer-reviewed. Klanten krijgen wekelijkse updates en een dedicated project-portaal." },
               { v: "Wat is jullie ervaring met Sharia-compliance?", a: "Voor opdrachten waar Sharia-compliance vereist is (Saoedi-Arabië, Bahrein, Koeweit) werken wij samen met gecertificeerde Sharia-adviseurs. Wij coördineren het volledige proces." },
