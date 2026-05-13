@@ -58,6 +58,25 @@ function renderSection(s: Section, i: number) {
           )}
         </figure>
       );
+    case "video":
+      return (
+        <figure key={i} className="my-10 flex flex-col items-center">
+          <div className="w-full max-w-sm mx-auto rounded-3xl overflow-hidden shadow-2xl" style={{ aspectRatio: "9/16" }}>
+            <iframe
+              src={`https://www.youtube.com/embed/${s.videoId}?rel=0`}
+              title={s.videotitel || "Video"}
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className="w-full h-full"
+            />
+          </div>
+          {s.bijschrift && (
+            <figcaption className="text-sm text-gray-500 text-center mt-4 italic">
+              {s.bijschrift}
+            </figcaption>
+          )}
+        </figure>
+      );
     default:
       return null;
   }

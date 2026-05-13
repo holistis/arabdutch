@@ -9,15 +9,275 @@ export interface BlogPost {
 }
 
 export interface Section {
-  type: "intro" | "h2" | "p" | "quote" | "afbeelding" | "lijst";
+  type: "intro" | "h2" | "p" | "quote" | "afbeelding" | "lijst" | "video";
   tekst?: string;
   items?: string[];
   src?: string;
   alt?: string;
   bijschrift?: string;
+  videoId?: string;
+  videotitel?: string;
 }
 
 const posts: BlogPost[] = [
+  {
+    slug: "kemkem-fossielenjacht-merzouga",
+    datum: "13 mei 2026",
+    tag: "Avontuur & Natuur",
+    titel: "Fossielenjacht in de Kem Kem: waar Spinosaurus en Carcharodontosaurus nog in de rotsen zitten",
+    excerpt: "De rode bergen van Kem Kem bewaren een geheim van 95 miljoen jaar. Tanden van vleesetende reuzen, botten van zeereptielenen rotstekeningen van mensen die er lang voor ons stonden. ArabDutch brengt je er naartoe, met een gids, op veilige plekken, en je mag iets meenemen.",
+    afbeelding: "/kemkem-fossielen-collectie.jpg",
+    inhoud: [
+      {
+        type: "intro",
+        tekst: "Stel je voor: je zit op je knieen in het rode zand van de Marokkaanse Sahara. In je hand houd je een tand. Scherp, zwaar, donkerbruin van mineralisatie. Hij is 95 miljoen jaar oud en behoorde toe aan een van de grootste roofdieren die ooit op aarde leefde. Welkom in de Kem Kem.",
+      },
+      {
+        type: "h2",
+        tekst: "Wat is de Kem Kem?",
+      },
+      {
+        type: "p",
+        tekst: "De Kem Kem Groep is een geologische formatie langs de grens van Marokko en Algerije, niet ver van de duinen van Merzouga. Wetenschappers noemen het de gevaarlijkste ecosysteem uit de prehistorie: een tropische rivierdelta van het Laat-Krijt, bevolkt door meerdere reusachtige roofdieren tegelijk. Nergens anders op aarde zijn zoveel grote carnivore dinosaurussen op dezelfde plek gevonden.",
+      },
+      {
+        type: "lijst",
+        items: [
+          "Spinosaurus aegyptiacus: grootste vleesetende dinosaurus ooit, half op land, half in het water. Langer dan een T-rex.",
+          "Carcharodontosaurus saharicus: schedel zo groot als een volwassen mens, tanden als messen.",
+          "Deltadromeus agilis: slanke, snelle roofdino van acht meter lang.",
+          "Onchopristis numidus: een reusachtige zaagvis van zes meter met getande snuit.",
+          "Rugops primus, Bahariasaurus en tientallen andere soorten, inclusief krokodilachtigen en grote zeeschildpadden.",
+        ],
+      },
+      {
+        type: "p",
+        tekst: "Wat dit gebied zo bijzonder maakt: de fossielen liggen in specifieke lagen van rode zandsteen die door erosie aan het oppervlak komen. Niet in alle bergen: alleen in bepaalde formaties. De lokale gravers kennen die lagen uit hun hoofd, overgeleverd van generatie op generatie.",
+      },
+      {
+        type: "video",
+        videoId: "uwvlyFSchnM",
+        videotitel: "Fossielencollectie Kem Kem: tanden en botten van land en zeedinosaurussen",
+        bijschrift: "Een collectie fossielen uit de Kem Kem: tanden van Spinosaurus, Carcharodontosaurus en zeereptielenen. Ouder dan de bekende vondsten van Oued Zem.",
+      },
+      {
+        type: "h2",
+        tekst: "De rotsgravures: mensen kwamen hier al lang voor ons",
+      },
+      {
+        type: "p",
+        tekst: "Terwijl je door de rode rotswanden loopt, valt je blik op ingekraste tekeningen. Paarden, kamelen, geometrische vormen, letters van mensen die hier eeuwen geleden stonden en hetzelfde gevoel hadden: dit is een plek die je niet vergeet. Deze petrogliefen zijn stille getuigen van een lange menselijke aanwezigheid in dit ogenschijnlijk verlaten landschap.",
+      },
+      {
+        type: "afbeelding",
+        src: "/kemkem-petroglyphs.jpg",
+        alt: "Prehistorische rotsgravures met ingekraste tekeningen van kamelen en letters in rode zandsteen, Kem Kem regio",
+        bijschrift: "Ingekraste rotsgravures in de rode zandsteen van de Kem Kem, met een paard of kameel en symbolen van vroegere bezoekers.",
+      },
+      {
+        type: "h2",
+        tekst: "Het werk achter de vondst",
+      },
+      {
+        type: "p",
+        tekst: "De fossielen komen niet vanzelf tevoorschijn. Lokale mannen uit de regio Merzouga werken dagelijks in de bergen, soms diep in zelfgegraven tunnels, soms op steile hellingen die alleen te voet bereikbaar zijn. Ze beginnen vroeg, voor de hitte ondraaglijk wordt. Met beitel, hamer en borstel werken ze met uiterste precisie. Eén verkeerde beweging beschadigt onherstelbaar wat 95 miljoen jaar intact bleef.",
+      },
+      {
+        type: "video",
+        videoId: "ZvzBnTgJvkQ",
+        videotitel: "Fossielenjacht: precisiewerk in de woestijnhitte",
+        bijschrift: "Hoe de gravers te werk gaan nadat het eerste zware graafwerk is gedaan. Geduld, precisie en extreme hitte.",
+      },
+      {
+        type: "video",
+        videoId: "vVmYfAaFGTI",
+        videotitel: "Binnen in een actieve fossielentunnel",
+        bijschrift: "Een blik in een vers gegraven tunnel in de bergwand. Buiten boven de 40 graden, binnen opvallend koel.",
+      },
+      {
+        type: "quote",
+        tekst: "Wat vroeger regelmatig gevonden werd, ligt nu diep verborgen of is simpelweg verdwenen. Het is een zeldzaam voorrecht om deze stukken nog in zo'n complete staat te zien.",
+      },
+      {
+        type: "h2",
+        tekst: "Wat je in de hand houdt",
+      },
+      {
+        type: "p",
+        tekst: "Op de kartonnen planken die de mannen op de grond uitleggen liggen tientallen stukken. Tanden van verschillende soorten, herkenbaar aan vorm en kleur. Wervelstukken. Schubben van oerpantservissen. Botfragmenten van reusachtige krokodillen. De afwisseling is duizelingwekkend. Dit zijn geen replica's of museum-afgietsels. Dit zijn de originelen, net uit de grond.",
+      },
+      {
+        type: "afbeelding",
+        src: "/kemkem-tand-hand.jpg",
+        alt: "Fossiele dinosaurustand in een hand, rode woestijnbodem op de achtergrond, Kem Kem Marokko",
+        bijschrift: "Een fossiele tand, vermoedelijk van een grote theropode, gevonden in de rode lagen van de Kem Kem formatie.",
+      },
+      {
+        type: "afbeelding",
+        src: "/kemkem-fossielen-veld.jpg",
+        alt: "Uitgespreide fossielencollectie op karton in de woestijn: tanden, botten, schubben van prehistoric dieren",
+        bijschrift: "Een selectie vondsten uitgelegd op karton in het veld. Tanden, botten en schubben van Cretaceous-tijdperk.",
+      },
+      {
+        type: "h2",
+        tekst: "Jouw expeditie met ArabDutch",
+      },
+      {
+        type: "p",
+        tekst: "ArabDutch organiseert kleinschalige fossielenexpedities naar de Kem Kem en omgeving, voor individuen en groepen tot vijf personen. Je wordt opgehaald per jeep en begeleid door onze vaste gids ter plaatse, een man die de bergen kent als zijn broekzak. Je zoekt mee op veilige, bekende locaties. Geen risico, geen avontuur dat verkeerd afloopt.",
+      },
+      {
+        type: "lijst",
+        items: [
+          "Ophalen per jeep vanuit je hotel in Merzouga of Erfoud.",
+          "Begeleiding door een ervaren lokale gids die de vindplaatsen kent.",
+          "Zoeken op veilige plekken, weg van instabiele tunnels en steile hellingen.",
+          "Je mag een selectie kleine fossielen meenemen als aandenken.",
+          "We assisteren bij het correct inpakken en, indien gewenst, bij het transport van fossielen en edelstenen vanuit Marokko naar de EU.",
+          "Hotel, vervoer en alle logistiek regelen we voor je, alles tegen kostprijs.",
+        ],
+      },
+      {
+        type: "video",
+        videoId: "VQrrRVRrIO4",
+        videotitel: "Marokkaanse theeceremonie met lokale fossielenexperts in Merzouga",
+        bijschrift: "Onder het genot van verse muntthee vertellen de lokale kenners over hun vondsten: Spinosaurus, Carcharodontosaurus en de rijkdom van de Kem Kem.",
+      },
+      {
+        type: "p",
+        tekst: "De trip is meer dan een excursie. Het is een ontmoeting met de mensen die dit erfgoed bewaken, met een landschap dat niets van zijn kracht heeft verloren, en met een stukje geschiedenis dat je letterlijk in de hand kunt houden. Heb je interesse in transport of aankoop van fossielen, edelstenen of andere authentieke producten uit Marokko naar de EU? Wij denken graag mee.",
+      },
+      {
+        type: "quote",
+        tekst: "Wij brengen je op plekken waar de massa niet komt. Wij kennen de verhalen achter de stenen en de mensen achter het werk.",
+      },
+      {
+        type: "p",
+        tekst: "Neem contact op via onze contactpagina voor meer informatie, prijzen en beschikbaarheid. We maken van elke trip een persoonlijke, onvergetelijke ervaring.",
+      },
+    ],
+  },
+  {
+    slug: "merzouga-woestijn-avontuur-complete-gids",
+    datum: "13 mei 2026",
+    tag: "Avontuur & Natuur",
+    titel: "Merzouga: de complete woestijngids voor een authentieke Sahara-beleving",
+    excerpt: "Quads over de duinen, kamperen onder een hemel vol sterren, je laten begraven in gloeiend woestijnzand voor je gewrichten, verse kamelenmelk drinken bij zonsopgang. En dat alles in de omgeving van Erg Chebbi, een van de mooiste duingebieden van Afrika. ArabDutch regelt het van A tot Z.",
+    afbeelding: "/kemkem-petroglyphs.jpg",
+    inhoud: [
+      {
+        type: "intro",
+        tekst: "Merzouga is meer dan een bestemming. Het is een gevoel. De rode duinen van Erg Chebbi rijzen tot 150 meter op uit het vlakke land. De stilte is zo diep dat je je eigen hartslag hoort. En als de zon ondergaat achter de bergen, kleurt de hemel in tinten die geen fotograaf ooit volledig vastlegt. Dit is waar wij je naartoe brengen.",
+      },
+      {
+        type: "h2",
+        tekst: "Erg Chebbi: de duinen die alles overheersen",
+      },
+      {
+        type: "p",
+        tekst: "De zandduinen van Erg Chebbi zijn een van de grootste en mooiste ergs van Marokko, tot 150 meter hoog, oranjegoud bij zonsopkomst en diep rood bij ondergaande zon. Dit is de klassieke plek voor kameelritten bij dageraad, voor het kamperen in een Berbertent midden in het zand en voor het gevoel van absolute eenzaamheid in een wereld die ineens heel groot lijkt.",
+      },
+      {
+        type: "video",
+        videoId: "c1kJYtXW-6o",
+        videotitel: "Panorama rode bergen Merzouga",
+        bijschrift: "Uitgestrekte vlaktes van de Sahara, met de rode bergen op de achtergrond en de graafplaatsen die de prehistorie bewaken.",
+      },
+      {
+        type: "h2",
+        tekst: "Quads, enduro's en crossmotors",
+      },
+      {
+        type: "p",
+        tekst: "Wie van avontuur houdt, vindt hier zijn gading. In de omgeving van Merzouga kun je quads huren voor een rit over de vlaktes en door de duinen, enduro-motoren voor wie meer technisch terrein wil verkennen, of crossmotoren voor de echte off-road liefhebber. Onze gids kent de beste routes, de uitkijkpunten en de plekken waar toeristen nooit komen.",
+      },
+      {
+        type: "h2",
+        tekst: "De zandbegraafnis: traditionele geneeskunde van de Sahara",
+      },
+      {
+        type: "p",
+        tekst: "In de zomermaanden, als de woestijnbodem opgestookt is tot ver boven de 50 graden, zoeken mensen de duinen op voor een heel bijzonder ritueel: de zandbegraafnis. Je wordt tot je nek begraven in het gloeiende zand, met alleen je hoofd boven de grond. Twintig tot dertig minuten. Het is een eeuwenoude Sahara-traditie die lokaal bekend staat als effectief bij reumatische klachten, gewrichtspijn en spierproblemen. Wetenschappelijk onderzoek bevestigt dat de intense warmte de doorbloeding stimuleert en ontspanning bevordert. Mensen reizen van ver om dit te ervaren.",
+      },
+      {
+        type: "quote",
+        tekst: "Je gaat in de grond als iemand met pijnlijke gewrichten en je komt eruit als iemand die de aarde heeft gevoeld. Het is raar, intens en onvergetelijk.",
+      },
+      {
+        type: "h2",
+        tekst: "Kamperen in de woestijn: gratis, vrij en onvergetelijk",
+      },
+      {
+        type: "p",
+        tekst: "De woestijn rond Merzouga is vrij toegankelijk. Kamperen is gratis en legaal. Met een slaapzak en een mat slaap je onder een hemel vol sterren, zo helder dat de Melkweg zichtbaar is als een brede witte band. Geen lichtpollutie, geen geluid. Alleen de wind, het zand en de nacht. Onze gids kent de veiligste en mooiste kampeerspots, ver van de drukke toeristenoorden.",
+      },
+      {
+        type: "video",
+        videoId: "WNdT4OBaPaY",
+        videotitel: "De rode bergen en de omgeving van Merzouga vanuit panoramisch perspectief",
+        bijschrift: "De uitgestrekte, ruige schoonheid van de Marokkaanse Sahara rondom Merzouga.",
+      },
+      {
+        type: "h2",
+        tekst: "Kameelritten en verse kamelenmelk",
+      },
+      {
+        type: "p",
+        tekst: "Een kameelrit bij zonsopkomst door Erg Chebbi is een van die ervaringen die je leven lang bijblijft. De rust van het dier, het ritme van de stap, het licht dat langzaam over de duinen trekt. Na de rit wacht verse kamelenmelk bij de lokale familie die onze partner is in de regio. Kamelenmelk is rijker aan vitamine C en ijzer dan koemelk, bevat probiotische stoffen en is van nature laag in lactose. De smaak is licht zoutig, fris en volledig anders dan je verwacht.",
+      },
+      {
+        type: "h2",
+        tekst: "Verse dadels en de gastvrijheid van de lokale bevolking",
+      },
+      {
+        type: "p",
+        tekst: "De mensen in de omgeving van Merzouga zijn Berbers en Sahrawi die al generaties lang in dit landschap wonen. Hun gastvrijheid is geen toeristische act: het is wie ze zijn. Je wordt uitgenodigd voor thee, voor eten, voor een gesprek. De dadels in deze regio worden geplukt van palmen die rechtstreeks uit de woestijnbodem groeien. Vers, zacht, met een smaak die niets te maken heeft met wat je in een supermarkt vindt.",
+      },
+      {
+        type: "h2",
+        tekst: "De fossielenjacht: een wereld op zich",
+      },
+      {
+        type: "p",
+        tekst: "De regio rond Merzouga grenst aan de Kem Kem formatie, een van de rijkste fossielengebieden ter wereld. Tanden van Spinosaurus en Carcharodontosaurus, botten van zeedinosaurussen, schubben van oervissen. Wie mee wil zoeken, doet dat samen met onze gids op veilige locaties. Je mag een selectie kleine vondsten meenemen. Lees meer in ons uitgebreide artikel over de Kem Kem fossielenjacht.",
+      },
+      {
+        type: "video",
+        videoId: "Mk8Zln9-dnM",
+        videotitel: "Gravers in de bergen van Kem Kem: tunnels uithouwen voor fossielen",
+        bijschrift: "Lokale gravers houwen diep in de rotsen, op zoek naar overblijfselen van miljoenen jaren oud. Dit is de werkelijkheid achter elke fossielenvondst.",
+      },
+      {
+        type: "h2",
+        tekst: "Wat ArabDutch voor je regelt",
+      },
+      {
+        type: "p",
+        tekst: "Wij organiseren de complete trip, van ophalen per jeep tot hotel, maaltijden, activiteiten en lokale begeleiding. Alles tegen kostprijs, voor individuen of kleine groepen van maximaal vijf personen. Geen massatoerisme, geen vaste pakketten. Elke trip is persoonlijk samengesteld op basis van wat jij wilt meemaken.",
+      },
+      {
+        type: "lijst",
+        items: [
+          "Ophalen per jeep vanuit jouw locatie in Marokko.",
+          "Hotel in Merzouga of bivak in de woestijn, jouw keuze.",
+          "Kameelrit bij zonsopkomst met verse kamelenmelk.",
+          "Quad, enduro of crossmotor huren met begeleiding.",
+          "Zandbegraafnis (op aanvraag, in de zomermaanden).",
+          "Fossielenjacht in de Kem Kem met lokale gids op veilige locaties.",
+          "Vrij kamperen onder de sterren, of een Berber-tent in de duinen.",
+          "Optioneel: assistentie bij transport van fossielen, edelstenen of andere producten vanuit Marokko naar de EU.",
+        ],
+      },
+      {
+        type: "p",
+        tekst: "Voor meer informatie, beschikbaarheid en prijzen: neem contact op via onze contactpagina. We beantwoorden elke vraag persoonlijk.",
+      },
+      {
+        type: "quote",
+        tekst: "Wij nemen je mee buiten de gebaande paden. Onze passie is om de authentieke kant van Marokko te laten zien, van de diepste fossielmijnen tot de hoogste duinen.",
+      },
+    ],
+  },
   {
     slug: "gitex-future-health-africa-casablanca-2026",
     datum: "8 mei 2026",
