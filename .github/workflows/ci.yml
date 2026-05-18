@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 8
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -48,7 +48,7 @@ jobs:
     # legacy-em-dashes zijn opgeruimd in een aparte content-pass.
     continue-on-error: true
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
 
       - name: Scan src/data/blogPosts.ts + landGidsen.ts
         # Regel uit memory/decisions.md: geen em-dashes (—) in publieke blogs/content.
