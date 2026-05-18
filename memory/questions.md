@@ -8,6 +8,11 @@ Vragen voor de product-owner. Niet voor Claude om te beslissen.
 
 ## 🔓 OPEN
 
+### Q008 — Em-dash cleanup-pass in `src/data/landGidsen.ts`
+- **Context:** CI em-dash-detector vond ~100+ em-dashes in `landGidsen.ts` (commit 2026-05-18). Deze zijn al langer publieke content. Regel uit `decisions.md` zegt: geen em-dashes in publieke content.
+- **Beslissing nodig:** mass-replace door komma's/haakjes (risico: tekst slechter leesbaar) OF per blog handmatig review (tijdrovend) OF accepteer als bestaand en alleen nieuwe content moet voldoen.
+- **Beslissing nodig voor:** consistentie publieke content. Tot dan staat CI-check op `continue-on-error: true`.
+
 ### Q001 — Live domein bevestigen
 - **Context:** Project-config noemt geen primair domein. Vermoedelijk arabdutch.nl of vergelijkbaar.
 - **Beslissing nodig:** Hoofd-domein + eventueel meta/alias-domeinen vastleggen in `project_arabdutch.md`.
