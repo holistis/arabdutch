@@ -1,73 +1,81 @@
-# React + TypeScript + Vite
+# ArabDutch
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> Brug tussen Nederland en Marokko: vastgoedgids, AI-zoekrapporten, strategiegesprek en B2B-pakketten.
 
-Currently, two official plugins are available:
+## Wat is ArabDutch?
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Een professioneel platform voor Nederlandse investeerders, ondernemers en professionals met interesse in Marokko (en breder MENA). We bieden:
 
-## React Compiler
+- **Marokko vastgoedgids** — complete landengids 2026
+- **AI-zoekrapporten** — diepgaande locatie- en regio-analyses
+- **Strategiegesprek** — boekbare één-op-één sessie
+- **B2B-pakketten** voor vastgoed- of business-trajecten (Marokko-only)
+- **Content** — blogs over GITEX Future Health Africa, Kem Kem, Marokko-actualiteiten
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Pakketten en pricing
 
-## Expanding the ESLint configuration
+| Pakket | Prijs | Voor wie |
+|---|---|---|
+| Starter | €3.000 | Verkennen, eerste stappen |
+| Business | €25.000 | Concreet traject |
+| Enterprise | €70.000 | Volledig vastgoed- of business-project |
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Andere landen dan Marokko: maatwerk via offerte-formulier.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Stack
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+| Laag | Technologie |
+|---|---|
+| Framework | Vite + React 19 + TypeScript |
+| Styling | Tailwind CSS + custom luxe components |
+| i18n | react-i18next |
+| Routing | react-router-dom v6 |
+| Forms / data | Supabase |
+| Payments | Stripe Payment Links |
+| Hosting | Railway (EU) |
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Lokaal draaien
+
+```bash
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Build voor productie:
+```bash
+npm run build
 ```
+
+Lint:
+```bash
+npm run lint
+```
+
+## Deployment
+
+Direct-to-main: elke `git push origin main` triggert een Railway auto-deploy. Geen dev-branch, kleine marketing-site die snel itereert. Zie `CLAUDE.md` voor werkafspraken.
+
+## Repo-geheugen
+
+Project-specifieke context staat in `memory/`:
+- `work_log.md` (chronologisch journal)
+- `decisions.md` (belangrijke beslissingen)
+- `domain.md` (business + stack)
+- `risks.md` (bekende valkuilen)
+- `questions.md` (open product-owner-vragen)
+- `project_arabdutch.md` (Railway-koppeling)
+
+## Stijl-regels
+
+- Geen em-dashes in publieke content
+- Luxe / cinematic visuele stijl voor subpagina's
+- Tweetalig waar zinvol (NL primair, AR voor MENA)
+
+## Externe samenhang
+
+- Lab-demo-link verwijst naar `holistis/SiteCraft-AI` Railway-URL
+- WhatsApp business button voor laagdrempelig contact
+
+## Licentie
+
+Proprietary, onderdeel van de Holistis-organisatie.
