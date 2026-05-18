@@ -1,0 +1,73 @@
+name: CI
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: Build + lint (Vite)
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Lint
+        run: npm run lint
+        continue-on-error: true
+
+      - name: Build
+        run: npm run build
+
+      - name: Verifieer build-output
+        run: |
+          test -d dist || (echo "❌ dist/ ontbreekt na build" && exit 1)
+          echo "✅ Build artifacts aanwezig"
+
+  no-em-dashes:
+    name: Em-dash detector (warning)
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    # Continue-on-error: bestaande content (landGidsen.ts) bevat nog em-dashes.
+    # Deze job is een zichtbare reminder, geen blocker. Wordt hard als de
+    # legacy-em-dashes zijn opgeruimd in een aparte content-pass.
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Scan src/data/blogPosts.ts + landGidsen.ts
+        # Regel uit memory/decisions.md: geen em-dashes (—) in publieke blogs/content.
+        # Em-dashes worden geassocieerd met AI-content en horen niet in onze stijl.
+        run: |
+          FOUND=0
+          if grep -nE "—" src/data/blogPosts.ts 2>/dev/null; then
+            echo "⚠️  Em-dashes in blogPosts.ts (zie regelnummers hierboven)"
+            FOUND=1
+          fi
+          if grep -nE "—" src/data/landGidsen.ts 2>/dev/null | head -5; then
+            echo "⚠️  Em-dashes in landGidsen.ts (eerste 5 hits, totaal kan groter zijn)"
+            FOUND=1
+          fi
+          if [ $FOUND -eq 0 ]; then
+            echo "✅ Geen em-dashes in publieke content-data"
+          else
+            echo ""
+            echo "ℹ️  Cleanup-pass voor em-dashes is op de TODO-lijst. Tot dan: warning."
+            # Niet exit 1 — continue-on-error is true op job-niveau, maar deze
+            # interne `if` werkt als documentatie.
+          fi
