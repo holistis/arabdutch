@@ -340,10 +340,11 @@ export default function Inzichten() {
                         // knop naar de wachtlijst i.p.v. een Stripe-betaling zonder levering.
                         // (stripeUrl blijft in de data bewaard voor zodra de levering werkt.)
                         <button
+                          type="button"
                           onClick={() => setModalRapport(r)}
                           className="flex items-center gap-1.5 bg-gradient-to-r from-gold-500 to-gold-600 hover:from-gold-400 hover:to-gold-500 text-white font-semibold text-xs px-4 py-2 rounded-full transition-all shadow-md shadow-gold-500/30"
                         >
-                          Op wachtlijst — {r.prijs}
+                          Op wachtlijst · {r.prijs}
                         </button>
                       )}
                     </div>
