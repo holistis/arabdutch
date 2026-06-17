@@ -335,21 +335,15 @@ export default function Inzichten() {
                         >
                           <Download className="w-4 h-4" /> Download
                         </button>
-                      ) : (r as any).stripeUrl ? (
-                        <a
-                          href={(r as any).stripeUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="flex items-center gap-1.5 bg-gradient-to-r from-gold-500 to-gold-600 hover:from-gold-400 hover:to-gold-500 text-white font-semibold text-xs px-4 py-2 rounded-full transition-all shadow-md shadow-gold-500/30"
-                        >
-                          Kopen — {r.prijs}
-                        </a>
                       ) : (
+                        // Betaalde rapporten: tot de automatische levering live is, gaat de
+                        // knop naar de wachtlijst i.p.v. een Stripe-betaling zonder levering.
+                        // (stripeUrl blijft in de data bewaard voor zodra de levering werkt.)
                         <button
                           onClick={() => setModalRapport(r)}
-                          className="flex items-center gap-1.5 text-gold-500 hover:text-gold-600 font-semibold text-sm transition-colors"
+                          className="flex items-center gap-1.5 bg-gradient-to-r from-gold-500 to-gold-600 hover:from-gold-400 hover:to-gold-500 text-white font-semibold text-xs px-4 py-2 rounded-full transition-all shadow-md shadow-gold-500/30"
                         >
-                          <Download className="w-4 h-4" /> Bekijk
+                          Op wachtlijst — {r.prijs}
                         </button>
                       )}
                     </div>

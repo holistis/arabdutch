@@ -3,7 +3,7 @@ import { X, Download, Lock, CheckCircle } from "lucide-react";
 import { supabase } from "../lib/supabase";
 
 interface Props {
-  rapport: { titel: string; beschrijving: string; land?: string };
+  rapport: { titel: string; beschrijving: string; land?: string; isGratis?: boolean; prijs?: string };
   onClose: () => void;
 }
 
@@ -12,6 +12,11 @@ export default function LeadCaptureModal({ rapport, onClose }: Props) {
   const [email, setEmail] = useState("");
   const [bedrijf, setBedrijf] = useState("");
   const [status, setStatus] = useState<"idle" | "loading" | "done" | "error">("idle");
+
+  // Betaalde rapporten worden (nog) niet automatisch geleverd. Tot de levering
+  // live is, vangen we geinteresseerde kopers eerlijk op een wachtlijst i.p.v.
+  // ze naar een Stripe-betaling te sturen die niets oplevert.
+  const isPremium = rapport.isGratis === false;
 
   async function submit(e: { preventDefault(): void }) {
     e.preventDefault();
@@ -23,7 +28,7 @@ export default function LeadCaptureModal({ rapport, onClose }: Props) {
         naam,
         bedrijf: bedrijf || null,
         land_interesse: rapport.land ?? null,
-        bron: "rapport",
+        bron: isPremium ? "wachtlijst-premium" : "rapport",
       });
 
       // 2. E-mail notificatie via Web3Forms (als key beschikbaar is)
@@ -31,11 +36,16 @@ export default function LeadCaptureModal({ rapport, onClose }: Props) {
       if (key) {
         const fd = new FormData();
         fd.append("access_key", key);
-        fd.append("subject", `📥 Rapport download: ${rapport.titel}`);
+        fd.append(
+          "subject",
+          isPremium
+            ? `⭐ Wachtlijst premium-rapport: ${rapport.titel}`
+            : `📥 Rapport download: ${rapport.titel}`,
+        );
         fd.append("naam", naam);
         fd.append("email", email);
         fd.append("bedrijf", bedrijf || "—");
-        fd.append("rapport", rapport.titel);
+        fd.append("rapport", `${rapport.titel}${rapport.prijs ? ` (${rapport.prijs})` : ""}`);
         await fetch("https://api.web3forms.com/submit", { method: "POST", body: fd });
       }
 
@@ -57,9 +67,16 @@ export default function LeadCaptureModal({ rapport, onClose }: Props) {
             <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
               <CheckCircle className="w-8 h-8 text-green-600" />
             </div>
-            <h3 className="text-xl font-serif font-bold text-navy-900 mb-2">Aanvraag ontvangen</h3>
+            <h3 className="text-xl font-serif font-bold text-navy-900 mb-2">
+              {isPremium ? "U staat op de wachtlijst" : "Aanvraag ontvangen"}
+            </h3>
             <p className="text-gray-500 text-sm leading-relaxed mb-6">
-              Wij sturen u het rapport binnen 24 uur toe op <strong>{email}</strong>. Controleer ook uw spammap.
+              {isPremium ? (
+                <>U krijgt als eerste bericht op <strong>{email}</strong> zodra dit premium-rapport
+                  beschikbaar is, met een introductiekorting voor wie op de wachtlijst staat.</>
+              ) : (
+                <>Wij sturen u het rapport binnen 24 uur toe op <strong>{email}</strong>. Controleer ook uw spammap.</>
+              )}
             </p>
             <button
               onClick={onClose}
@@ -72,10 +89,18 @@ export default function LeadCaptureModal({ rapport, onClose }: Props) {
           <div className="p-8">
             <div className="flex items-center gap-2 mb-1">
               <Lock className="w-4 h-4 text-gold-500" />
-              <span className="text-gold-500 text-xs font-semibold uppercase tracking-widest">Gratis rapport</span>
+              <span className="text-gold-500 text-xs font-semibold uppercase tracking-widest">
+                {isPremium ? "Premium-rapport · wachtlijst" : "Gratis rapport"}
+              </span>
             </div>
             <h3 className="text-xl font-serif font-bold text-navy-900 mb-1 leading-tight">{rapport.titel}</h3>
-            <p className="text-gray-500 text-sm mb-6">{rapport.beschrijving}</p>
+            <p className="text-gray-500 text-sm mb-2">{rapport.beschrijving}</p>
+            {isPremium && (
+              <p className="text-gray-600 text-sm mb-6 bg-gold-500/5 border border-gold-500/20 rounded-lg p-3">
+                Dit rapport wordt op dit moment afgerond. Laat uw gegevens achter en u krijgt als
+                eerste bericht zodra het klaar is, met een introductiekorting.
+              </p>
+            )}
 
             <form onSubmit={submit} className="space-y-4">
               <div>
@@ -117,7 +142,11 @@ export default function LeadCaptureModal({ rapport, onClose }: Props) {
                 className="w-full bg-gold-500 hover:bg-gold-400 disabled:opacity-60 text-white font-semibold py-3 rounded-lg flex items-center justify-center gap-2 transition-colors"
               >
                 <Download className="w-4 h-4" />
-                {status === "loading" ? "Versturen..." : "Ontvang het rapport gratis"}
+                {status === "loading"
+                  ? "Versturen..."
+                  : isPremium
+                    ? "Zet mij op de wachtlijst"
+                    : "Ontvang het rapport gratis"}
               </button>
               <p className="text-center text-xs text-gray-400">
                 Geen spam. Uw gegevens worden vertrouwelijk behandeld conform onze privacyverklaring.
