@@ -6,6 +6,21 @@ Bekende valkuilen voor de marketing-site. Proportional gehouden — geen healthc
 
 ---
 
+## 🔴 Kosten / cloud (hoog, projectoverstijgend)
+
+Deze twee gelden voor álle projecten met een Google Cloud of pay-as-you-go koppeling, niet alleen de site. Opgenomen omdat ze op 2026-08-13 samen €100,39 hebben gekost. Zie `work_log.md` van die datum.
+
+### R005 — Google Cloud kent geen uitgavenplafond
+- **Risico:** De "limiet" die je in Google Cloud instelt is de **betaaldrempel**: het bedrag dat oploopt vóór Google je kaart belast. Het is geen rem. Google **verhoogt die drempel automatisch** naarmate je betaalgeschiedenis opbouwt (€10 → €50 → €100). Een budget alert waarschuwt alleen; Google zegt dat zelf letterlijk: *"Setting a budget does not cap resource or API consumption."*
+- **Hoe het misging:** ingesteld op $10 in de veronderstelling dat dit een plafond was. Drempel was intussen naar €100 gegroeid, dus het kon tien keer verder oplopen voor er iets opviel.
+- **Mitigatie:** het enige harde slot is **billing loskoppelen** van het project. Wil je wel blijven draaien met een echte rem, gebruik dan **quota's** (APIs & Services → Quotas, bv. requests per dag), niet budgetten. Zet daarnaast een budget alert op €1 als rookmelder.
+- **Als het misgaat:** billing loskoppelen van alle projecten via `console.cloud.google.com/billing/<account-id>/manage`. De openstaande schuld blijft wel staan en moet betaald worden.
+
+### R006 — "Gratis" API-labels in code verouderen stil
+- **Risico:** Een provider die als gratis in de code staat kan betaald wórden zonder dat er iets aan de code verandert. Concreet: `wazir-al-ghanima/src/free-llm.ts` had Vertex AI als stap 0 van de gratis-keten met het commentaar *"gratis GCP credits"*. Klopte tot het proeftegoed op was. **Vertex heeft geen gratis tier.** Omdat het stap 0 was, ging élke call daarheen en werd de hele gratis keten eronder nooit bereikt.
+- **Mitigatie:** elke betaalde bron achter een expliciete env-schakelaar die standaard uit staat. Patroon dat het project al had voor Gemini (`ALLOW_PAID_GEMINI`) en nu ook voor Vertex (`ALLOW_PAID_VERTEX`). Let op dat de rem ook echt op de bronnen zit die daadwerkelijk gebruikt worden: `ALLOW_PAID_GEMINI` bewaakte alleen sleutel 3 en hoger, terwijl sleutel 1 en 2 de betaalde prepaid sleutels waren.
+- **Als het misgaat:** kosten verhuizen naar de volgende schakel in plaats van te stoppen. Controleer na het dichtzetten van één bron altijd of de eerstvolgende in de keten wél gratis is.
+
 ## ⚠️ Content / juridisch (middel)
 
 ### R001 — Em-dashes (—) in publieke content

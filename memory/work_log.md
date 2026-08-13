@@ -4,6 +4,57 @@ Regels: nieuwste blokje bovenaan, per sessie datum+omgeving+wat+waarom+TODO.
 
 ---
 
+## 2026-08-13 — door web-Claude (security-check na hack + Google Cloud kostenlek gedicht)
+
+Sessie begon met een hackmelding en eindigde bij een Google Cloud rekening van €100,39. Drie losstaande zaken, allemaal uitgezocht. Werk raakte vooral `ai-app` en `wazir-al-ghanima`, niet de arabdutch-site zelf.
+
+### 1. Security-check na gehackte GitHub van externe samenwerker
+
+- **Aanleiding:** een samenwerker met toegang tot `ai-app` meldde dat zijn GitHub of een token gehackt was. Later toegelicht als: kwaadaardig npm-package, "Noord-Korea, via Ethereum wallet". Dat past op het bekende Lazarus/"Contagious Interview"-patroon: nep-packages (vaak crypto-tooling of nep-sollicitatieopdrachten) die browserwachtwoorden, SSH-keys, npm/GitHub-tokens en wallets van de machine stelen.
+- **Door hem genoemde indicatoren gecontroleerd:** een `postcss.config.mjs` met één eindeloos lange regel, en `branch_structure.json` / `temp_auto_push.bat` / `temp_interactive_push.bat` in `.gitignore`. **Geen van beide aangetroffen**, in `arabdutch` noch `ai-app`, ook niet in de volledige git-historie.
+- **Secret-scan:** volledige historie van `ai-app`, `wazir-al-ghanima` en de publieke `bug-bounty-intelligence-mcp` doorzocht op `AIza`-keys en service-account-sleutels. **Niets gelekt.** De gecommitte `.env.production`-bestanden in `ai-app` bevatten alleen publieke Clerk-keys (`pk_live_`) en dummy-waarden, conform de uitzondering die in `.gitignore` gedocumenteerd staat.
+- **Collaborators van alle 9 private repos nagelopen.** Overal alleen `holistis` (admin), behalve `ai-app`.
+- ⚠️ **OPEN: `mousadirksz` heeft nog write-toegang op `ai-app`.** Verwijderen via github.com/holistis/ai-app/settings/access. Nog niet gebeurd. Zijn laatste commit was 20 juni; sindsdien alleen eigen commits.
+- **Advies dat nog staat:** zijn hele machine geldt als besmet, niet alleen zijn GitHub. Elke credential die hij ooit heeft gezien of ingetypt moet hij vanaf een schone machine roteren.
+
+### 2. Dependabot CVE in ai-app (GHSA-jmr9-qjv8-65gv, extract-zip)
+
+- `extract-zip` 2.0.1 (symlink path traversal, high) kwam binnen via `puppeteer` 24.x → `@puppeteer/browsers` 2.x. Er is geen gepatchte extract-zip; `@puppeteer/browsers` 3.x verving het pakket volledig door `modern-tar`. Daarom was een puppeteer major-bump 24 → 25.7.0 de enige route.
+- Puppeteer 25 schrapte `networkidle0` als geldige `waitUntil` voor `page.setContent()` (blijft wel geldig voor `page.goto()`). Beide PDF-generators gebruikten dat juist om op de Google Fonts stylesheet te wachten. Vervangen door `waitUntil: "load"` plus een expliciete `document.fonts.ready`-wacht, hetzelfde best-effort patroon met 3s-timeout dat `pdfGeneratorV2.ts` al toepaste.
+- **Geverifieerd:** `tsc --noEmit` geeft exact dezelfde 29 pre-existing fouten als onaangeraakt main (geen nieuwe), `npm run build` slaagt, en beide `generatePDFBuffer()`-functies draaien end-to-end door een echte Chromium-launch.
+- ⚠️ **OPEN: branch `fix/dependabot-extract-zip-symlink-traversal` is nog niet gemerged.** Bewust niet direct naar main: het raakt de betaalde rapport-PDF's en het daadwerkelijk gerenderde lettertype was hier niet te controleren (de sandbox-proxy blokkeert Chromium's internettoegang, dus de fonts laadden niet). **Eerst één rapport-PDF genereren en het lettertype visueel checken, dan pas mergen.**
+- Bij het pushen meldde GitHub **69 kwetsbaarheden op main** (1 critical, 39 high, 25 moderate, 4 low). Alleen de root-dependencies zijn aangepakt. `monitor/`, `shorts/` en `mobile/` hebben eigen dependency-trees en zijn niet bekeken.
+
+### 3. Google Cloud: €99,34 in 13 dagen. Oorzaak gevonden en gedicht
+
+**Symptoom:** billing-account `012D63-16365B-BD2BE2` stond op €100,39 openstaand, Visa geweigerd. Verbruik: juni €0,00 → 1 t/m 13 augustus €99,34. Twee gekoppelde projecten: `gen-lang-client-0222081237` (AI Studio) en `vertex-api-501516` (Vertex).
+
+**Oorzaak 1, het lek zelf.** In `wazir-al-ghanima/src/free-llm.ts` stond Vertex AI als **stap 0** van de "GRATIS-VANGNET-KETTING", met het commentaar *"gratis GCP credits"*. Dat klopte zolang het proeftegoed (~€255, het `$300`-trialtegoed) liep. Dat tegoed is opgebruikt en **Vertex heeft geen gratis tier**, dus stap 0 werd stilzwijgend een betaalde call. Omdat het de eerste stap was, ging élke LLM-call daarheen en werd de rest van de keten (Cerebras, Together, GitHub Models, Groq, SambaNova, OpenRouter, Mistral, Qwen, Ollama) nooit bereikt.
+
+**Oorzaak 2, waarom het zo ver kon oplopen.** De gebruiker dacht een limiet van $10 te hebben ingesteld. Dat was de **betaaldrempel**, niet een plafond: het bedrag dat oploopt voordat Google de kaart belast. Google verhoogt die drempel automatisch met de betaalgeschiedenis mee, van €10 naar €100. Google Cloud kent geen uitgavenplafond; een budget alert waarschuwt alleen (Google zegt dat zelf ook letterlijk: *"Setting a budget does not cap resource or API consumption"*).
+
+**Wat het draaiende hield:** `wazir-al-ghanima` draait op Railway met `startCommand: npx tsx src/cloud-loop.ts` en `restartPolicy ON_FAILURE` (10 retries). Die loop deed elke 2 uur een radar-ronde en elke 12 uur een volledige scan. Eigen comment bovenin: *"de 24/7 PAID-jacht in de cloud (Railway). Omgezet 2026-06-26."* Dat verklaart de tijdlijn precies: juni bijna niets (4 dagen actief), augustus de eerste volle periode.
+
+**Wat er gefixt is (beide gepusht naar `wazir-al-ghanima` main):**
+
+- `ab68346` — `CLOUD_LOOP_ENABLED`, standaard uit. Bij uitgeschakelde stand blijft het proces bewust idle in plaats van `exit()`en, zodat Railway een geslaagde deploy ziet, de oude betalende container vervangt, en de restartPolicy niet gaat herstarten.
+- `bfbbc86` — `ALLOW_PAID_VERTEX`, standaard uit. Zelfde "hard slot"-filosofie die `src/gemini.ts` al toepaste met `ALLOW_PAID_GEMINI`, alleen ontbrak die rem juist op de stap die vooraan stond. Ook `vertexAIAvailable()` en `freeAvailable()` respecteren de schakelaar nu, zodat een betaalde bron niet meer als "gratis bron beschikbaar" telt.
+- Beide geverifieerd: typecheck ongewijzigd t.o.v. baseline (14 pre-existing fouten, geen in de gewijzigde bestanden), en de gates in beide richtingen getest (zonder vlag uit, met vlag aan).
+
+**Wat de gebruiker zelf heeft gedaan:** Vertex API uitgezet, billing losgekoppeld van beide projecten, budget alert op €0,00 gezet. "Your AI spend €0.00" bevestigd in de console.
+
+**Aandachtspunt dat hierbij boven kwam:** `src/gemini.ts` documenteert zelf dat `GEMINI_API_KEY` en `_2` **betaald prepaid** zijn (Tier 1 AI Studio, geen gratis tier) en één billing-account delen. De `ALLOW_PAID_GEMINI`-rem bewaakt alleen sleutel 3 en hoger, dus die twee gingen er ongehinderd langs. Nu de billing van dat project af is, vallen dezelfde `AIza`-sleutels automatisch terug op de gratis tier. Zou de billing ooit terugkomen, dan is dit opnieuw een lek.
+
+### Openstaand
+
+- **€100,39 betalen** met een werkende kaart. Verdwijnt niet vanzelf; onbetaald volgt schorsing en daarna incasso.
+- **`mousadirksz` verwijderen** als collaborator op `ai-app`.
+- **Branch `fix/dependabot-extract-zip-symlink-traversal` mergen** na visuele check van één rapport-PDF.
+- **Railway controleren:** staat er een nieuwe deploy van `wazir-al-ghanima`? Log moet `[cloud-loop] UITGESCHAKELD` tonen. Zo niet, staat auto-deploy uit en moet de service handmatig gepauzeerd worden.
+- **`cloud-sweep` nakijken** (`src/audit/cloud-sweep.ts`), draait mogelijk als aparte Railway-service met 12-uurs interval. Valt buiten de `cloud-loop`-schakelaar.
+- **`OLLAMA_URL` zetten in Railway** op het Hetzner-adres. Default is `http://localhost:11434`, wat in een Railway-container niet bestaat, dus die laatste gratis schakel faalt nu stil.
+- **69 Dependabot-meldingen op `ai-app`** (1 critical) nog te beoordelen, inclusief de subprojecten.
+
 ## 2026-07-24 — door laptop-Claude (Fresh Food adviesrapport, buiten website-codebase)
 
 - Opdracht: elite tweetalig (NL+AR) fiscaal/juridisch adviesrapport voor klant Fresh Food (Egyptisch bedrijf, export zoete aardappelen), t.a.v. de heer Ibrahim Salem. Dit is een consultancy-deliverable van ArabDutch zelf, geen wijziging aan de site-codebase.
