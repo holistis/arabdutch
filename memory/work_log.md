@@ -22,7 +22,8 @@ Sessie begon met een hackmelding en eindigde bij een Google Cloud rekening van �
 - `extract-zip` 2.0.1 (symlink path traversal, high) kwam binnen via `puppeteer` 24.x → `@puppeteer/browsers` 2.x. Er is geen gepatchte extract-zip; `@puppeteer/browsers` 3.x verving het pakket volledig door `modern-tar`. Daarom was een puppeteer major-bump 24 → 25.7.0 de enige route.
 - Puppeteer 25 schrapte `networkidle0` als geldige `waitUntil` voor `page.setContent()` (blijft wel geldig voor `page.goto()`). Beide PDF-generators gebruikten dat juist om op de Google Fonts stylesheet te wachten. Vervangen door `waitUntil: "load"` plus een expliciete `document.fonts.ready`-wacht, hetzelfde best-effort patroon met 3s-timeout dat `pdfGeneratorV2.ts` al toepaste.
 - **Geverifieerd:** `tsc --noEmit` geeft exact dezelfde 29 pre-existing fouten als onaangeraakt main (geen nieuwe), `npm run build` slaagt, en beide `generatePDFBuffer()`-functies draaien end-to-end door een echte Chromium-launch.
-- ⚠️ **OPEN: branch `fix/dependabot-extract-zip-symlink-traversal` is nog niet gemerged.** Bewust niet direct naar main: het raakt de betaalde rapport-PDF's en het daadwerkelijk gerenderde lettertype was hier niet te controleren (de sandbox-proxy blokkeert Chromium's internettoegang, dus de fonts laadden niet). **Eerst één rapport-PDF genereren en het lettertype visueel checken, dan pas mergen.**
+- ✅ **Gemerged naar main** (`0d7ee03`) nadat de twijfel over het lettertype alsnog is weggenomen. De sandbox-proxy blokkeert Chromium's toegang tot fonts.googleapis.com, dus in plaats daarvan is het mechanisme deterministisch getest met een lokale HTTP-server die een webfont pas 1500ms ná het `load`-event uitlevert. Resultaat: het font belandt gewoon in de PDF (`BaseFont /AAAAAA+DejaVuSerif-Bold` in plaats van een fallback). Dezelfde test op de oude `networkidle0`-code geeft exact hetzelfde resultaat, dus de omzetting is gedragsneutraal op precies het punt waar de zorg zat.
+- **Valkuil bij dat testen, voor de volgende keer:** de eerste testronde leek te bewijzen dat het font NIET laadde, in beide versies. Dat was een fout in de test, niet in de code: `@font-face` is CORS-gebonden en de testserver stuurde geen `Access-Control-Allow-Origin`. Let daar op, `document.fonts.status` wordt namelijk óók `"loaded"` als een font-fetch is mislukt, dus die status alleen is geen bewijs.
 - Bij het pushen meldde GitHub **69 kwetsbaarheden op main** (1 critical, 39 high, 25 moderate, 4 low). Alleen de root-dependencies zijn aangepakt. `monitor/`, `shorts/` en `mobile/` hebben eigen dependency-trees en zijn niet bekeken.
 
 ### 3. Google Cloud: €99,34 in 13 dagen. Oorzaak gevonden en gedicht
@@ -48,8 +49,7 @@ Sessie begon met een hackmelding en eindigde bij een Google Cloud rekening van �
 ### Openstaand
 
 - **€100,39 betalen** met een werkende kaart. Verdwijnt niet vanzelf; onbetaald volgt schorsing en daarna incasso.
-- **`mousadirksz` verwijderen** als collaborator op `ai-app`.
-- **Branch `fix/dependabot-extract-zip-symlink-traversal` mergen** na visuele check van één rapport-PDF.
+- **`mousadirksz` verwijderen** als collaborator op `ai-app`. Kan alleen de eigenaar via github.com/holistis/ai-app/settings/access.
 - **Railway controleren:** staat er een nieuwe deploy van `wazir-al-ghanima`? Log moet `[cloud-loop] UITGESCHAKELD` tonen. Zo niet, staat auto-deploy uit en moet de service handmatig gepauzeerd worden.
 - **`cloud-sweep` nakijken** (`src/audit/cloud-sweep.ts`), draait mogelijk als aparte Railway-service met 12-uurs interval. Valt buiten de `cloud-loop`-schakelaar.
 - **`OLLAMA_URL` zetten in Railway** op het Hetzner-adres. Default is `http://localhost:11434`, wat in een Railway-container niet bestaat, dus die laatste gratis schakel faalt nu stil.
