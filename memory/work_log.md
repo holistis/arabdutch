@@ -4,6 +4,12 @@ Regels: nieuwste blokje bovenaan, per sessie datum+omgeving+wat+waarom+TODO.
 
 ---
 
+## 2026-08-18 — door web-Claude (AI Opportunity Atlas: onderzoeksprotocol v1)
+
+- **Wat:** meedenk-sessie over de "slimme boer"-metafoor uitgewerkt tot een concreet onderzoeksprotocol. Nieuw: `research/ai-opportunity-atlas/protocol.md` (7 fasen, funnel, scoringsmodel, kill-criteria) en `masterprompt.md` (5 agent-rollen: scout, analist, modelleur, red team, synthesist). Branch: `claude/ai-opportunity-atlas-zhupwb`.
+- **Belangrijkste toevoegingen t.o.v. het oorspronkelijke voorstel:** Fase 0 (inventaris van eigen asymmetrieën, met NL<->MENA-corridor als dwarsdoorsnede en fit-score van 20% in de weging), validatie-ladder met echte-wereld-bewijs (geen bouw boven smoke test zonder pre-sale), verplicht kerkhof-onderzoek en red team per topkans, atlas als levend monitorsysteem i.p.v. eenmalig rapport, en budget-regel: alleen gratis bronnen (les uit R005/R006).
+- **TODO voor eigenaar:** Fase 0-inventaris in protocol.md nalopen en accorderen, `{{MAX_KAPITAAL}}` bepalen, daarna scouts starten (fase 1).
+
 ## 2026-08-13 — door web-Claude (security-check na hack + Google Cloud kostenlek gedicht)
 
 Sessie begon met een hackmelding en eindigde bij een Google Cloud rekening van €100,39. Drie losstaande zaken, allemaal uitgezocht. Werk raakte vooral `ai-app` en `wazir-al-ghanima`, niet de arabdutch-site zelf.
