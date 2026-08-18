@@ -35,7 +35,15 @@ Startpunt (aan te vullen en te herwegen door de eigenaar):
 | Lopende consultancy met echte klantproblemen (bijv. export-dossiers zoals Fresh Food) | Data | Betalende klanten zijn een primaire bron van gevalideerde pijn |
 | Zelfstandig software + AI-agenten kunnen bouwen en 24/7 laten draaien | Productie | Snelheid en kosten; geen dev-team nodig |
 | Fiscaal/juridisch/administratief adviesdomein (Holistis) | Kennis + vertrouwen | Regelgevingszwaar werk met hoge betalingsbereidheid |
-| Tijd beschikbaar, laag kapitaal | Beperking | Sluit kapitaalintensieve modellen uit, geen belemmering voor Type A/B |
+| Tijd beschikbaar, kapitaal max €500 | Beperking | Sluit kapitaalintensieve modellen uit, geen belemmering voor Type A/B |
+| Eigen Hetzner-server met Ollama (qwen2.5:32b) | Productie | Onbeperkte LLM-capaciteit tegen vaste lage kosten, plus privacy-route voor gevoelige data |
+| **PeilAI** (pilot-AI-production): NEN 7510-compliant AI-tevredenheidsonderzoek, 6 wettelijk verplichte templates (PREM, CEO Wmo, KTO, MTO), Stripe + e-mail + PDF af, code-compleet, nog niet live | Product | Verplichte uitgave bij de klant, incumbents vragen €5k-150k/jr, marge 93-98% |
+| **ZorgAssist** (zorgscript-development, fysioverslag.nl): huisartsbrief + behandelplan voor fysiotherapeuten, live op Railway, pricing €29/€79/€149 p/m | Product | Live kassa in medische administratie (atlas-domein 5) |
+| **SiteCraft-AI**: AI-websitebouwer, live op Railway | Product/tooling | Leverancier-tooling voor dienstverlening |
+| **al-yad**: privacy-first browser-automatiseringsagent (fase 1, vroege bouw) | Tooling in wording | Fysieke-uitvoeringslaag voor informatie-arbitrage, nog geen omzetkandidaat |
+| **wazir-al-ghanima**: 24/7 agent-loop-infrastructuur (bug bounty, nu uit) | Infra-ervaring | Bewezen vermogen om monitoringssystemen te bouwen en draaiend te houden |
+
+**Vastgesteld 2026-08-18: MAX_KAPITAAL = €500.** Dit is een hard kill-criterium in Fase 4. Bouwtijd en softwarecapaciteit zijn expliciet géén beperking (eigen bouw plus eigen server); de schaarse factoren in dit portfolio zijn distributie en focus, niet productie.
 
 **Consequentie voor het onderzoek:** de corridor NL/EU ↔ Marokko/MENA is geen gewoon domein maar een dwarsdoorsnede die in élk domein (handel, regelgeving, logistiek, vastgoed, landbouw) een extra asymmetrie-laag toevoegt. Kansen op die corridor krijgen structureel voorrang bij gelijke score.
 
@@ -113,7 +121,7 @@ Per overgebleven kans een harde mini-businesscase:
 | Tijd tot eerste omzet | weken/maanden |
 | Regelgevingsrisico | laag / middel / hoog + welke regels |
 
-**Kill-criteria:** brutomarge < 50% bij digitaal, geen pad naar eerste omzet binnen 6 maanden, of startkapitaal boven wat de eigenaar wil inzetten.
+**Kill-criteria:** brutomarge < 50% bij digitaal, geen pad naar eerste omzet binnen 6 maanden, of startkapitaal boven €500 (MAX_KAPITAAL, vastgesteld 2026-08-18). Let op: bouwuren tellen niet als kapitaal (eigen capaciteit), terugkerende kosten boven ± €50 per maand vóór eerste omzet wel.
 
 ---
 

@@ -111,7 +111,9 @@ AI-hefboom 20%, fit 20%, moat 15%, marge/schaal 15%, uitvoerbaarheid 10%).
 Regelgeving is een poort, geen weging: hoog risico zonder mitigatie = stop.
 
 Kill-regels: brutomarge onder 50% bij digitaal, geen eerste omzet binnen
-6 maanden, of startkapitaal boven {{MAX_KAPITAAL}}: afkeuren met reden.
+6 maanden, of startkapitaal boven €500 (MAX_KAPITAAL): afkeuren met reden.
+Bouwuren tellen niet als kapitaal; terugkerende kosten boven ± €50 per
+maand vóór eerste omzet wel.
 ```
 
 ---

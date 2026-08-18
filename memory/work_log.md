@@ -8,7 +8,8 @@ Regels: nieuwste blokje bovenaan, per sessie datum+omgeving+wat+waarom+TODO.
 
 - **Wat:** meedenk-sessie over de "slimme boer"-metafoor uitgewerkt tot een concreet onderzoeksprotocol. Nieuw: `research/ai-opportunity-atlas/protocol.md` (7 fasen, funnel, scoringsmodel, kill-criteria) en `masterprompt.md` (5 agent-rollen: scout, analist, modelleur, red team, synthesist). Branch: `claude/ai-opportunity-atlas-zhupwb`.
 - **Belangrijkste toevoegingen t.o.v. het oorspronkelijke voorstel:** Fase 0 (inventaris van eigen asymmetrieën, met NL<->MENA-corridor als dwarsdoorsnede en fit-score van 20% in de weging), validatie-ladder met echte-wereld-bewijs (geen bouw boven smoke test zonder pre-sale), verplicht kerkhof-onderzoek en red team per topkans, atlas als levend monitorsysteem i.p.v. eenmalig rapport, en budget-regel: alleen gratis bronnen (les uit R005/R006).
-- **TODO voor eigenaar:** Fase 0-inventaris in protocol.md nalopen en accorderen, `{{MAX_KAPITAAL}}` bepalen, daarna scouts starten (fase 1).
+- **TODO voor eigenaar:** Fase 0-inventaris in protocol.md nalopen en accorderen, daarna scouts starten (fase 1).
+- **Aanvulling later die dag:** eigenaar stelde MAX_KAPITAAL = €500 vast. Fase 0-inventaris gevuld op basis van echte repo-inspectie (zorgscript-development/ZorgAssist, pilot-AI-production/PeilAI, sitecraft-ai, al-yad): twee vrijwel afgebouwde producten in verplichte/administratieve markten (PeilAI code-compleet maar nog niet live; ZorgAssist live op fysioverslag.nl met pricing). Conclusie in sessie: schaarse factor is distributie en focus, niet bouwen; PeilAI lanceren + eerste founding customers is de hoogst scorende kans binnen €500.
 
 ## 2026-08-13 — door web-Claude (security-check na hack + Google Cloud kostenlek gedicht)
 
