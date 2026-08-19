@@ -4,6 +4,14 @@ Regels: nieuwste blokje bovenaan, per sessie datum+omgeving+wat+waarom+TODO.
 
 ---
 
+## 2026-08-19 — door web-Claude (AI Opportunity Atlas: onderzoek uitgevoerd, eindrapport v1)
+
+- **Wat:** het masterprotocol van de eigenaar daadwerkelijk uitgevoerd met multi-agent-workflows (schone lei, zonder bestaande repos als input). Fase 1: 8 domein-scouts, 164 signalen, 46 hypotheses, 88 ideeën gekild. Fase 3-8: 14 kandidaten geclusterd en onafhankelijk geverifieerd (5 bewijspijlers + economic reality check), 4 red teams afgerond (C01-C04, alle survival laag).
+- **Kernbevinding:** geen enkele kandidaat heeft direct betaalbewijs voor het specifieke aanbod (alle 14 PARTIALLY_CONFIRMED, dus cap 60/100). Compliance-deadline-kansen sneuvelen structureel bij het red team (gratis ontsnappingsroutes). Diensten verslaan tools. #1 bet: 48-uurs calculatiedienst installatie/bouw-MKB; #2 remote praktijkmanager huisartsen; #3 NetruimteScan. Eerste stap: €100-falsificatietests die aanbetaling meten.
+- **Beperking:** maandelijkse spend-limiet brak 10 red teams (C05-C14) en de committee-agent af; ranking C05-C14 is LOW CONFIDENCE, committee-weging door hoofdonderzoeker gedaan. Workflow resumeerbaar (run wf_79c61b60-513, verificaties gecached).
+- **Bestanden:** `research/ai-opportunity-atlas/eindrapport.md` + `data/fase1_scouts.json` + `data/fase2_verificatie_partieel.json`, branch `claude/ai-opportunity-atlas-zhupwb`.
+- **TODO:** na limiet-verhoging red teams C05-C14 + committee resumen; daarna gap-research top 3; daarna de tests in de echte wereld.
+
 ## 2026-08-18 — door web-Claude (AI Opportunity Atlas: onderzoeksprotocol v1)
 
 - **Wat:** meedenk-sessie over de "slimme boer"-metafoor uitgewerkt tot een concreet onderzoeksprotocol. Nieuw: `research/ai-opportunity-atlas/protocol.md` (7 fasen, funnel, scoringsmodel, kill-criteria) en `masterprompt.md` (5 agent-rollen: scout, analist, modelleur, red team, synthesist). Branch: `claude/ai-opportunity-atlas-zhupwb`.
