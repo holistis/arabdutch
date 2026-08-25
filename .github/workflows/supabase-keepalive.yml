@@ -1,0 +1,28 @@
+name: Supabase keepalive
+
+on:
+  schedule:
+    - cron: "0 6 */3 * *"
+  workflow_dispatch: {}
+
+jobs:
+  ping:
+    name: Ping Supabase REST API
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    steps:
+      - name: Query rapporten (public, read-only)
+        run: |
+          status=$(curl -s -o /tmp/response.json -w "%{http_code}" \
+            "${SUPABASE_URL}/rest/v1/rapporten?select=id&limit=1" \
+            -H "apikey: ${SUPABASE_ANON_KEY}" \
+            -H "Authorization: Bearer ${SUPABASE_ANON_KEY}")
+          echo "HTTP status: $status"
+          cat /tmp/response.json
+          if [ "$status" -ge 400 ]; then
+            echo "::error::Supabase keepalive ping failed (status $status) — check SUPABASE_URL/SUPABASE_ANON_KEY secrets"
+            exit 1
+          fi
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
