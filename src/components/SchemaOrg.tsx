@@ -49,13 +49,7 @@ const ORG_SCHEMA = {
     "Company Formation Morocco",
     "Company Formation UAE",
     "Strategic Consulting"
-  ],
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.9",
-    "reviewCount": "27",
-    "bestRating": "5"
-  }
+  ]
 };
 
 export default function SchemaOrg() {
