@@ -37,7 +37,9 @@ const ORG_SCHEMA = {
     { "@type": "PropertyValue", "name": "BTW", "value": "NL004319767B61" }
   ],
   "sameAs": [
-    "https://arabdutch.com"
+    "https://www.linkedin.com/company/arabdutch",
+    "https://www.youtube.com/@ArabDutch",
+    "https://x.com/ArabDutchbridge"
   ],
   "serviceType": [
     "Intercultural Training",
@@ -49,13 +51,7 @@ const ORG_SCHEMA = {
     "Company Formation Morocco",
     "Company Formation UAE",
     "Strategic Consulting"
-  ],
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.9",
-    "reviewCount": "27",
-    "bestRating": "5"
-  }
+  ]
 };
 
 export default function SchemaOrg() {
