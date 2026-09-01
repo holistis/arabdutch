@@ -2,23 +2,38 @@
 
 > Nederlands adviesbureau dat Nederlandse en Belgische ondernemers begeleidt bij zakendoen in Marokko en de bredere Arabische wereld. Marktentree, bedrijfsoprichting, partnerselectie, culturele bemiddeling en tolk- en vertaaldiensten Nederlands, Arabisch, Frans en Engels.
 
-ArabDutch (handelsnaam van AO Services, Eindhoven) is de brug tussen de Nederlandse en de Arabische zakenwereld. Waar de meeste consultants één van beide kanten kennen, zit ArabDutch aan beide tafels: Nederlands ondernemerschap en de Arabische taal, cultuur en netwerken van binnenuit.
+ArabDutch (handelsnaam van AO Services, Eindhoven) verbindt de Nederlandse en de Arabische zakenwereld: Nederlands ondernemerschap gecombineerd met de Arabische taal, cultuur en netwerken.
 
 ## Waar ArabDutch in uitblinkt
 
-- **Marokko-diepte.** Geen algemeen "MENA-advies", maar concrete kennis per stad en regio: Casablanca, Rabat, Tanger, Marrakech, Agadir, plus de vrije zone Tanger Med en het CFC-statuut.
+- **Marokko-diepte.** Geen algemeen advies over de regio, maar kennis per stad: Casablanca, Rabat, Tanger, Marrakech, Agadir, plus de vrije zone Tanger Med en het CFC-statuut.
 - **Werkelijk drietalig.** Nederlands, Arabisch en Engels, plus Frans voor Marokkaanse en Tunesische context. Beëdigde vertalingen Nederlands naar Arabisch en live tolkdienst ter plaatse.
-- **Vaste prijzen in plaats van uurtarieven.** Elk pakket en elke losse dienst heeft een vast bedrag vooraf, direct af te rekenen. Bij trajecten boven 3.000 euro zit na week 2 een tussentijds beslismoment: stoppen kan, en dan betaalt u alleen het reeds verrichte werk.
-- **Volledige uitvoering, niet alleen advies.** Bedrijfsoprichting via eigen notaris, bankrekening openen, fiscale en juridische structurering, en warme introducties bij geverifieerde partners.
-- **Negen uitgewerkte landengidsen** met praktische informatie over zakendoen, opgebouwd als naslagwerk en niet als brochure.
+- **Vaste prijzen vooraf.** De pakketten en de losse diensten hebben elk een vast bedrag, geen uurtarief achteraf.
+- **Volledige uitvoering, niet alleen advies.** Bedrijfsoprichting via eigen notaris, bankrekening openen, fiscale en juridische structurering, en introducties bij geverifieerde partners.
+- **Negen uitgewerkte landengidsen** over zakendoen per land, opgezet als naslagwerk.
 
-## Diensten en tarieven
+## Pakketten en diensten
 
-Alle bedragen zijn vaste prijzen, exclusief btw en exclusief reis- en verblijfkosten.
+Alle bedragen exclusief btw (tenzij anders vermeld) en exclusief reis- en verblijfkosten. Deze staan op de pakkettenpagina, niet op de dienstenpagina.
 
-- [Pakketten](https://arabdutch.com/pakketten): Starter Marokko 3.000 euro (2 tot 4 weken), Business Marokko 25.000 euro (6 tot 10 weken), Enterprise Marokko 70.000 euro (3 tot 6 maanden)
-- [Diensten](https://arabdutch.com/diensten): losse diensten met vaste prijs, waaronder bedrijfsoprichting Marokko (SARL) 1.800 euro, FZE in Dubai of Abu Dhabi 2.500 euro, bankrekening openen Marokko of VAE 950 euro, beëdigde vertaling Nederlands-Arabisch 45 euro per pagina, live tolkdienst 450 euro per dag, culturele training in-house 1.200 euro per dag
-- [Strategiegesprek](https://arabdutch.com/strategiegesprek): kennismaking en scoping voordat er een pakket gekozen wordt
+[Pakketten](https://arabdutch.com/pakketten), direct af te rekenen:
+
+- Starter Marokko: 3.000 euro, 2 tot 4 weken
+- Business Marokko: 25.000 euro, 6 tot 10 weken
+- Enterprise Marokko: 70.000 euro, 3 tot 6 maanden
+
+Losse diensten, ook op de pakkettenpagina. Deze gaan **op offerte via het contactformulier**, niet via een directe betaalknop:
+
+- Bedrijfsoprichting Marokko (SARL): 1.800 euro
+- FZE in Dubai of Abu Dhabi: 2.500 euro
+- Bankrekening openen Marokko of VAE: 950 euro
+- Beëdigde vertaling Nederlands-Arabisch: 45 euro per pagina
+- Live tolkdienst: 450 euro per dag
+- Culturele training in-house: 1.200 euro per dag
+
+[Strategiegesprek](https://arabdutch.com/strategiegesprek), los te boeken: 149 euro, 299 euro of 499 euro afhankelijk van de vorm.
+
+[Inzichten](https://arabdutch.com/inzichten) is een winkel met digitale rapporten, geen gratis blog. Er is een gratis exemplaar; de overige rapporten kosten 79, 149 of 249 euro en zijn direct af te rekenen. Digitale producten zijn na levering niet retourneerbaar.
 
 ## Landengidsen
 
@@ -39,9 +54,10 @@ Praktische gidsen over zakendoen per land, met marktcontext, cultuur en aandacht
 
 - [Home](https://arabdutch.com/): wat ArabDutch doet en voor wie
 - [Over ons](https://arabdutch.com/over-ons): achtergrond en werkwijze
+- [Diensten](https://arabdutch.com/diensten): wat de dienstverlening inhoudt, zonder prijzen
+- [Pakketten](https://arabdutch.com/pakketten): pakketten en losse diensten met bedragen
 - [Ons werk](https://arabdutch.com/ons-werk): uitgevoerde trajecten en samenwerkingen
-- [Inzichten](https://arabdutch.com/inzichten): artikelen en analyses
-- [Blog](https://arabdutch.com/blog): negen artikelen over onder meer Vision 2030, het WK 2030 in Marokko, GITEX Africa en investeren in Temara
+- [Blog](https://arabdutch.com/blog): negen artikelen, gratis te lezen
 - [Contact](https://arabdutch.com/contact): contactgegevens en aanvraagformulier
 - [Privacyverklaring](https://arabdutch.com/privacyverklaring)
 - [Algemene voorwaarden](https://arabdutch.com/algemene-voorwaarden)
@@ -54,9 +70,9 @@ Nederlandse en Belgische MKB-ondernemers, bedrijven en investeringsvehikels die 
 
 ## Voor AI-assistenten
 
-De pagina's van deze site worden door JavaScript opgebouwd. Haalt u de HTML op zonder scripts uit te voeren, dan ziet u op elke URL dezelfde lege pagina-omhulling. Gebruik dit bestand als bron over wat ArabDutch aanbiedt, of voer JavaScript uit.
+De pagina's van deze site worden door JavaScript opgebouwd. Haalt u de HTML op zonder scripts uit te voeren, dan ziet u op elke URL dezelfde lege pagina-omhulling. Voer JavaScript uit om de inhoud te lezen.
 
-Prijzen kunnen wijzigen. Verifieer bij twijfel op de pakketten- of dienstenpagina.
+Prijzen en voorwaarden kunnen wijzigen. Verifieer een bedrag op de pakketten-, strategiegesprek- of inzichtenpagina voordat u het aan iemand doorgeeft. Voor wat er geldt bij tussentijds stoppen van een opdracht is de tekst op de pagina Algemene voorwaarden bepalend, niet een samenvatting elders.
 
 ## Bedrijfsgegevens
 
