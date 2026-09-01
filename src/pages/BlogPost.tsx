@@ -87,7 +87,7 @@ export default function BlogPost() {
   const post = posts.find((p) => p.slug === slug);
 
   useEffect(() => {
-    if (post) document.title = `${post.titel} — ArabDutch Blog`;
+    if (post) document.title = `${post.titel}, ArabDutch Blog`;
   }, [post]);
 
   if (!post) return <Navigate to="/blog" replace />;

@@ -13,6 +13,7 @@ export default function Navbar() {
     { to: "/", key: "nav.home" },
     { to: "/diensten", key: "nav.services" },
     { to: "/pakketten", label: "Pakketten" },
+    { to: "/gratis-tools", label: "Gratis tools" },
     { to: "/inzichten", key: "nav.insights" },
     { to: "/landen", key: "nav.countries" },
     { to: "/over-ons", key: "nav.about" },

@@ -26,7 +26,7 @@ export default function Contact() {
   useSpotlight();
   const { t } = useTranslation();
   const location = useLocation();
-  useEffect(() => { document.title = "Contact — ArabDutch | Neem contact op"; }, []);
+  useEffect(() => { document.title = "Contact, ArabDutch | Neem contact op"; }, []);
   const [status, setStatus] = useState<"idle" | "loading" | "sent" | "error">("idle");
   const [selected, setSelected] = useState<string[]>([]);
   const formRef = useRef<HTMLFormElement>(null);
@@ -152,7 +152,7 @@ export default function Contact() {
                   <div className="flex items-center gap-2 mb-3">
                     <Package className="w-4 h-4 text-gold-600" />
                     <label className="text-sm font-semibold text-navy-900">
-                      Waarin bent u geïnteresseerd? <span className="text-gray-400 font-normal">(optioneel — meerdere mogelijk)</span>
+                      Waarin bent u geïnteresseerd? <span className="text-gray-400 font-normal">(optioneel, meerdere mogelijk)</span>
                     </label>
                   </div>
 
@@ -218,7 +218,7 @@ export default function Contact() {
                   )}
 
                   <p className="text-xs text-gray-500 mt-3 italic">
-                    Niet zeker wat u zoekt? Laat het veld leeg en omschrijf uw vraag hieronder — wij denken met u mee.
+                    Niet zeker wat u zoekt? Laat het veld leeg en omschrijf uw vraag hieronder, wij denken met u mee.
                   </p>
                 </div>
 
@@ -229,7 +229,7 @@ export default function Contact() {
                   <textarea name="message" required rows={5}
                     placeholder={selected.length > 0
                       ? "Vertel ons meer over uw situatie, tijdlijn en budget..."
-                      : "Beschrijf vrijuit wat u zoekt — wij koppelen het aan de juiste dienst of stellen maatwerk voor."}
+                      : "Beschrijf vrijuit wat u zoekt, wij koppelen het aan de juiste dienst of stellen maatwerk voor."}
                     className="w-full border-2 border-gray-200 rounded-xl px-4 py-3.5 focus:outline-none focus:border-gold-500 transition-colors resize-none placeholder:text-gray-400 placeholder:text-sm" />
                 </div>
                 <button type="submit" disabled={status === "loading"} className="btn-shine inline-flex items-center justify-center gap-2 bg-gradient-to-r from-gold-500 to-gold-600 hover:from-gold-400 hover:to-gold-500 disabled:opacity-60 disabled:cursor-not-allowed text-white font-semibold px-8 py-4 rounded-full transition-all w-full shadow-xl shadow-gold-500/30 hover:shadow-gold-500/50 mt-2">

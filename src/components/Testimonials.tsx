@@ -1,28 +1,36 @@
 import { motion } from "framer-motion";
-import { Quote, Star } from "lucide-react";
+import { ShieldCheck, FileSearch, Scale } from "lucide-react";
 import useSpotlight from "./Spotlight";
 
-const testimonials = [
+/**
+ * Voorheen een testimonials-blok. Bewust vervangen: ArabDutch is een jong
+ * bureau en had op dit moment nog geen afgeronde klantcases. Klantcitaten
+ * tonen die er niet zijn, is misleiding, ongeacht hoe voorzichtig ze zijn
+ * geformuleerd. Zodra er echte, met toestemming gedeelde cases zijn, kan hier
+ * een testimonials-blok terugkomen met naam en akkoord van de klant.
+ *
+ * Wat hier nu staat doet hetzelfde vertrouwenswerk, maar dan waar: onze
+ * werkwijze, onze grenzen, en waar wij ons aan binden.
+ */
+
+const pijlers = [
   {
-    quote: "ArabDutch heeft ons binnen vier maanden een Marokkaanse partner geleverd die we via reguliere kanalen nooit hadden gevonden. De culturele begeleiding maakte het verschil tussen een handshake en een handtekening.",
-    naam: "Eric V.",
-    functie: "Investment Director",
-    sector: "Vastgoed · Nederland",
-    rating: 5,
+    icon: FileSearch,
+    titel: "Wij tonen de bron",
+    tekst:
+      "Elk cijfer in onze landengidsen is te herleiden naar een officiële bron met datum. Regelgeving in de regio verandert snel en veel adviespagina's staan vol verouderde tarieven. Wat wij niet zeker weten, benoemen wij als onzeker in plaats van het glad te strijken.",
   },
   {
-    quote: "De klantentour naar Hoogendoorn en LetsGrow was vlekkeloos georganiseerd. Onze Saoedische delegatie sprak nog maanden over de gastvrijheid en het professionalisme. Drie pilots staan inmiddels in de planning.",
-    naam: "Yasser A.",
-    functie: "Director Innovation",
-    sector: "Agritech · KSA",
-    rating: 5,
+    icon: Scale,
+    titel: "Wij noemen ook wat tegenzit",
+    tekst:
+      "Een adviseur die alleen kansen laat zien, verkoopt u iets. Wij benoemen de vallen die pas na jaren zichtbaar worden: verlengingskosten die boven de instapprijs liggen, een status die u vijf jaar kwijt bent bij overschrijding, of geld dat u niet meer uit het land krijgt omdat het verkeerd is ingebracht.",
   },
   {
-    quote: "Wij wilden uitbreiden naar Marokko maar wisten niet waar te beginnen. ArabDutch heeft binnen 8 weken een SARL opgericht in Casablanca, banking geregeld bij AttijariWafa en de eerste twee partners aan ons gekoppeld. Hun €25.000 pakket is een fractie van wat de Big 4 vroeg.",
-    naam: "Marlies de B.",
-    functie: "Founder",
-    sector: "SaaS · Nederland",
-    rating: 5,
+    icon: ShieldCheck,
+    titel: "Wij zeggen ook nee",
+    tekst:
+      "Past een land of een structuur niet bij uw plan, dan zeggen wij dat voordat u betaalt. Wij werken niet met stromanconstructies en adviseren geen route waarvan wij de risico's niet kunnen overzien. Voor zwaarwegende fiscale en juridische vragen verwijzen wij naar een specialist in dat rechtsgebied.",
   },
 ];
 
@@ -36,43 +44,34 @@ export default function Testimonials() {
           initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }} className="text-center mb-16">
           <div className="inline-flex items-center gap-3 mb-6 glass-gold px-5 py-2.5 rounded-full">
-            <Star className="w-3.5 h-3.5 text-gold-300 fill-gold-300" />
-            <span className="text-gold-200 text-xs font-semibold uppercase tracking-[0.25em]">Wat klanten zeggen</span>
+            <ShieldCheck className="w-3.5 h-3.5 text-gold-300" />
+            <span className="text-gold-200 text-xs font-semibold uppercase tracking-[0.25em]">Onze werkwijze</span>
           </div>
           <h2 className="font-display font-bold text-5xl md:text-6xl mb-4 gradient-luxe">
             Vertrouwen wordt verdiend
           </h2>
           <p className="text-white/60 text-lg max-w-2xl mx-auto">
-            Een selectie van anonieme klantcitaten — namen op aanvraag bij interesse in referenties.
+            Wij zijn een jong bureau en tonen liever geen klantcitaten dan citaten die wij niet kunnen laten bevestigen. Waar wij ons wel aan binden, staat hieronder.
           </p>
         </motion.div>
 
         <div className="grid md:grid-cols-3 gap-6">
-          {testimonials.map((t, i) => (
+          {pijlers.map((p, i) => (
             <motion.div
-              key={i}
+              key={p.titel}
               initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }} transition={{ delay: i * 0.1, duration: 0.6 }}
               data-spotlight
               className="card-luxe rounded-3xl p-8 flex flex-col">
-              <Quote className="w-10 h-10 text-gold-400/60 mb-5" />
-              <p className="text-white/80 leading-relaxed mb-6 italic flex-1">"{t.quote}"</p>
-              <div className="flex items-center gap-0.5 mb-4">
-                {Array.from({ length: t.rating }).map((_, j) => (
-                  <Star key={j} className="w-4 h-4 text-gold-400 fill-gold-400" />
-                ))}
-              </div>
-              <div className="pt-5 border-t border-white/10">
-                <p className="font-display font-bold text-white">{t.naam}</p>
-                <p className="text-white/40 text-sm">{t.functie}</p>
-                <p className="text-gold-300 text-xs mt-1 uppercase tracking-widest">{t.sector}</p>
-              </div>
+              <p.icon className="w-10 h-10 text-gold-400/60 mb-5" />
+              <h3 className="font-display font-bold text-white text-xl mb-3">{p.titel}</h3>
+              <p className="text-white/70 leading-relaxed flex-1">{p.tekst}</p>
             </motion.div>
           ))}
         </div>
 
         <p className="text-center text-white/30 text-xs mt-12 max-w-2xl mx-auto">
-          * Klantnamen geanonimiseerd ter bescherming van zakelijke vertrouwelijkheid. Originele referenties worden vertrouwelijk verstrekt aan serieuze opdrachtgevers na intentieverklaring.
+          Zodra wij trajecten hebben afgerond waarvan de opdrachtgever instemt met publicatie, plaatsen wij hier echte cases met naam en toestemming.
         </p>
       </div>
     </section>

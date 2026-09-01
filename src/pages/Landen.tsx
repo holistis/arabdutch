@@ -15,7 +15,7 @@ const risicoConfig = {
 
 export default function Landen() {
   useSpotlight();
-  useEffect(() => { document.title = "Landengidsen — ArabDutch | Leven & Ondernemen in de Arabische wereld"; }, []);
+  useEffect(() => { document.title = "Landengidsen, ArabDutch | Leven & Ondernemen in de Arabische wereld"; }, []);
 
   const maghreb = landGidsen.filter(l => l.regio === "Maghreb");
   const golf = landGidsen.filter(l => l.regio === "Golf");
@@ -90,7 +90,7 @@ export default function Landen() {
       <LuxeHero
         badge="Landengidsen"
         title={<>Als Nederlander of Vlaming<br /><span className="gradient-luxe italic">leven & ondernemen</span><br />in de Arabische wereld</>}
-        subtitle="Per land: belasting, visum, bedrijfsoprichting, vastgoed, kosten van levensonderhoud en culturele do's & don'ts. Opgesteld door ArabDutch — op basis van directe ervaring ter plaatse."
+        subtitle="Per land: belasting, visum, bedrijfsoprichting, vastgoed, kosten van levensonderhoud en culturele do's & don'ts. Opgesteld door ArabDutch, op basis van directe ervaring ter plaatse."
       />
 
       <section className="py-32 bg-luxe-mesh relative overflow-hidden noise-overlay">
@@ -109,7 +109,7 @@ export default function Landen() {
             Uw land ontbreekt?
           </h2>
           <p className="text-gray-500 text-xl mb-10 max-w-2xl mx-auto leading-relaxed">
-            Wij werken continu aan uitbreidingen. Heeft u een specifiek land in gedachten — Yemen, Bahrein, Koeweit, Syrië of Libanon? Neem contact op en wij informeren u zodra de gids beschikbaar is.
+            Wij werken continu aan uitbreidingen. Heeft u een specifiek land in gedachten, Yemen, Bahrein, Koeweit, Syrië of Libanon? Neem contact op en wij informeren u zodra de gids beschikbaar is.
           </p>
           <Link to="/contact"
             className="btn-shine inline-flex items-center gap-2 bg-gradient-to-r from-gold-500 to-gold-600 hover:from-gold-400 hover:to-gold-500 text-white font-semibold px-12 py-5 rounded-full transition-all shadow-xl shadow-gold-500/40 hover:shadow-gold-500/60 hover:scale-105 text-lg">

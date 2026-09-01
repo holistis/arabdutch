@@ -2,10 +2,10 @@ import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Shield } from "lucide-react";
 
-const DATUM = "11 mei 2026";
+const DATUM = "1 september 2026";
 
 export default function Privacyverklaring() {
-  useEffect(() => { document.title = "Privacyverklaring — ArabDutch"; }, []);
+  useEffect(() => { document.title = "Privacyverklaring, ArabDutch"; }, []);
   return (
     <main className="pt-20">
       <section className="bg-navy-900 text-white py-20">
@@ -38,7 +38,7 @@ export default function Privacyverklaring() {
             <li>Naam en contactgegevens (e-mailadres, telefoonnummer)</li>
             <li>Bedrijfsnaam en functietitel</li>
             <li>De inhoud van berichten die u via ons contactformulier stuurt</li>
-            <li>Technische gegevens bij websitebezoek (IP-adres, browsertype, bezochte pagina's) via analytische cookies — uitsluitend met uw toestemming</li>
+            <li>Technische gegevens die uw browser standaard meestuurt bij het opvragen van een pagina (waaronder IP-adres en browsertype) en die bij onze hostingpartij kortstondig in serverlogs terechtkomen. Wij analyseren deze niet en koppelen ze niet aan u als persoon.</li>
           </ul>
 
           <h2>3. Waarom verwerken wij uw gegevens?</h2>
@@ -46,7 +46,7 @@ export default function Privacyverklaring() {
           <ul>
             <li><strong>Dienstverlening:</strong> om uitvoering te geven aan een opdracht of overeenkomst</li>
             <li><strong>Communicatie:</strong> om te reageren op uw vragen en contactverzoeken</li>
-            <li><strong>Marketing:</strong> om u — uitsluitend met uw uitdrukkelijke toestemming — te informeren over onze diensten en inzichten</li>
+            <li><strong>Marketing:</strong> om u, uitsluitend met uw uitdrukkelijke toestemming, te informeren over onze diensten en inzichten</li>
             <li><strong>Wettelijke verplichtingen:</strong> voor belasting- en boekhoudkundige doeleinden</li>
           </ul>
 
@@ -63,16 +63,20 @@ export default function Privacyverklaring() {
           <ul>
             <li>Contactformuliergegevens: maximaal 2 jaar na laatste contact</li>
             <li>Klantgegevens bij actieve opdracht: 7 jaar (fiscale bewaarplicht)</li>
-            <li>Analytische cookiedata: maximaal 13 maanden</li>
+            <li>Aanmeldingen voor onze nieuwsbrief of voor een rapport: tot u zich afmeldt</li>
           </ul>
 
           <h2>6. Worden uw gegevens gedeeld met derden?</h2>
-          <p>Wij verkopen uw persoonsgegevens nooit aan derden. Wij kunnen gegevens delen met:</p>
+          <p>Wij verkopen uw persoonsgegevens nooit aan derden. Hieronder staan de verwerkers die wij inschakelen, met naam genoemd zodat u weet waar uw gegevens terechtkomen:</p>
           <ul>
-            <li><strong>Verwerkers:</strong> softwareleveranciers die namens ons gegevens verwerken (bijv. e-mailprovider, hosting), uitsluitend op basis van een verwerkersovereenkomst</li>
+            <li><strong>Supabase:</strong> de database waarin een contactaanvraag, een aanmelding voor een rapport of een nieuwsbriefinschrijving wordt opgeslagen. Gehost binnen de EU.</li>
+            <li><strong>Web3Forms:</strong> verstuurt ons een notificatie zodra u een formulier invult, zodat wij uw aanvraag zien.</li>
+            <li><strong>Railway:</strong> de hostingpartij waarop deze website draait, met servers binnen de EU.</li>
+            <li><strong>Stripe:</strong> uitsluitend wanneer u een betaling doet. Uw betaalgegevens komen bij Stripe binnen en niet bij ons.</li>
             <li><strong>Zakenpartners:</strong> alleen met uw expliciete toestemming in het kader van een opdracht</li>
             <li><strong>Autoriteiten:</strong> als wij daartoe wettelijk verplicht zijn</li>
           </ul>
+          <p>Wij gebruiken geen analytics-diensten en geen advertentienetwerken. Uw IP-adres wordt door ons niet naar een externe dienst gestuurd om uw land te bepalen; de taal van de site wordt afgeleid uit de taalinstelling van uw eigen browser.</p>
 
           <h2>7. Internationale doorgifte</h2>
           <p>Wij kunnen gegevens doorgeven aan partijen buiten de Europese Economische Ruimte (EER), in het bijzonder aan samenwerkingspartners in de Arabische wereld. Dit geschiedt uitsluitend indien er passende waarborgen zijn zoals standaardcontractbepalingen van de Europese Commissie of expliciete toestemming.</p>

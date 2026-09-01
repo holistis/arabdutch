@@ -55,7 +55,7 @@ const pakketten = [
     marktPrijs: "€235.000",
     duur: "3–6 maanden",
     includes: [
-      "Multi-regio strategiedocument Marokko (80-120p) — Casablanca, Rabat, Tanger, Marrakech, Agadir",
+      "Multi-regio strategiedocument Marokko (80-120p), Casablanca, Rabat, Tanger, Marrakech, Agadir",
       "Bedrijfsoprichting + CFC of Tanger Med vrije zone setup",
       "Banking, fiscaal en juridische structurering compleet",
       "Dedicated project manager + 2 senior consultants",
@@ -84,14 +84,14 @@ const losseDiensten = [
 
 export default function Pakketten() {
   useSpotlight();
-  useEffect(() => { document.title = "Marokko Pakketten — ArabDutch | Done-for-you marktentree Nederland ↔ Marokko"; }, []);
+  useEffect(() => { document.title = "Marokko Pakketten, ArabDutch | Done-for-you marktentree Nederland ↔ Marokko"; }, []);
 
   return (
     <main className="pt-20 bg-[#0a0f1f]">
       <LuxeHero
         badge="🇲🇦 Marokko · Done-for-you pakketten"
         title={<>U levert de visie.<br /><span className="gradient-luxe italic">Wij leveren Marokko.</span></>}
-        subtitle="Drie heldere pakketten voor uw marktentree in Marokko — van verkenning tot volledige expansie. 70% onder de tarieven van Big 4 consultancies, met diepe lokale expertise in Casablanca, Rabat, Tanger en Marrakech."
+        subtitle="Drie heldere pakketten voor uw marktentree in Marokko, van verkenning tot volledige expansie. 70% onder de tarieven van Big 4 consultancies, met diepe lokale expertise in Casablanca, Rabat, Tanger en Marrakech."
       />
 
       {/* PAKKETTEN */}
@@ -152,7 +152,7 @@ export default function Pakketten() {
                       : "bg-navy-900 hover:bg-navy-800 text-white shadow-lg"
                   }`}
                 >
-                  {p.cta} — {p.prijs} <ArrowRight className="w-4 h-4" />
+                  {p.cta}, {p.prijs} <ArrowRight className="w-4 h-4" />
                 </a>
                 <p className={`text-center text-xs mt-3 ${p.populair ? "text-white/40" : "text-gray-400"}`}>
                   <Shield className="w-3 h-3 inline mr-1" /> Vaste prijs · Geen verrassingen
@@ -176,10 +176,10 @@ export default function Pakketten() {
                   Op zoek naar de <span className="shimmer-text">Golfregio of Levant</span>?
                 </h3>
                 <p className="text-white/70 leading-relaxed mb-4">
-                  Onze pakketten zijn gespecialiseerd op Marokko — daar zit onze diepste expertise en ons sterkste netwerk. Voor de VAE, Saoedi-Arabië, Qatar, Oman, Egypte, Jordanië, Tunesië, Irak of Libië werken wij op maat.
+                  Onze pakketten zijn gespecialiseerd op Marokko, daar zit onze diepste expertise en ons sterkste netwerk. Voor de VAE, Saoedi-Arabië, Qatar, Oman, Egypte, Jordanië, Tunesië, Irak of Libië werken wij op maat.
                 </p>
                 <p className="text-white/50 text-sm mb-8">
-                  Begin met een strategiegesprek — daar bepalen we samen welk traject bij uw situatie past.
+                  Begin met een strategiegesprek, daar bepalen we samen welk traject bij uw situatie past.
                 </p>
               </div>
               <div className="flex flex-col gap-3">
@@ -265,7 +265,7 @@ export default function Pakketten() {
               <span className="gradient-luxe italic">opdrachtgevers voor ons kiezen</span>
             </h2>
             <p className="text-gray-500 text-lg max-w-2xl mx-auto mt-6">
-              Geen verkooppraat — feitelijk en structureel onderbouwd waarom wij anders zijn dan Big 4 of lokale advocatenkantoren.
+              Geen verkooppraat, feitelijk en structureel onderbouwd waarom wij anders zijn dan Big 4 of lokale advocatenkantoren.
             </p>
           </motion.div>
 
@@ -274,13 +274,13 @@ export default function Pakketten() {
               {
                 icon: <Languages className="w-6 h-6" />,
                 titel: "Tweetalig op senior niveau",
-                tekst: "Native Nederlands én native Marokkaans Arabisch / Frans, in één persoon. Geen tolk nodig — uw consultant is zelf de culturele brug.",
+                tekst: "Native Nederlands én native Marokkaans Arabisch / Frans, in één persoon. Geen tolk nodig, uw consultant is zelf de culturele brug.",
                 bewijs: "Vrijwel uniek in de NL-MA consultancy-markt",
               },
               {
                 icon: <User className="w-6 h-6" />,
                 titel: "Directe lijn met de founder",
-                tekst: "U werkt rechtstreeks met de oprichter — geen junior consultants, geen accountmanager, geen relay van informatie.",
+                tekst: "U werkt rechtstreeks met de oprichter, geen junior consultants, geen accountmanager, geen relay van informatie.",
                 bewijs: "Bij Big 4 is dit alleen mogelijk vanaf zes-cijferige projecten",
               },
               {
@@ -293,18 +293,18 @@ export default function Pakketten() {
                 icon: <Shield className="w-6 h-6" />,
                 titel: "70% lagere overhead",
                 tekst: "Geen kantoor in Casablanca, geen junior staff op de loonlijst, geen marketingbudget van 10% van omzet. Onze structuur is bewust slank.",
-                bewijs: "Verklaart structureel onze prijzen — geen tijdelijke korting",
+                bewijs: "Verklaart structureel onze prijzen, geen tijdelijke korting",
               },
               {
                 icon: <Clock className="w-6 h-6" />,
                 titel: "Zelfde tijdzone",
-                tekst: "Marokko draait op CET — dezelfde klok als Nederland. Geen vertraging, geen 'we komen er morgen op terug' uit Dubai of Riyadh.",
+                tekst: "Marokko draait op CET, dezelfde klok als Nederland. Geen vertraging, geen 'we komen er morgen op terug' uit Dubai of Riyadh.",
                 bewijs: "Werkdag begint én eindigt synchroon met uw kantoor",
               },
               {
                 icon: <MapPin className="w-6 h-6" />,
                 titel: "Lokaal netwerk, niet uitbesteed",
-                tekst: "Wij werken met vaste notarissen, fiscalisten en banking-contacten in Casablanca, Rabat en Tanger die wij persoonlijk kennen — geen anonieme onderaanneming.",
+                tekst: "Wij werken met vaste notarissen, fiscalisten en banking-contacten in Casablanca, Rabat en Tanger die wij persoonlijk kennen, geen anonieme onderaanneming.",
                 bewijs: "Verkort doorlooptijden met gemiddeld 30-40%",
               },
             ].map((r, i) => (
@@ -338,8 +338,8 @@ export default function Pakketten() {
 
           <div className="space-y-4">
             {[
-              { v: "Waarom zijn jullie prijzen zoveel lager dan Big 4?", a: "Wij hebben een fundamenteel andere structuur: dedicated specialisten zonder dure kantoorhiërarchieën in London of Riyadh. Onze overheadkosten zijn 70% lager dan McKinsey of BCG — die besparing geven wij direct door aan onze klanten zonder kwaliteitsconcessie." },
-              { v: "Hoe werkt betaling en tussentijdse stopzetting?", a: "Onze pakketten zijn zakelijke (B2B) diensten — het wettelijke herroepingsrecht voor consumenten is niet van toepassing. Bij projecten van >€3.000 geldt een tussentijds review-moment na week 2: u kunt op dat moment besluiten te stoppen, waarbij u alleen de reeds verrichte werkzaamheden betaalt. Zo houdt u grip op het traject zonder onnodig risico." },
+              { v: "Waarom zijn jullie prijzen zoveel lager dan Big 4?", a: "Wij hebben een fundamenteel andere structuur: dedicated specialisten zonder dure kantoorhiërarchieën in London of Riyadh. Onze overheadkosten zijn 70% lager dan McKinsey of BCG, die besparing geven wij direct door aan onze klanten zonder kwaliteitsconcessie." },
+              { v: "Hoe werkt betaling en tussentijdse stopzetting?", a: "Onze pakketten zijn zakelijke (B2B) diensten, het wettelijke herroepingsrecht voor consumenten is niet van toepassing. Bij projecten van >€3.000 geldt een tussentijds review-moment na week 2: u kunt op dat moment besluiten te stoppen, waarbij u alleen de reeds verrichte werkzaamheden betaalt. Zo houdt u grip op het traject zonder onnodig risico." },
               { v: "Werken jullie ook voor non-EU klanten?", a: "Ja. Wij werken voor Nederlandse, Belgische, Duitse en Arabische klanten. Voor non-EU klanten geldt reverse charge op BTW." },
               { v: "Hoe garanderen jullie kwaliteit?", a: "Elke opdracht heeft een senior consultant als hoofdverantwoordelijke met minimaal 10 jaar regio-ervaring. Onze deliverables worden intern gepeer-reviewed. Klanten krijgen wekelijkse updates en een dedicated project-portaal." },
               { v: "Wat is jullie ervaring met Sharia-compliance?", a: "Voor opdrachten waar Sharia-compliance vereist is (Saoedi-Arabië, Bahrein, Koeweit) werken wij samen met gecertificeerde Sharia-adviseurs. Wij coördineren het volledige proces." },

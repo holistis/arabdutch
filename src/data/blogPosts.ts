@@ -291,12 +291,6 @@ const posts: BlogPost[] = [
         tekst: "Van 4 tot 6 mei 2026 was Casablanca het zenuwcentrum van de Afrikaanse gezondheidszorg. De eerste editie van GITEX Future Health Africa bracht ministers, ziekenhuisdirecteuren, AI-onderzoekers, fondsen en honderden bedrijven samen onder één centraal thema: hoe bouwt Afrika een eigen, soevereine gezondheidssector? ArabDutch was er drie dagen lang en kwam thuis met een glasheldere overtuiging: Nederlandse healthtech mag deze trein niet missen.",
       },
       {
-        type: "afbeelding",
-        src: "/gitex-health-casablanca-organizers.png",
-        alt: "Abdoellah Ouadoudi bij Organizers Office van GITEX Future Health Africa Morocco 2026",
-        bijschrift: "Founder Abdoellah Ouadoudi bij het Organizers Office van GITEX Future Health Africa, Casablanca",
-      },
-      {
         type: "h2",
         tekst: "Waarom Casablanca, en waarom nu?",
       },
@@ -307,12 +301,6 @@ const posts: BlogPost[] = [
       {
         type: "p",
         tekst: "Het resultaat: meer dan 300 exposanten, 50+ investeerders, delegaties uit ruim 30 landen, van Senegal en Nigeria tot Saoedi-Arabië, de VAE, Frankrijk en de Verenigde Staten. Het Executive Summit voerde de boventoon onder een titel die je niet snel vergeet: 'Financing Health Sovereignty: From Dependency to Dominance.'",
-      },
-      {
-        type: "afbeelding",
-        src: "/gitex-health-casablanca-hall.png",
-        alt: "GITEX Future Health Africa beursvloer Casablanca",
-        bijschrift: "De beursvloer met startup-zones: Idea Stage, Pre-Seed en Series & Beyond",
       },
       {
         type: "h2",

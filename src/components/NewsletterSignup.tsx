@@ -80,12 +80,12 @@ export default function NewsletterSignup({ variant = "dark", compact = false }: 
             ArabDutch Market Intelligence
           </p>
           <p className={`text-xs uppercase tracking-widest ${variant === "dark" ? "text-gold-300" : "text-gold-600"}`}>
-            Maandelijks · gratis · 2.000+ lezers
+            Maandelijks · gratis · opzeggen met één klik
           </p>
         </div>
       </div>
       <p className={`text-sm mb-6 leading-relaxed ${variant === "dark" ? "text-white/60" : "text-gray-500"}`}>
-        Marktupdates, regelgeving en strategische inzichten over de Arabische wereld. Direct in uw inbox. Geen spam — uitschrijven kan altijd.
+        Marktupdates, regelgeving en strategische inzichten over de Arabische wereld. Direct in uw inbox. Geen spam, uitschrijven kan altijd.
       </p>
       <div className="flex flex-col sm:flex-row gap-3">
         <input

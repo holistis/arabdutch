@@ -2,10 +2,10 @@ import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Cookie } from "lucide-react";
 
-const DATUM = "11 mei 2026";
+const DATUM = "1 september 2026";
 
 export default function Cookiebeleid() {
-  useEffect(() => { document.title = "Cookiebeleid — ArabDutch"; }, []);
+  useEffect(() => { document.title = "Cookiebeleid, ArabDutch"; }, []);
   return (
     <main className="pt-20">
       <section className="bg-navy-900 text-white py-20">
@@ -31,18 +31,15 @@ export default function Cookiebeleid() {
           <h3>Functionele cookies (altijd actief)</h3>
           <p>Deze cookies zijn strikt noodzakelijk voor het functioneren van de website. Zij slaan bijvoorbeeld uw cookievoorkeur op. Zonder deze cookies werkt de website niet correct. Er is geen toestemming vereist voor het plaatsen van functionele cookies.</p>
           <ul>
-            <li><strong>arabdutch_cookie_consent</strong> — slaat uw cookievoorkeur op (1 jaar)</li>
+            <li><strong>arabdutch_cookie_consent</strong>, slaat uw cookievoorkeur op (1 jaar)</li>
+            <li><strong>arabdutch_lang</strong>, onthoudt uw taalkeuze zodat de site niet elke keer opnieuw hoeft te raden</li>
           </ul>
 
-          <h3>Analytische cookies (met toestemming)</h3>
-          <p>Wij gebruiken analytische cookies om het gebruik van onze website te meten en te verbeteren. Deze cookies verzamelen geanonimiseerde gegevens zoals het aantal bezoekers, welke pagina's bezocht worden en hoe lang bezoekers op de site blijven.</p>
-          <ul>
-            <li>Indien van toepassing: Google Analytics 4 (geanonimiseerd IP, geen cross-site tracking)</li>
-            <li>Bewaartermijn: maximaal 13 maanden</li>
-          </ul>
+          <h3>Analytische cookies</h3>
+          <p>Wij plaatsen op dit moment geen analytische cookies en gebruiken geen Google Analytics of vergelijkbare dienst. Er wordt dus niet bijgehouden welke pagina's u bezoekt of hoe lang u blijft. Mocht dit veranderen, dan werken wij dit beleid bij en vragen wij vooraf uw toestemming.</p>
 
-          <h3>Marketing cookies (met toestemming)</h3>
-          <p>Wij plaatsen momenteel geen marketing- of trackingcookies van derden. Mocht dit in de toekomst veranderen, dan zullen wij dit beleid bijwerken en opnieuw uw toestemming vragen.</p>
+          <h3>Marketing cookies</h3>
+          <p>Wij plaatsen geen marketing- of trackingcookies van derden. Mocht dit in de toekomst veranderen, dan zullen wij dit beleid bijwerken en opnieuw uw toestemming vragen.</p>
 
           <h2>3. Toestemming beheren</h2>
           <p>Bij uw eerste bezoek aan onze website vragen wij u toestemming voor het plaatsen van niet-essentiële cookies. U kunt uw voorkeur op elk moment wijzigen via de cookiebanner onderaan de pagina, of door uw browserinstellingen aan te passen.</p>
@@ -69,7 +66,7 @@ export default function Cookiebeleid() {
           <h2>8. Contact</h2>
           <p>Heeft u vragen over ons cookiebeleid? Neem dan contact op via <a href="mailto:info@arabdutch.com" className="text-gold-600 hover:underline">info@arabdutch.com</a>.</p>
 
-          <p className="text-sm text-gray-400 mt-12">© {new Date().getFullYear()} ArabDutch — Boschdijk 520, 5621 JG Eindhoven</p>
+          <p className="text-sm text-gray-400 mt-12">© {new Date().getFullYear()} ArabDutch, Boschdijk 520, 5621 JG Eindhoven</p>
         </div>
       </section>
     </main>

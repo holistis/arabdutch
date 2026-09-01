@@ -8,14 +8,14 @@ import useSpotlight from "../components/Spotlight";
 
 export default function Blog() {
   useSpotlight();
-  useEffect(() => { document.title = "Blog — ArabDutch | Inzichten over Nederland & Arabische wereld"; }, []);
+  useEffect(() => { document.title = "Blog, ArabDutch | Inzichten over Nederland & Arabische wereld"; }, []);
 
   return (
     <main className="pt-20 bg-[#0a0f1f]">
       <LuxeHero
         badge="Inzichten & updates"
         title={<>Verhalen vanuit<br /><span className="gradient-luxe italic">twee werelden</span></>}
-        subtitle="Geen oppervlakkige content. Diepgaande analyses van onze opdrachten, marktontwikkelingen en culturele inzichten — uit eerste hand."
+        subtitle="Geen oppervlakkige content. Diepgaande analyses van onze opdrachten, marktontwikkelingen en culturele inzichten, uit eerste hand."
       />
 
       <section className="py-32 bg-luxe-mesh relative overflow-hidden noise-overlay">

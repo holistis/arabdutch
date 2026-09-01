@@ -4,7 +4,7 @@ import { AlertCircle } from "lucide-react";
 const DATUM = "11 mei 2026";
 
 export default function Disclaimer() {
-  useEffect(() => { document.title = "Disclaimer — ArabDutch"; }, []);
+  useEffect(() => { document.title = "Disclaimer, ArabDutch"; }, []);
   return (
     <main className="pt-20">
       <section className="bg-navy-900 text-white py-20">
@@ -42,7 +42,7 @@ export default function Disclaimer() {
           <p>Onze website kan links bevatten naar externe websites. Wij zijn niet verantwoordelijk voor de inhoud, het privacybeleid of de betrouwbaarheid van deze externe websites. Het opnemen van een link houdt geen aanbeveling in.</p>
 
           <h2>5. Intellectueel eigendom</h2>
-          <p>Alle inhoud op deze website — inclusief teksten, logo's, afbeeldingen, grafisch materiaal, rapporten en analyses — is het intellectuele eigendom van ArabDutch of wordt met toestemming gebruikt. Het is niet toegestaan om enige inhoud te kopiëren, verveelvoudigen, verspreiden of openbaar maken zonder onze voorafgaande schriftelijke toestemming.</p>
+          <p>Alle inhoud op deze website, inclusief teksten, logo's, afbeeldingen, grafisch materiaal, rapporten en analyses, is het intellectuele eigendom van ArabDutch of wordt met toestemming gebruikt. Het is niet toegestaan om enige inhoud te kopiëren, verveelvoudigen, verspreiden of openbaar maken zonder onze voorafgaande schriftelijke toestemming.</p>
 
           <h2>6. Bescherming van bedrijfsinformatie en analyses</h2>
           <p>De door ArabDutch gepubliceerde marktanalyses, rapporten, whitepapers en inzichten zijn vertrouwelijk en uitsluitend bestemd voor de ontvanger(s). Verspreiding, publicatie of gebruik voor commerciële doeleinden zonder schriftelijke toestemming van ArabDutch is niet toegestaan en kan leiden tot aansprakelijkheid.</p>

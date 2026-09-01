@@ -22,7 +22,7 @@ const SERVICE_KEYS = [
 const cases = [
   { tag: "Vastgoed", land: "Marokko", titel: "Investeerders naar Temara & Rabat begeleid" },
   { tag: "Agritech", land: "Saoedi-Arabië & Libië", titel: "Klantentour langs Nederlandse innovators" },
-  { tag: "Cybersecurity", land: "Afrika", titel: "Partnership Manea — uitbreiding naar Afrika" },
+  { tag: "Cybersecurity", land: "Afrika", titel: "Partnership Manea, uitbreiding naar Afrika" },
 ];
 
 const MARQUEE_REGIONS = [
@@ -100,7 +100,7 @@ export default function Home() {
   const orbY1 = useTransform(scrollYProgress, [0, 1], [0, -300]);
   const orbY2 = useTransform(scrollYProgress, [0, 1], [0, 400]);
 
-  useEffect(() => { document.title = "ArabDutch — Bruggenbouwer tussen Nederland en de Arabische wereld"; }, []);
+  useEffect(() => { document.title = "ArabDutch, Bruggenbouwer tussen Nederland en de Arabische wereld"; }, []);
 
   useEffect(() => {
     const onMove = (e: MouseEvent) => {
@@ -116,7 +116,7 @@ export default function Home() {
     <main className="pt-20 bg-[#0a0f1f]">
 
       {/* ═══════════════════════════════════════════════════════════
-          HERO — cinematic
+          HERO, cinematic
           ═══════════════════════════════════════════════════════════ */}
       <section ref={heroRef} className="relative bg-luxe-mesh min-h-screen flex items-center overflow-hidden noise-overlay">
         {/* parallax floating orbs */}
@@ -217,7 +217,7 @@ export default function Home() {
       </section>
 
       {/* ═══════════════════════════════════════════════════════════
-          MARQUEE — landen
+          MARQUEE, landen
           ═══════════════════════════════════════════════════════════ */}
       <section className="bg-[#0a0f1f] py-12 border-y border-gold-500/10 overflow-hidden">
         <div className="marquee">
@@ -233,7 +233,7 @@ export default function Home() {
       </section>
 
       {/* ═══════════════════════════════════════════════════════════
-          COUNTERS — premium stats
+          COUNTERS, premium stats
           ═══════════════════════════════════════════════════════════ */}
       <section className="bg-luxe-mesh py-32 relative overflow-hidden noise-overlay">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full blur-3xl opacity-30"
@@ -276,7 +276,7 @@ export default function Home() {
       </section>
 
       {/* ═══════════════════════════════════════════════════════════
-          DIENSTEN — bento grid 3D
+          DIENSTEN, bento grid 3D
           ═══════════════════════════════════════════════════════════ */}
       <section className="py-32 bg-luxe-light relative overflow-hidden">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[400px] opacity-30 pointer-events-none"
@@ -332,7 +332,7 @@ export default function Home() {
       </section>
 
       {/* ═══════════════════════════════════════════════════════════
-          QUOTE / PHILOSOPHY — cinematic split
+          QUOTE / PHILOSOPHY, cinematic split
           ═══════════════════════════════════════════════════════════ */}
       <section className="py-32 bg-luxe-mesh relative overflow-hidden noise-overlay">
         <div className="absolute top-0 right-0 w-[600px] h-[600px] opacity-30"
@@ -407,7 +407,7 @@ export default function Home() {
       </section>
 
       {/* ═══════════════════════════════════════════════════════════
-          CTA — grand finale
+          CTA, grand finale
           ═══════════════════════════════════════════════════════════ */}
       <section className="py-40 bg-luxe-mesh relative overflow-hidden noise-overlay">
         <div className="absolute inset-0 bg-aurora opacity-60 pointer-events-none" />
