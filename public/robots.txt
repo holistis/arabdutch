@@ -1,4 +1,25 @@
 User-agent: *
 Allow: /
 
+# Antwoordmachines: crawlers die een pagina ophalen om een gebruiker nu een
+# antwoord te geven. Expliciet toegestaan, zodat ze niet terugvallen op de
+# standaardinstelling van elke afzonderlijke leverancier.
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
 Sitemap: https://arabdutch.com/sitemap.xml
