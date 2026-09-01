@@ -18,21 +18,21 @@ const initialen = (naam: string) =>
   naam.split(" ").filter(Boolean).map(w => w[0]).join("").slice(0, 2).toUpperCase();
 
 const waarden = [
-  { icon: <Target className="w-6 h-6" />, title: "Onze missie", text: "Ondernemers, investeerders en instellingen succesvol verbinden met de Arabische wereld — en andersom. Niet als tussenpersoon, maar als strategische partner." },
+  { icon: <Target className="w-6 h-6" />, title: "Onze missie", text: "Ondernemers, investeerders en instellingen succesvol verbinden met de Arabische wereld, en andersom. Niet als tussenpersoon, maar als strategische partner." },
   { icon: <Heart className="w-6 h-6" />, title: "Onze waarden", text: "Vertrouwen gaat boven alles. Wij zeggen wat we doen, en doen wat we zeggen. Cultureel respect, integriteit en langetermijndenken zitten in ons DNA." },
-  { icon: <Users className="w-6 h-6" />, title: "Ons netwerk", text: "Actieve relaties met ondernemers, overheden en investeerders in Marokko, Saoedi-Arabië, Libië, de VAE en Nederland — opgebouwd door jaren aanwezig te zijn." },
+  { icon: <Users className="w-6 h-6" />, title: "Ons netwerk", text: "Actieve relaties met ondernemers, overheden en investeerders in Marokko, Saoedi-Arabië, Libië, de VAE en Nederland, opgebouwd door jaren aanwezig te zijn." },
 ];
 
 export default function OverOns() {
   useSpotlight();
-  useEffect(() => { document.title = "Over Ons — ArabDutch | Team & Missie"; }, []);
+  useEffect(() => { document.title = "Over Ons, ArabDutch | Team & Missie"; }, []);
 
   return (
     <main className="pt-20 bg-[#0a0f1f]">
       <LuxeHero
         badge="Wie zijn wij"
         title={<>Twee culturen.<br /><span className="gradient-luxe italic">Eén missie.</span></>}
-        subtitle="Wij zijn Nederlanders met Arabische wortels — en Arabieren met Nederlands begrip. Dat is geen toeval, het is ons fundament."
+        subtitle="Wij zijn Nederlanders met Arabische wortels, en Arabieren met Nederlands begrip. Dat is geen toeval, het is ons fundament."
       />
 
       {/* ACHTERGROND */}
@@ -52,9 +52,9 @@ export default function OverOns() {
               Geboren tussen<br />twee werelden
             </h2>
             <div className="space-y-5 text-gray-600 leading-relaxed text-lg">
-              <p>ArabDutch is opgericht door Abdoellah — in Nederland geboren, met diepe culturele wortels in de Arabische wereld. Die tweeledige identiteit is geen bijzaak; het is precies wat ons onderscheidt. Wij spreken beide talen, kennen beide culturen van binnenuit en weten hoe zaken écht gedaan worden aan weerszijden van de brug.</p>
-              <p>Waar andere adviseurs werken vanuit theorie, werken wij vanuit vertrouwen en relaties die door de jaren zijn opgebouwd — in Marokko, Saoedi-Arabië, Libië, de VAE en Nederland. Ons team van 12 professionals combineert juridische, financiële, taalkundige en zakelijke expertise.</p>
-              <p>Wij geloven dat de grootste kansen liggen op het snijvlak van twee werelden. Ons werk is om u daar te brengen — efficiënt, betrouwbaar en met resultaat.</p>
+              <p>ArabDutch is opgericht door Abdoellah, in Nederland geboren, met diepe culturele wortels in de Arabische wereld. Die tweeledige identiteit is geen bijzaak; het is precies wat ons onderscheidt. Wij spreken beide talen, kennen beide culturen van binnenuit en weten hoe zaken écht gedaan worden aan weerszijden van de brug.</p>
+              <p>Waar andere adviseurs werken vanuit theorie, werken wij vanuit vertrouwen en relaties die door de jaren zijn opgebouwd, in Marokko, Saoedi-Arabië, Libië, de VAE en Nederland. Ons team van 12 professionals combineert juridische, financiële, taalkundige en zakelijke expertise.</p>
+              <p>Wij geloven dat de grootste kansen liggen op het snijvlak van twee werelden. Ons werk is om u daar te brengen, efficiënt, betrouwbaar en met resultaat.</p>
             </div>
           </motion.div>
 
@@ -128,7 +128,7 @@ export default function OverOns() {
             viewport={{ once: true }} transition={{ duration: 0.7 }}
             className="mt-20 glass-strong rounded-3xl p-10 text-center">
             <p className="text-white/80 leading-relaxed text-lg max-w-3xl mx-auto font-light">
-              Naast ons vaste team werken wij samen met een selecte groep vertrouwde partners en specialisten in Nederland en de Arabische wereld. Dat stelt ons in staat om élke opdracht — hoe specifiek ook — met de juiste expertise aan te pakken.
+              Naast ons vaste team werken wij samen met een selecte groep vertrouwde partners en specialisten in Nederland en de Arabische wereld. Dat stelt ons in staat om élke opdracht, hoe specifiek ook, met de juiste expertise aan te pakken.
             </p>
           </motion.div>
         </div>
@@ -143,7 +143,7 @@ export default function OverOns() {
             Wilt u ons team ontmoeten?
           </h2>
           <p className="text-gray-500 text-xl mb-10 max-w-2xl mx-auto leading-relaxed">
-            Plan een persoonlijke kennismaking — wij komen graag bij u langs, of u bij ons in Eindhoven.
+            Plan een persoonlijke kennismaking, wij komen graag bij u langs, of u bij ons in Eindhoven.
           </p>
           <Link to="/contact"
             className="btn-shine inline-flex items-center gap-2 bg-gradient-to-r from-gold-500 to-gold-600 hover:from-gold-400 hover:to-gold-500 text-white font-semibold px-12 py-5 rounded-full transition-all shadow-xl shadow-gold-500/40 hover:shadow-gold-500/60 hover:scale-105 text-lg">

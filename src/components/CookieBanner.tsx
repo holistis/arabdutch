@@ -32,7 +32,7 @@ export default function CookieBanner() {
         <div className="flex items-start gap-3 flex-1">
           <Cookie className="w-5 h-5 text-gold-400 flex-shrink-0 mt-0.5" />
           <p className="text-white/80 text-sm leading-relaxed">
-            Wij gebruiken cookies om uw ervaring te verbeteren en websiteverkeer te analyseren.
+            Wij gebruiken alleen functionele opslag om uw taalkeuze en deze melding te onthouden. Wij volgen u niet en gebruiken geen trackingcookies.
             Lees meer in ons{" "}
             <Link to="/cookiebeleid" className="text-gold-400 hover:underline">cookiebeleid</Link>{" "}
             en onze{" "}

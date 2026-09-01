@@ -4,30 +4,36 @@ import nl from "./nl";
 import en from "./en";
 import ar from "./ar";
 
-const ARAB_COUNTRIES = ["AE","SA","QA","KW","BH","OM","YE","MA","TN","LY","EG","JO","IQ","SY","LB","DZ","SD","MR","SO","DJ","KM","PS"];
-const DUTCH_COUNTRIES = ["NL","BE"];
-
-async function detectLanguage(): Promise<string> {
+/**
+ * Taaldetectie gebeurt bewust volledig op het apparaat zelf.
+ *
+ * Hier stond eerder een aanroep naar ipapi.co om het land af te leiden uit het
+ * IP-adres. Dat gebeurde bij het opstarten van de app, dus vóór de cookiebanner
+ * en zonder toestemming, waarmee het IP-adres van elke bezoeker naar een derde
+ * partij ging. Dat is onder de AVG niet houdbaar en het stond ook niet in de
+ * privacyverklaring. De browsertaal is voor dit doel een even goed signaal,
+ * verlaat het apparaat niet, en scheelt bovendien tot 2 seconden wachttijd
+ * voordat de pagina rendert.
+ */
+function detectLanguage(): string {
   const stored = localStorage.getItem("arabdutch_lang");
   if (stored) return stored;
 
-  try {
-    const res = await fetch("https://ipapi.co/json/", { signal: AbortSignal.timeout(2000) });
-    const data = await res.json() as { country_code?: string };
-    const cc = data.country_code ?? "";
-    if (ARAB_COUNTRIES.includes(cc)) return "ar";
-    if (DUTCH_COUNTRIES.includes(cc)) return "nl";
-    return "en";
-  } catch {
-    const lang = navigator.language.slice(0, 2).toLowerCase();
-    if (lang === "ar") return "ar";
-    if (lang === "nl") return "nl";
-    return "en";
+  const voorkeuren = navigator.languages?.length
+    ? navigator.languages
+    : [navigator.language];
+
+  for (const voorkeur of voorkeuren) {
+    const code = voorkeur.slice(0, 2).toLowerCase();
+    if (code === "ar") return "ar";
+    if (code === "nl") return "nl";
+    if (code === "en") return "en";
   }
+  return "en";
 }
 
 export async function initI18n() {
-  const lng = await detectLanguage();
+  const lng = detectLanguage();
   await i18n.use(initReactI18next).init({
     resources: {
       nl: { translation: nl },

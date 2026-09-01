@@ -9,13 +9,13 @@ const diensten = [
   {
     icon: <Globe className="w-7 h-7" />,
     title: "Interculturele Training",
-    desc: "Wij trainen uw team in culturele intelligentie — van communicatiestijlen tot onderhandelingsdynamiek. Onmisbaar wanneer u Arabische markten betreedt of partners uit de regio ontvangt.",
+    desc: "Wij trainen uw team in culturele intelligentie, van communicatiestijlen tot onderhandelingsdynamiek. Onmisbaar wanneer u Arabische markten betreedt of partners uit de regio ontvangt.",
     deliverables: ["2-daagse workshop op locatie", "Cultureel handboek (NL+AR)", "Follow-up coaching sessie"],
   },
   {
     icon: <Handshake className="w-7 h-7" />,
     title: "Business Matchmaking",
-    desc: "U zoekt de juiste partner — wij vinden die voor u. Ons netwerk in Nederland én de Arabische wereld stelt ons in staat gerichte koppelingen te maken die tot echte resultaten leiden.",
+    desc: "U zoekt de juiste partner, wij vinden die voor u. Ons netwerk in Nederland én de Arabische wereld stelt ons in staat gerichte koppelingen te maken die tot echte resultaten leiden.",
     deliverables: ["Profielanalyse van uw bedrijf", "Geverifieerde shortlist (5-10 partners)", "Begeleide kennismaking"],
   },
   {
@@ -27,7 +27,7 @@ const diensten = [
   {
     icon: <BookOpen className="w-7 h-7" />,
     title: "Taal & Cultuur Consulting",
-    desc: "Taal is meer dan woorden. Wij vertalen NL ↔ AR en begeleiden onderhandelingen, contractbesprekingen en introductiegesprekken — zodat elke boodschap overkomt zoals bedoeld.",
+    desc: "Taal is meer dan woorden. Wij vertalen NL ↔ AR en begeleiden onderhandelingen, contractbesprekingen en introductiegesprekken, zodat elke boodschap overkomt zoals bedoeld.",
     deliverables: ["Beëdigde vertalingen", "Live tolkdiensten", "Culturele briefing per gesprek"],
   },
   {
@@ -39,7 +39,7 @@ const diensten = [
   {
     icon: <Users className="w-7 h-7" />,
     title: "Netwerkevenementen",
-    desc: "Wij organiseren gerichte handelsmissies, tours en bijeenkomsten die duurzame zakelijke relaties opleveren — geen eenmalige handshakes, maar verbindingen die stand houden.",
+    desc: "Wij organiseren gerichte handelsmissies, tours en bijeenkomsten die duurzame zakelijke relaties opleveren, geen eenmalige handshakes, maar verbindingen die stand houden.",
     deliverables: ["Volledige tour-organisatie", "Curated deelnemerslijst", "Pre- & post-event begeleiding"],
   },
 ];
@@ -47,23 +47,23 @@ const diensten = [
 const proces = [
   { stap: "01", titel: "Kennismaking", desc: "Vrijblijvend gesprek waarin we uw ambitie, markt en context volledig in kaart brengen." },
   { stap: "02", titel: "Strategie", desc: "Wij stellen een tailormade plan op met deliverables, tijdlijn en investering." },
-  { stap: "03", titel: "Uitvoering", desc: "Implementatie met onze experts ter plaatse — u krijgt wekelijks updates en directe contact." },
+  { stap: "03", titel: "Uitvoering", desc: "Implementatie met onze experts ter plaatse, u krijgt wekelijks updates en directe contact." },
   { stap: "04", titel: "Resultaat & vervolg", desc: "Afsluitende analyse, geleverde waarde en doorlopende ondersteuning naar wens." },
 ];
 
 export default function Diensten() {
   useSpotlight();
-  useEffect(() => { document.title = "Diensten — ArabDutch | Consultancy Nederland & Arabische wereld"; }, []);
+  useEffect(() => { document.title = "Diensten, ArabDutch | Consultancy Nederland & Arabische wereld"; }, []);
 
   return (
     <main className="pt-20 bg-[#0a0f1f]">
       <LuxeHero
         badge="Wat wij bieden"
         title={<>Diensten op<br /><span className="gradient-luxe italic">strategisch niveau</span></>}
-        subtitle="Geen standaardpakketten. Elke opdracht is maatwerk — afgestemd op uw markt, uw sector en uw ambities."
+        subtitle="Geen standaardpakketten. Elke opdracht is maatwerk, afgestemd op uw markt, uw sector en uw ambities."
       />
 
-      {/* DIENSTEN — bento grid */}
+      {/* DIENSTEN, bento grid */}
       <section className="py-32 bg-luxe-light relative overflow-hidden">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] opacity-30 pointer-events-none"
           style={{ background: "radial-gradient(ellipse, rgba(196,149,42,.3) 0%, transparent 60%)" }} />

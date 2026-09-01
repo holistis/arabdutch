@@ -18,6 +18,7 @@ import Disclaimer from "./pages/Disclaimer";
 import AlgemeneVoorwaarden from "./pages/AlgemeneVoorwaarden";
 import Cookiebeleid from "./pages/Cookiebeleid";
 import Inzichten from "./pages/Inzichten";
+import GratisTools from "./pages/GratisTools";
 import Landen from "./pages/Landen";
 import LandGids from "./pages/LandGids";
 import Strategiegesprek from "./pages/Strategiegesprek";
@@ -45,6 +46,7 @@ export default function App() {
         <Route path="/algemene-voorwaarden" element={<AlgemeneVoorwaarden />} />
         <Route path="/cookiebeleid" element={<Cookiebeleid />} />
         <Route path="/inzichten" element={<Inzichten />} />
+        <Route path="/gratis-tools" element={<GratisTools />} />
         <Route path="/landen" element={<Landen />} />
         <Route path="/landen/:slug" element={<LandGids />} />
       </Routes>

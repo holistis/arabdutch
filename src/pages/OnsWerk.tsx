@@ -26,7 +26,7 @@ const projecten = [
     datum: "Mei 2025",
     tag: "Partnership",
     land: "Saoedi-Arabië → Afrika",
-    titel: "ArabDutch & Manea — Cybersecurity",
+    titel: "ArabDutch & Manea, Cybersecurity",
     desc: "Een nieuwe stap richting cybersecurityuitbreiding in Afrika via een strategisch partnership tussen ArabDutch en Manea (Saoedi-Arabië).",
     impact: "Marktbetreding in 3 Afrikaanse landen",
   },
@@ -35,21 +35,21 @@ const projecten = [
     tag: "Culturele Reis",
     land: "Marokko",
     titel: "Fossielenreis naar de Ourika Vallei",
-    desc: "Een onvergetelijke georganiseerde fossielenreis naar Marokko — cultuur, natuur en zakelijke relaties gecombineerd in één unieke ervaring.",
+    desc: "Een onvergetelijke georganiseerde fossielenreis naar Marokko, cultuur, natuur en zakelijke relaties gecombineerd in één unieke ervaring.",
     impact: "12 deelnemers, langdurige relaties",
   },
 ];
 
 export default function OnsWerk() {
   useSpotlight();
-  useEffect(() => { document.title = "Ons Werk — ArabDutch | Projecten & Resultaten"; }, []);
+  useEffect(() => { document.title = "Ons Werk, ArabDutch | Projecten & Resultaten"; }, []);
 
   return (
     <main className="pt-20 bg-[#0a0f1f]">
       <LuxeHero
         badge="Onze resultaten"
         title={<>Concrete<br /><span className="gradient-luxe italic">opdrachten</span>, bewezen<br /><span className="text-stroke">resultaten</span></>}
-        subtitle="Dit is een selectie van wat wij voor onze klanten realiseerden — in Marokko, de Golfregio, Noord-Afrika en daarbuiten."
+        subtitle="Dit is een selectie van wat wij voor onze klanten realiseerden, in Marokko, de Golfregio, Noord-Afrika en daarbuiten."
       />
 
       {/* PROJECTEN */}

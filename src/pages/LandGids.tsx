@@ -22,7 +22,7 @@ export default function LandGids() {
   const [actieveTab, setActieveTab] = useState<Tab>("Belasting");
 
   useEffect(() => {
-    if (land) document.title = `${land.naam} — ArabDutch Landengids`;
+    if (land) document.title = `${land.naam}, ArabDutch Landengids`;
   }, [land]);
 
   if (!land) return <Navigate to="/landen" replace />;

@@ -66,7 +66,7 @@ const pakketten = [
 
 export default function Strategiegesprek() {
   useSpotlight();
-  useEffect(() => { document.title = "Strategiegesprek — ArabDutch | Boek een 1-op-1 met senior consultant"; }, []);
+  useEffect(() => { document.title = "Strategiegesprek, ArabDutch | Boek een 1-op-1 met senior consultant"; }, []);
 
   const [submitted, setSubmitted] = useState(false);
   const [form, setForm] = useState({ naam: "", email: "", bedrijf: "", pakket: "", vraag: "" });
@@ -87,7 +87,7 @@ export default function Strategiegesprek() {
         fd.append("subject", `📞 Boekingsverzoek: ${form.pakket}`);
         fd.append("naam", form.naam);
         fd.append("email", form.email);
-        fd.append("bedrijf", form.bedrijf || "—");
+        fd.append("bedrijf", form.bedrijf || "niet opgegeven");
         fd.append("pakket", form.pakket);
         fd.append("vraag", form.vraag);
         await fetch("https://api.web3forms.com/submit", { method: "POST", body: fd });
@@ -169,7 +169,7 @@ export default function Strategiegesprek() {
                       : "bg-navy-900 hover:bg-navy-800 text-white shadow-lg"
                   }`}
                 >
-                  Boek {p.duur} — {p.prijs} <ArrowRight className="w-4 h-4" />
+                  Boek {p.duur}, {p.prijs} <ArrowRight className="w-4 h-4" />
                 </a>
                 <p className={`text-center text-xs mt-3 ${p.populair ? "text-white/40" : "text-gray-400"}`}>
                   <Shield className="w-3 h-3 inline mr-1" /> Vaste prijs · Direct bevestigd na betaling
@@ -195,9 +195,9 @@ export default function Strategiegesprek() {
               </p>
               <div className="space-y-3">
                 {[
-                  "Senior consultants — geen junior medewerkers",
+                  "Senior consultants, geen junior medewerkers",
                   "Voorbereiding op basis van uw industrie",
-                  "100% vertrouwelijk — NDA op verzoek",
+                  "100% vertrouwelijk, NDA op verzoek",
                   "Schriftelijke samenvatting binnen 48 uur na gesprek",
                 ].map((p, i) => (
                   <div key={i} className="flex items-center gap-3 text-gray-700">
@@ -270,7 +270,7 @@ export default function Strategiegesprek() {
             Liever eerst een vrijblijvend gesprek?
           </h2>
           <p className="text-white/60 mb-8 text-lg">
-            Stuur ons een bericht en wij bellen binnen 1 werkdag terug — zonder kosten of verplichting.
+            Stuur ons een bericht en wij bellen binnen 1 werkdag terug, zonder kosten of verplichting.
           </p>
           <Link to="/contact" className="inline-flex items-center gap-2 glass-strong hover:bg-white/10 text-white font-semibold px-10 py-4 rounded-full transition-all">
             Contact opnemen <ArrowRight className="w-4 h-4" />

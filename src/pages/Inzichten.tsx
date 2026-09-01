@@ -39,7 +39,7 @@ const landKleuren: Record<string, string> = {
 };
 
 // Pricing strategie: ArabDutch = 65% onder markt (McKinsey/BCG/BMI Research voor vergelijkbare scope)
-// Tier 1 (Gratis): preview / light reports — lead magnet
+// Tier 1 (Gratis): preview / light reports, lead magnet
 // Tier 2 (€79): standaard country/topic report 20-30p
 // Tier 3 (€149): diepgaand sector + actiegids 30-45p
 // Tier 4 (€249): premium strategisch, met contacten + tools 40-60p
@@ -55,7 +55,7 @@ const rapporten = [
   },
   {
     slug: "expat-vae-belasting",
-    titel: "Expat in de VAE — Fiscale gids",
+    titel: "Expat in de VAE, Fiscale gids",
     beschrijving: "Geen inkomstenbelasting, maar wél verplichtingen in Nederland. Alles over uw fiscale positie als Dutch expat in Dubai of Abu Dhabi.",
     land: "vae", landNaam: "VAE", vlag: "🇦🇪",
     categorie: "belasting", isGratis: true, paginas: 20, datum: "Maart 2026", tier: "intro",
@@ -85,7 +85,7 @@ const rapporten = [
   // === €79 STANDAARD ===
   {
     slug: "vastgoed-marokko-complete-gids",
-    titel: "Vastgoed in heel Marokko — Complete marktgids 2026",
+    titel: "Vastgoed in heel Marokko, Complete marktgids 2026",
     beschrijving: "De meest complete vastgoedgids voor Marokko: marktanalyse en rendementen per stad (Casablanca, Rabat, Marrakech, Tanger, Agadir, Fes), koopprocedure voor Nederlanders stap voor stap, belasting & notariskosten, hypotheekmogelijkheden en 18 geselecteerde projecten. Gratis 6-pagina preview.",
     land: "marokko", landNaam: "Marokko", vlag: "🇲🇦",
     categorie: "vastgoed", isGratis: false, paginas: 34, datum: "Mei 2026", prijs: "€79", marktPrijs: "€220", tier: "standaard",
@@ -93,7 +93,7 @@ const rapporten = [
   },
   {
     slug: "jordanie-asez-vrije-zone",
-    titel: "Aqaba ASEZ — De stille winnaar",
+    titel: "Aqaba ASEZ, De stille winnaar",
     beschrijving: "Speciale Economische Zone Aqaba: 5% vennootschapsbelasting, 100% buitenlands eigendom, strategische haven richting Saoedi-Arabië en de Golf. Inclusief stappenplan.",
     land: "jordanie", landNaam: "Jordanië", vlag: "🇯🇴",
     categorie: "bedrijfsoprichting", isGratis: false, paginas: 24, datum: "Mei 2026", prijs: "€79", marktPrijs: "€220", tier: "standaard",
@@ -101,7 +101,7 @@ const rapporten = [
   },
   {
     slug: "egypte-vastgoed-mar-mediterranee",
-    titel: "Vastgoed Egypte — New Alamein & Noordkust",
+    titel: "Vastgoed Egypte, New Alamein & Noordkust",
     beschrijving: "De Mediterraanse goudkust: marktanalyse, vergunningseisen voor buitenlanders, rendementen en infrastructuurontwikkeling 2026-2030. Gratis preview beschikbaar.",
     land: "egypte", landNaam: "Egypte", vlag: "🇪🇬",
     categorie: "vastgoed", isGratis: false, paginas: 26, datum: "Juni 2026", prijs: "€79", marktPrijs: "€220", tier: "standaard",
@@ -111,7 +111,7 @@ const rapporten = [
   // === €149 DIEPGAAND ===
   {
     slug: "saudi-vision-2030-kansen",
-    titel: "Saudi Vision 2030 — Sectorkansen NL",
+    titel: "Saudi Vision 2030, Sectorkansen NL",
     beschrijving: "Diepgaande sector-analyse: van NEOM tot agritech, infrastructuur en watertechnologie. €1 biljoen investeringen ontleed per sector. Inclusief aanbestedingenmatrix en 25 lokale contacten.",
     land: "saoedi-arabie", landNaam: "Saoedi-Arabië", vlag: "🇸🇦",
     categorie: "bedrijfsoprichting", isGratis: false, paginas: 38, datum: "Februari 2026", prijs: "€149", marktPrijs: "€420", tier: "diepgaand",
@@ -119,7 +119,7 @@ const rapporten = [
   },
   {
     slug: "qatar-financial-centre-gids",
-    titel: "Qatar Financial Centre — Setup gids",
+    titel: "Qatar Financial Centre, Setup gids",
     beschrijving: "Volledige procedure voor Nederlandse ondernemers: QFC vs Free Zone, kapitaaleisen, belasting (10%), residency, bankvoorkeuren en compliance. Stap-voor-stap met juridische templates.",
     land: "qatar", landNaam: "Qatar", vlag: "🇶🇦",
     categorie: "bedrijfsoprichting", isGratis: false, paginas: 34, datum: "Juni 2026", prijs: "€149", marktPrijs: "€420", tier: "diepgaand",
@@ -127,7 +127,7 @@ const rapporten = [
   },
   {
     slug: "oman-2040-nederlandse-kansen",
-    titel: "Oman Vision 2040 — Strategische kansen",
+    titel: "Oman Vision 2040, Strategische kansen",
     beschrijving: "Geen Dubai-prijzen, wél strategische ligging. Sectoren: logistiek (Duqm), toerisme, mining en visserij. Belasting, residency, partnerstructuren en 15 geverifieerde lokale contacten.",
     land: "oman", landNaam: "Oman", vlag: "🇴🇲",
     categorie: "bedrijfsoprichting", isGratis: false, paginas: 36, datum: "Juni 2026", prijs: "€149", marktPrijs: "€420", tier: "diepgaand",
@@ -137,7 +137,7 @@ const rapporten = [
   // === €249 PREMIUM ===
   {
     slug: "wk2030-marokko-aanbestedingen",
-    titel: "WK 2030 Marokko — €5B aanbestedingen",
+    titel: "WK 2030 Marokko, €5B aanbestedingen",
     beschrijving: "Premium strategische gids: alle 23 sectoren, €5 miljard aan stadia/HSR/hotels/luchthavens, tendering-procedures, 40+ lokale partnerprofielen, juridische templates en regionale prioriteiten Casablanca-Tanger-Marrakech-Agadir.",
     land: "marokko", landNaam: "Marokko", vlag: "🇲🇦",
     categorie: "bedrijfsoprichting", isGratis: false, paginas: 56, datum: "Juni 2026", prijs: "€249", marktPrijs: "€700", tier: "premium",
@@ -145,16 +145,16 @@ const rapporten = [
   },
   {
     slug: "irak-wederopbouw-nederlandse-bedrijven",
-    titel: "Irak wederopbouw — €88B kansenmatrix",
-    beschrijving: "Premium-rapport: $88 miljard aan aanbestedingen tot 2030. Sectoren waterzuivering, energie, telecom, infrastructuur — gefocust op Koerdistan en Basra. Risk-rating per provincie, 30+ contacten, juridische analyse en sectie security/operations.",
+    titel: "Irak wederopbouw, €88B kansenmatrix",
+    beschrijving: "Premium-rapport: $88 miljard aan aanbestedingen tot 2030. Sectoren waterzuivering, energie, telecom, infrastructuur, gefocust op Koerdistan en Basra. Risk-rating per provincie, 30+ contacten, juridische analyse en sectie security/operations.",
     land: "irak", landNaam: "Irak", vlag: "🇮🇶",
     categorie: "bedrijfsoprichting", isGratis: false, paginas: 52, datum: "Juni 2026", prijs: "€249", marktPrijs: "€700", tier: "premium",
     stripeUrl: "https://buy.stripe.com/3cI6oH7a80gz5XMfh17ok06",
   },
   {
     slug: "vision-2030-vs-2040-vergelijking",
-    titel: "Vision 2030 vs 2040 — Strategische landenkeuze",
-    beschrijving: "De ultieme keuzegids: KSA, VAE, Qatar of Oman — welk land past bij welk type Nederlands bedrijf? Volledige beslismatrix, kosten-baten per sector, 50+ contacten regionaal, en ArabDutch's eigen positioneringsraamwerk.",
+    titel: "Vision 2030 vs 2040, Strategische landenkeuze",
+    beschrijving: "De ultieme keuzegids: KSA, VAE, Qatar of Oman, welk land past bij welk type Nederlands bedrijf? Volledige beslismatrix, kosten-baten per sector, 50+ contacten regionaal, en ArabDutch's eigen positioneringsraamwerk.",
     land: "algemeen", landNaam: "Golfregio", vlag: "🕌",
     categorie: "bedrijfsoprichting", isGratis: false, paginas: 48, datum: "Mei 2026", prijs: "€249", marktPrijs: "€700", tier: "premium",
     stripeUrl: "https://buy.stripe.com/6oUfZhcus4wP3PEgl57ok07",
@@ -165,7 +165,7 @@ const filters = ["Alle", "Marokko", "VAE", "Saoedi-Arabië", "Tunesië", "Qatar"
 
 export default function Inzichten() {
   useSpotlight();
-  useEffect(() => { document.title = "Data & Inzichten — ArabDutch | Rapporten & Landengidsen"; }, []);
+  useEffect(() => { document.title = "Data & Inzichten, ArabDutch | Rapporten & Landengidsen"; }, []);
   const [actievFilter, setActievFilter] = useState("Alle");
   const [modalRapport, setModalRapport] = useState<typeof rapporten[0] | null>(null);
 
@@ -180,7 +180,7 @@ export default function Inzichten() {
       <LuxeHero
         badge="Data & Inzichten"
         title={<>De meest complete<br /><span className="gradient-luxe italic">kennisbank</span></>}
-        subtitle="Diepgaande rapporten, landengidsen en marktanalyses — opgesteld door ArabDutch op basis van jarenlange ervaring in Marokko, de Golf en de Levant. Voor investeerders, ondernemers en expats."
+        subtitle="Diepgaande rapporten, landengidsen en marktanalyses, opgesteld door ArabDutch op basis van jarenlange ervaring in Marokko, de Golf en de Levant. Voor investeerders, ondernemers en expats."
       >
         <div className="flex flex-wrap gap-12 border-t border-gold-500/20 pt-8 max-w-4xl">
           {[
@@ -329,11 +329,13 @@ export default function Inzichten() {
                         </button>
                       )}
                       {r.isGratis ? (
+                        // Ook de gratis rapporten zijn nog in bewerking. Zolang er geen
+                        // bestand is, beloven we geen download en geen levertermijn.
                         <button
                           onClick={() => setModalRapport(r)}
                           className="flex items-center gap-1.5 text-gold-500 hover:text-gold-600 font-semibold text-sm transition-colors"
                         >
-                          <Download className="w-4 h-4" /> Download
+                          <Download className="w-4 h-4" /> Houd mij op de hoogte
                         </button>
                       ) : (
                         // Betaalde rapporten: tot de automatische levering live is, gaat de
@@ -369,7 +371,7 @@ export default function Inzichten() {
                   Premium kwaliteit.<br /><span className="shimmer-text">65% onder marktprijs.</span>
                 </h3>
                 <p className="text-white/70 leading-relaxed mb-6">
-                  Onze rapporten hebben dezelfde diepgang als die van McKinsey, BCG of Euromonitor — maar geen €1.500+ per stuk. Wij geloven dat kwalitatieve kennis toegankelijk moet zijn voor het Nederlandse MKB, niet alleen voor Big 4 klanten.
+                  Onze rapporten hebben dezelfde diepgang als die van McKinsey, BCG of Euromonitor, maar geen €1.500+ per stuk. Wij geloven dat kwalitatieve kennis toegankelijk moet zijn voor het Nederlandse MKB, niet alleen voor Big 4 klanten.
                 </p>
                 <p className="text-white/50 text-sm">
                   Elk betaald rapport heeft een gratis preview van 6 pagina's, zodat u vooraf de kwaliteit en inhoud kunt beoordelen voor aanschaf.
@@ -412,7 +414,7 @@ export default function Inzichten() {
                 <span className="gradient-luxe italic">10 Arabische landen</span>
               </h2>
               <p className="text-white/70 leading-relaxed mb-10 text-lg">
-                Wij weten als geen ander wat u moet weten: van belastingverdragen en verblijfsvergunningen tot bankrekeningen openen en zakelijke etiquette. Per land, per onderwerp — compleet en actueel.
+                Wij weten als geen ander wat u moet weten: van belastingverdragen en verblijfsvergunningen tot bankrekeningen openen en zakelijke etiquette. Per land, per onderwerp, compleet en actueel.
               </p>
               <div className="flex flex-wrap gap-3 mb-10">
                 {["🇲🇦 Marokko", "🇦🇪 VAE", "🇸🇦 Saoedi-Arabië", "🇹🇳 Tunesië", "🇪🇬 Egypte", "🇯🇴 Jordanië", "🇶🇦 Qatar", "🇮🇶 Irak", "🇱🇾 Libië", "🇴🇲 Oman"].map(l => (

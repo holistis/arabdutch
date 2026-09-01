@@ -44,7 +44,7 @@ export default function LeadCaptureModal({ rapport, onClose }: Props) {
         );
         fd.append("naam", naam);
         fd.append("email", email);
-        fd.append("bedrijf", bedrijf || "—");
+        fd.append("bedrijf", bedrijf || "niet opgegeven");
         fd.append("rapport", `${rapport.titel}${rapport.prijs ? ` (${rapport.prijs})` : ""}`);
         await fetch("https://api.web3forms.com/submit", { method: "POST", body: fd });
       }
@@ -68,14 +68,14 @@ export default function LeadCaptureModal({ rapport, onClose }: Props) {
               <CheckCircle className="w-8 h-8 text-green-600" />
             </div>
             <h3 className="text-xl font-serif font-bold text-navy-900 mb-2">
-              {isPremium ? "U staat op de wachtlijst" : "Aanvraag ontvangen"}
+              U staat op de lijst
             </h3>
             <p className="text-gray-500 text-sm leading-relaxed mb-6">
               {isPremium ? (
                 <>U krijgt als eerste bericht op <strong>{email}</strong> zodra dit premium-rapport
                   beschikbaar is, met een introductiekorting voor wie op de wachtlijst staat.</>
               ) : (
-                <>Wij sturen u het rapport binnen 24 uur toe op <strong>{email}</strong>. Controleer ook uw spammap.</>
+                <>Wij zijn eerlijk over waar dit rapport staat: het is nog in bewerking. U krijgt bericht op <strong>{email}</strong> zodra het klaar is, zonder verdere verplichtingen. Liever meteen iets bruikbaars? Op onze pagina met gratis tools staan kant-en-klare hulpmiddelen die u direct kunt gebruiken.</>
               )}
             </p>
             <button
