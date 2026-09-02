@@ -81,11 +81,14 @@ INSERT INTO rapporten (slug, titel, beschrijving, land, categorie, is_gratis) VA
 --
 -- Wat je er wel mee kunt: zien welke pagina's bezocht worden en of een
 -- wijziging effect heeft. Dat is precies genoeg om te sturen.
+-- BEWUST GEEN created_at. Een tijdstempel op de seconde maakt bezoeken weer
+-- onderscheidbaar en daarmee in principe correleerbaar met serverlogs, en dat
+-- is precies wat de privacyverklaring belooft NIET te bewaren. Alleen het pad
+-- en de dag, verder niets.
 CREATE TABLE IF NOT EXISTS paginaweergaven (
   id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
   pad TEXT NOT NULL,
-  dag DATE NOT NULL DEFAULT CURRENT_DATE,
-  created_at TIMESTAMPTZ DEFAULT NOW()
+  dag DATE NOT NULL DEFAULT CURRENT_DATE
 );
 
 CREATE INDEX IF NOT EXISTS paginaweergaven_dag_pad_idx ON paginaweergaven (dag, pad);
