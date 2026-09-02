@@ -36,7 +36,7 @@ export default function Cookiebeleid() {
           </ul>
 
           <h3>Analytische cookies</h3>
-          <p>Wij plaatsen op dit moment geen analytische cookies en gebruiken geen Google Analytics of vergelijkbare dienst. Er wordt dus niet bijgehouden welke pagina's u bezoekt of hoe lang u blijft. Mocht dit veranderen, dan werken wij dit beleid bij en vragen wij vooraf uw toestemming.</p>
+          <p>Wij plaatsen geen analytische cookies en gebruiken geen Google Analytics of een vergelijkbare externe dienst. Wij tellen wel zelf hoe vaak een pagina bekeken wordt, maar daarbij wordt alleen het pad en de dag opgeslagen, zonder cookie en zonder enig gegeven waarmee u herkenbaar zou zijn. Hoe lang u blijft of welke route u door de site neemt, meten wij niet. Respecteert uw browser Do Not Track of Global Privacy Control, dan tellen wij uw bezoek niet mee.</p>
 
           <h3>Marketing cookies</h3>
           <p>Wij plaatsen geen marketing- of trackingcookies van derden. Mocht dit in de toekomst veranderen, dan zullen wij dit beleid bijwerken en opnieuw uw toestemming vragen.</p>

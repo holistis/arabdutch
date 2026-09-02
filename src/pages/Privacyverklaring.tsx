@@ -76,7 +76,8 @@ export default function Privacyverklaring() {
             <li><strong>Zakenpartners:</strong> alleen met uw expliciete toestemming in het kader van een opdracht</li>
             <li><strong>Autoriteiten:</strong> als wij daartoe wettelijk verplicht zijn</li>
           </ul>
-          <p>Wij gebruiken geen analytics-diensten en geen advertentienetwerken. Uw IP-adres wordt door ons niet naar een externe dienst gestuurd om uw land te bepalen; de taal van de site wordt afgeleid uit de taalinstelling van uw eigen browser.</p>
+          <p>Wij gebruiken geen externe analytics-diensten en geen advertentienetwerken. Uw IP-adres wordt door ons niet naar een externe dienst gestuurd om uw land te bepalen; de taal van de site wordt afgeleid uit de taalinstelling van uw eigen browser.</p>
+          <p>Wel houden wij zelf bij hoe vaak een pagina wordt bekeken. Daarbij slaan wij uitsluitend het pad en de dag op, dus bijvoorbeeld dat de pagina /diensten op 1 september is bekeken. Er wordt geen IP-adres, sessie-identificatie, apparaatgegeven of verwijzende site bewaard. Twee bezoeken van dezelfde persoon zijn voor ons niet van elkaar te onderscheiden en een individuele bezoeker is uit deze cijfers niet te herleiden. Er worden hiervoor geen cookies geplaatst. Als uw browser Do Not Track of Global Privacy Control meestuurt, tellen wij uw bezoek helemaal niet mee.</p>
 
           <h2>7. Internationale doorgifte</h2>
           <p>Wij kunnen gegevens doorgeven aan partijen buiten de Europese Economische Ruimte (EER), in het bijzonder aan samenwerkingspartners in de Arabische wereld. Dit geschiedt uitsluitend indien er passende waarborgen zijn zoals standaardcontractbepalingen van de Europese Commissie of expliciete toestemming.</p>
