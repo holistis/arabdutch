@@ -69,3 +69,29 @@ INSERT INTO rapporten (slug, titel, beschrijving, land, categorie, is_gratis) VA
   ('expat-vae-belasting', 'Expat in de VAE — fiscale gids voor Nederlanders', 'Geen inkomstenbelasting, maar wél verplichtingen in Nederland. Alles over uw fiscale positie.', 'vae', 'belasting', true),
   ('saudi-vision-2030-kansen', 'Saudi Vision 2030 — kansen voor Nederlandse bedrijven', 'Van NEOM tot agritech: concrete sectorkansen voor Nederlandse ondernemers in Saoedi-Arabië.', 'saoedi-arabie', 'bedrijfsoprichting', false),
   ('leven-marokko-nederlander', 'Als Nederlander leven in Marokko', 'Van uitschrijven in Nederland tot zorgverzekering, bankrekening en sociale zekerheid in Marokko.', 'marokko', 'leven', true);
+
+-- ─── Anonieme paginateller ───────────────────────────────────────────────────
+-- Bewust GEEN externe analytics-dienst en bewust GEEN cookies.
+--
+-- Wat hier wordt opgeslagen: alleen het pad en de dag. Geen IP-adres, geen
+-- sessie-id, geen user-agent, geen verwijzer, geen enkele identifier. Twee
+-- bezoeken van dezelfde persoon zijn niet van elkaar te onderscheiden, en een
+-- individuele bezoeker is uit deze tabel niet te herleiden. Daarmee is dit
+-- geen verwerking van persoonsgegevens en is er geen toestemming vereist.
+--
+-- Wat je er wel mee kunt: zien welke pagina's bezocht worden en of een
+-- wijziging effect heeft. Dat is precies genoeg om te sturen.
+CREATE TABLE IF NOT EXISTS paginaweergaven (
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  pad TEXT NOT NULL,
+  dag DATE NOT NULL DEFAULT CURRENT_DATE,
+  created_at TIMESTAMPTZ DEFAULT NOW()
+);
+
+CREATE INDEX IF NOT EXISTS paginaweergaven_dag_pad_idx ON paginaweergaven (dag, pad);
+
+ALTER TABLE paginaweergaven ENABLE ROW LEVEL SECURITY;
+
+-- Alleen INSERT voor anon, geen SELECT-policy: bezoekers kunnen een weergave
+-- registreren maar de cijfers niet uitlezen. Zelfde patroon als leads.
+CREATE POLICY "Iedereen kan weergave registreren" ON paginaweergaven FOR INSERT WITH CHECK (true);

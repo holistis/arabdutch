@@ -5,6 +5,7 @@ import CookieBanner from "./components/CookieBanner";
 import WhatsAppButton from "./components/WhatsAppButton";
 import SchemaOrg from "./components/SchemaOrg";
 import ScrollToTop from "./components/ScrollToTop";
+import PaginaTeller from "./components/PaginaTeller";
 import Home from "./pages/Home";
 import OverOns from "./pages/OverOns";
 import Diensten from "./pages/Diensten";
@@ -28,6 +29,7 @@ export default function App() {
   return (
     <BrowserRouter>
       <ScrollToTop />
+      <PaginaTeller />
       <SchemaOrg />
       <Navbar />
       <Routes>
