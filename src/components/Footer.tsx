@@ -89,7 +89,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-white/10 pt-6 flex flex-col md:flex-row justify-between items-center gap-3">
-          <p className="text-white/40 text-xs">© {new Date().getFullYear()} AO Services (ArabDutch) · {t("footer.rights")} · Eindhoven · <a href="https://sitecraft-ai-production.up.railway.app" target="_blank" rel="noopener noreferrer" className="text-white/20 hover:text-white/40 transition-colors">lab</a></p>
+          <p className="text-white/40 text-xs">© {new Date().getFullYear()} AO Services (ArabDutch) · {t("footer.rights")} · Eindhoven · <a href="https://mergefix.com" target="_blank" rel="noopener noreferrer" className="text-white/20 hover:text-white/40 transition-colors">lab</a></p>
           <div className="flex gap-4">
             <Link to="/privacyverklaring" className="text-white/40 hover:text-white text-xs transition-colors">Privacy</Link>
             <Link to="/disclaimer" className="text-white/40 hover:text-white text-xs transition-colors">Disclaimer</Link>

@@ -8,16 +8,27 @@ Bij einde: schrijf bovenaan een nieuw blokje:
 - Wat gedaan / Waarom / TODO
 ```
 
-## Railway deploys
-Na elke `git push origin main`:
-1. Poll build logs: `until railway logs --build --lines 5 2>&1 | grep -q "Healthcheck\|ERROR\|FAILED"; do sleep 15; done`
-2. Check runtime: `railway logs --lines 10`
-3. Healthcheck OK → meld "Deploy OK"
-4. Error → fix direct, push opnieuw
+## Hosting (Coolify op Hetzner)
+Sinds 2026-09-07 gemigreerd van Railway (leeg account, deployt niets meer) naar een
+eigen Hetzner-server, beheerd via Coolify:
+- Server: 138.201.204.97 (root via SSH)
+- Coolify app-id: 5 (arabdutch, poort 8183 → intern 3001)
+- Domein: arabdutch.com + www.arabdutch.com
+- Certificaat: HTTP-01/webroot (niet Cloudflare-DNS)
+- GitHub-webhooks op deze repo: 0 ingesteld → een `git push origin main` deployt
+  NIETS automatisch. Deploy gaat nu nog handmatig via het Coolify-dashboard
+  (127.0.0.1:9090, alleen bereikbaar vanaf de server zelf of via SSH-tunnel).
+  Check bij twijfel opnieuw of er ondertussen een webhook is ingericht, dat kan
+  dit voorbehoud stil hebben ingehaald.
 
 ## Algemeen
-- Commits gaan direct naar main (Railway deployt automatisch)
-- Nooit user vragen om Railway logs te sturen
+- **NOOIT direct naar main pushen.** Werk altijd op een dev-/feature-branch, valideer
+  (build/typecheck), push die branch naar origin en vraag de koning expliciet om te
+  testen voor een merge naar main volgt. Dit is een harde globale regel (zie
+  `~/.claude/CLAUDE.md`), geen project-specifieke uitzondering — Railway's
+  automatische main-deploy is weg, dus er is ook geen technische reden meer om
+  hiervan af te wijken.
+- Nooit user vragen om Railway-logs te sturen, Railway bestaat niet meer voor dit project
 - Geen approve-prompts (bypassPermissions actief)
 
 ## Memory
