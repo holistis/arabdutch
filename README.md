@@ -6,11 +6,11 @@
 
 Een professioneel platform voor Nederlandse investeerders, ondernemers en professionals met interesse in Marokko (en breder MENA). We bieden:
 
-- **Marokko vastgoedgids** — complete landengids 2026
-- **AI-zoekrapporten** — diepgaande locatie- en regio-analyses
-- **Strategiegesprek** — boekbare één-op-één sessie
+- **Marokko vastgoedgids**: complete landengids 2026
+- **AI-zoekrapporten**: diepgaande locatie- en regio-analyses
+- **Strategiegesprek**: boekbare één-op-één sessie
 - **B2B-pakketten** voor vastgoed- of business-trajecten (Marokko-only)
-- **Content** — blogs over GITEX Future Health Africa, Kem Kem, Marokko-actualiteiten
+- **Content**: blogs over GITEX Future Health Africa, Kem Kem, Marokko-actualiteiten
 
 ## Pakketten en pricing
 
